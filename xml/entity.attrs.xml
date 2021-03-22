@@ -1,0 +1,517 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--Generated on 2021-03-17T21:43:34.255-04:00-->
+<GeneratedDoc name="entity.attrs" type="json_data">
+	<Intro/>
+	<Items groupBy="Entity_Type">
+		<Item name="ACTION_MANAGER.tags">
+			<Field name="Entity_Type">ACTION_MANAGER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="APPLICATION.tags">
+			<Field name="Entity_Type">APPLICATION</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="APPLICATION_COMPONENT.tags">
+			<Field name="Entity_Type">APPLICATION_COMPONENT</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="APPLICATION_SERVER.tags">
+			<Field name="Entity_Type">APPLICATION_SERVER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="AVAILABILITY_ZONE.tags">
+			<Field name="Entity_Type">AVAILABILITY_ZONE</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="BUSINESS.tags">
+			<Field name="Entity_Type">BUSINESS</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="BUSINESS_ACCOUNT.tags">
+			<Field name="Entity_Type">BUSINESS_ACCOUNT</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="BUSINESS_ACCOUNT.vendorID">
+			<Field name="Entity_Type">BUSINESS_ACCOUNT</Field>
+			<Field name="Attribute_Name">vendorID</Field>
+			<Field name="Attribute_Type">TEXT</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="BUSINESS_APPLICATION.tags">
+			<Field name="Entity_Type">BUSINESS_APPLICATION</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="BUSINESS_ENTITY.tags">
+			<Field name="Entity_Type">BUSINESS_ENTITY</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="BUSINESS_TRANSACTION.tags">
+			<Field name="Entity_Type">BUSINESS_TRANSACTION</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="BUSINESS_USER.tags">
+			<Field name="Entity_Type">BUSINESS_USER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="CHASSIS.tags">
+			<Field name="Entity_Type">CHASSIS</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="CLOUD_COMMITMENT.tags">
+			<Field name="Entity_Type">CLOUD_COMMITMENT</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="CLOUD_SERVICE.tags">
+			<Field name="Entity_Type">CLOUD_SERVICE</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="COMPUTE_RESOURCE.tags">
+			<Field name="Entity_Type">COMPUTE_RESOURCE</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="COMPUTE_TIER.tags">
+			<Field name="Entity_Type">COMPUTE_TIER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="CONTAINER.tags">
+			<Field name="Entity_Type">CONTAINER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="CONTAINER_PLATFORM_CLUSTER.tags">
+			<Field name="Entity_Type">CONTAINER_PLATFORM_CLUSTER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="CONTAINER_POD.tags">
+			<Field name="Entity_Type">CONTAINER_POD</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="CONTAINER_SPEC.tags">
+			<Field name="Entity_Type">CONTAINER_SPEC</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="DATABASE.tags">
+			<Field name="Entity_Type">DATABASE</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="DATABASE_SERVER.tags">
+			<Field name="Entity_Type">DATABASE_SERVER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="DATABASE_SERVER_TIER.tags">
+			<Field name="Entity_Type">DATABASE_SERVER_TIER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="DATABASE_TIER.tags">
+			<Field name="Entity_Type">DATABASE_TIER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="DATACENTER.tags">
+			<Field name="Entity_Type">DATACENTER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="DESIRED_RESERVED_INSTANCE.tags">
+			<Field name="Entity_Type">DESIRED_RESERVED_INSTANCE</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="DESKTOP_POOL.tags">
+			<Field name="Entity_Type">DESKTOP_POOL</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="DISK_ARRAY.tags">
+			<Field name="Entity_Type">DISK_ARRAY</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="DISTRIBUTED_VIRTUAL_PORTGROUP.tags">
+			<Field name="Entity_Type">DISTRIBUTED_VIRTUAL_PORTGROUP</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="DPOD.tags">
+			<Field name="Entity_Type">DPOD</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="HCI_PHYSICAL_MACHINE.tags">
+			<Field name="Entity_Type">HCI_PHYSICAL_MACHINE</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="HYPERVISOR_SERVER.tags">
+			<Field name="Entity_Type">HYPERVISOR_SERVER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="INFRASTRUCTURE.tags">
+			<Field name="Entity_Type">INFRASTRUCTURE</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="INTERNET.tags">
+			<Field name="Entity_Type">INTERNET</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="IO_MODULE.tags">
+			<Field name="Entity_Type">IO_MODULE</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="IP.tags">
+			<Field name="Entity_Type">IP</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="LICENSING_SERVICE.tags">
+			<Field name="Entity_Type">LICENSING_SERVICE</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="LOAD_BALANCER.tags">
+			<Field name="Entity_Type">LOAD_BALANCER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="LOGICAL_POOL.tags">
+			<Field name="Entity_Type">LOGICAL_POOL</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="MAC.tags">
+			<Field name="Entity_Type">MAC</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="MOVER.tags">
+			<Field name="Entity_Type">MOVER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="NAMESPACE.tags">
+			<Field name="Entity_Type">NAMESPACE</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="NETWORK.tags">
+			<Field name="Entity_Type">NETWORK</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="NETWORKING_ENDPOINT.tags">
+			<Field name="Entity_Type">NETWORKING_ENDPOINT</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="OPERATOR.tags">
+			<Field name="Entity_Type">OPERATOR</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="PHYSICAL_MACHINE.cpuModel">
+			<Field name="Entity_Type">PHYSICAL_MACHINE</Field>
+			<Field name="Attribute_Name">cpuModel</Field>
+			<Field name="Attribute_Type">TEXT</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="PHYSICAL_MACHINE.model">
+			<Field name="Entity_Type">PHYSICAL_MACHINE</Field>
+			<Field name="Attribute_Name">model</Field>
+			<Field name="Attribute_Type">TEXT</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="PHYSICAL_MACHINE.numCpus">
+			<Field name="Entity_Type">PHYSICAL_MACHINE</Field>
+			<Field name="Attribute_Name">numCpus</Field>
+			<Field name="Attribute_Type">NUMBER</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="PHYSICAL_MACHINE.tags">
+			<Field name="Entity_Type">PHYSICAL_MACHINE</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="PHYSICAL_MACHINE.timezone">
+			<Field name="Entity_Type">PHYSICAL_MACHINE</Field>
+			<Field name="Attribute_Name">timezone</Field>
+			<Field name="Attribute_Type">TEXT</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="PORT.tags">
+			<Field name="Entity_Type">PORT</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="PROCESSOR_POOL.tags">
+			<Field name="Entity_Type">PROCESSOR_POOL</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="REGION.tags">
+			<Field name="Entity_Type">REGION</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="RESERVED_INSTANCE.tags">
+			<Field name="Entity_Type">RESERVED_INSTANCE</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="RESERVED_INSTANCE_SPECIFICATION.tags">
+			<Field name="Entity_Type">RESERVED_INSTANCE_SPECIFICATION</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="RIGHT_SIZER.tags">
+			<Field name="Entity_Type">RIGHT_SIZER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="SAVINGS.tags">
+			<Field name="Entity_Type">SAVINGS</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="SERVICE.tags">
+			<Field name="Entity_Type">SERVICE</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="SERVICE_ENTITY_TEMPLATE.tags">
+			<Field name="Entity_Type">SERVICE_ENTITY_TEMPLATE</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="SERVICE_PROVIDER.tags">
+			<Field name="Entity_Type">SERVICE_PROVIDER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="STORAGE.isLocal">
+			<Field name="Entity_Type">STORAGE</Field>
+			<Field name="Attribute_Name">isLocal</Field>
+			<Field name="Attribute_Type">BOOLEAN</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="STORAGE.tags">
+			<Field name="Entity_Type">STORAGE</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="STORAGE_CONTROLLER.tags">
+			<Field name="Entity_Type">STORAGE_CONTROLLER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="STORAGE_TIER.tags">
+			<Field name="Entity_Type">STORAGE_TIER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="STORAGE_VOLUME.tags">
+			<Field name="Entity_Type">STORAGE_VOLUME</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="SWITCH.tags">
+			<Field name="Entity_Type">SWITCH</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="THIS_ENTITY.tags">
+			<Field name="Entity_Type">THIS_ENTITY</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="THREE_TIER_APPLICATION.tags">
+			<Field name="Entity_Type">THREE_TIER_APPLICATION</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="UNKNOWN.tags">
+			<Field name="Entity_Type">UNKNOWN</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="VIEW_POD.tags">
+			<Field name="Entity_Type">VIEW_POD</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="VIRTUAL_APPLICATION.tags">
+			<Field name="Entity_Type">VIRTUAL_APPLICATION</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="VIRTUAL_DATACENTER.tags">
+			<Field name="Entity_Type">VIRTUAL_DATACENTER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="VIRTUAL_MACHINE.connectedNetworks">
+			<Field name="Entity_Type">VIRTUAL_MACHINE</Field>
+			<Field name="Attribute_Name">connectedNetworks</Field>
+			<Field name="Attribute_Type">MULTI_TEXT</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="VIRTUAL_MACHINE.guestOsType">
+			<Field name="Entity_Type">VIRTUAL_MACHINE</Field>
+			<Field name="Attribute_Name">guestOsType</Field>
+			<Field name="Attribute_Type">ENUM</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="VIRTUAL_MACHINE.numCpus">
+			<Field name="Entity_Type">VIRTUAL_MACHINE</Field>
+			<Field name="Attribute_Name">numCpus</Field>
+			<Field name="Attribute_Type">NUMBER</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="VIRTUAL_MACHINE.tags">
+			<Field name="Entity_Type">VIRTUAL_MACHINE</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="VIRTUAL_VOLUME.attachmentState">
+			<Field name="Entity_Type">VIRTUAL_VOLUME</Field>
+			<Field name="Attribute_Name">attachmentState</Field>
+			<Field name="Attribute_Type">ENUM</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="VIRTUAL_VOLUME.tags">
+			<Field name="Entity_Type">VIRTUAL_VOLUME</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="VIRTUAL_VOLUME.volumeId">
+			<Field name="Entity_Type">VIRTUAL_VOLUME</Field>
+			<Field name="Attribute_Name">volumeId</Field>
+			<Field name="Attribute_Type">TEXT</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="VLAN.tags">
+			<Field name="Entity_Type">VLAN</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="VM_SPEC.tags">
+			<Field name="Entity_Type">VM_SPEC</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="VPOD.tags">
+			<Field name="Entity_Type">VPOD</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="WEB_SERVER.tags">
+			<Field name="Entity_Type">WEB_SERVER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="WORKLOAD_CONTROLLER.tags">
+			<Field name="Entity_Type">WORKLOAD_CONTROLLER</Field>
+			<Field name="Attribute_Name">tags</Field>
+			<Field name="Attribute_Type">TEXT_MULTIMAP</Field>
+			<Field name="Description"/>
+		</Item>
+	</Items>
+</GeneratedDoc>

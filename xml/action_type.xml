@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--Generated on 2021-03-17T21:43:34.174-04:00-->
+<GeneratedDoc name="action_type" type="type">
+	<Intro/>
+	<Items>
+		<Item name="ACTIVATE">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="ALLOCATE">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="BUY_RI">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="DEACTIVATE">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="DELETE">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="MOVE">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="NONE">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="PROVISION">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="RECONFIGURE">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="RESIZE">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="SCALE">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="START">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="SUSPEND">
+			<Field name="Notes"/>
+		</Item>
+	</Items>
+</GeneratedDoc>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--Generated on 2021-03-17T21:43:34.227-04:00-->
+<GeneratedDoc name="entity" type="table">
+	<Intro/>
+	<Items>
+		<Item name="oid">
+			<Field name="Type">bigint</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">true</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="type">
+			<Field name="Type">entity_type</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="name">
+			<Field name="Type">text</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="environment">
+			<Field name="Type">environment_type</Field>
+			<Field name="Nullable">true</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="attrs">
+			<Field name="Type">jsonb</Field>
+			<Field name="Nullable">true</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="first_seen">
+			<Field name="Type">timestamp with time zone</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="last_seen">
+			<Field name="Type">timestamp with time zone</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+	</Items>
+</GeneratedDoc>

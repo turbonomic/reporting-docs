@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--Generated on 2021-03-17T21:43:34.172-04:00-->
+<GeneratedDoc name="action_state" type="type">
+	<Intro/>
+	<Items>
+		<Item name="ACCEPTED">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="CLEARED">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="FAILED">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="FAILING">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="IN_PROGRESS">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="POST_IN_PROGRESS">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="PRE_IN_PROGRESS">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="QUEUED">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="READY">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="REJECTED">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="SUCCEEDED">
+			<Field name="Notes"/>
+		</Item>
+	</Items>
+</GeneratedDoc>

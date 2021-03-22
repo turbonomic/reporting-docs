@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--Generated on 2021-03-17T21:43:34.177-04:00-->
+<GeneratedDoc name="attr_type" type="type">
+	<Intro/>
+	<Items>
+		<Item name="ENTITY_STATE">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="NUM_VCPU">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="VOLUME_ATTACHED">
+			<Field name="Notes"/>
+		</Item>
+	</Items>
+</GeneratedDoc>

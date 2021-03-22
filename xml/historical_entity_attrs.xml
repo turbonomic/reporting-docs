@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--Generated on 2021-03-17T21:43:34.234-04:00-->
+<GeneratedDoc name="historical_entity_attrs" type="table">
+	<Intro/>
+	<Items>
+		<Item name="time">
+			<Field name="Type">timestamp with time zone</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="entity_oid">
+			<Field name="Type">bigint</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="type">
+			<Field name="Type">attr_type</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="bool_value">
+			<Field name="Type">boolean</Field>
+			<Field name="Nullable">true</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="int_value">
+			<Field name="Type">int</Field>
+			<Field name="Nullable">true</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="long_value">
+			<Field name="Type">bigint</Field>
+			<Field name="Nullable">true</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="double_value">
+			<Field name="Type">double precision</Field>
+			<Field name="Nullable">true</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="string_value">
+			<Field name="Type">text</Field>
+			<Field name="Nullable">true</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="int_arr_value">
+			<Field name="Type">int[]</Field>
+			<Field name="Nullable">true</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="long_arr_value">
+			<Field name="Type">bigint[]</Field>
+			<Field name="Nullable">true</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="string_arr_value">
+			<Field name="Type">text[]</Field>
+			<Field name="Nullable">true</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="double_arr_value">
+			<Field name="Type">float8[]</Field>
+			<Field name="Nullable">true</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="json_value">
+			<Field name="Type">jsonb</Field>
+			<Field name="Nullable">true</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+	</Items>
+</GeneratedDoc>

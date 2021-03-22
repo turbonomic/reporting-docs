@@ -1,0 +1,906 @@
+---
+types:
+  metric_type:
+    intro: "MetricType is a really cool type. Some of its really cool features are:\n\
+      - #1\n- #2"
+    items:
+      CPU:
+        Notes: "Here are **some notes** on the `CPU` value."
+      BALLOONING:
+        Notes: "Ballooning Notes"
+      ACTIVE_SESSIONS:
+        Notes: "Active Sessions Notes"
+      BUFFER_COMMODITY:
+        Notes: null
+      CONNECTION:
+        Notes: null
+      COOLING:
+        Notes: null
+      CPU_ALLOCATION:
+        Notes: null
+      CPU_HEADROOM:
+        Notes: null
+      CPU_PROVISIONED:
+        Notes: null
+      CPU_READY:
+        Notes: null
+      DB_CACHE_HIT_RATE:
+        Notes: null
+      DB_MEM:
+        Notes: null
+      DTU:
+        Notes: null
+      EXTENT:
+        Notes: null
+      FLOW:
+        Notes: null
+      FLOW_ALLOCATION:
+        Notes: null
+      HEAP:
+        Notes: null
+      IMAGE_CPU:
+        Notes: null
+      IMAGE_MEM:
+        Notes: null
+      IMAGE_STORAGE:
+        Notes: null
+      IO_THROUGHPUT:
+        Notes: null
+      MEM:
+        Notes: null
+      MEM_ALLOCATION:
+        Notes: null
+      MEM_HEADROOM:
+        Notes: null
+      MEM_PROVISIONED:
+        Notes: null
+      NET_THROUGHPUT:
+        Notes: null
+      POOL_CPU:
+        Notes: null
+      POOL_MEM:
+        Notes: null
+      POOL_STORAGE:
+        Notes: null
+      PORT_CHANEL:
+        Notes: null
+      POWER:
+        Notes: null
+      Q16_VCPU:
+        Notes: null
+      Q1_VCPU:
+        Notes: null
+      Q2_VCPU:
+        Notes: null
+      Q32_VCPU:
+        Notes: null
+      Q3_VCPU:
+        Notes: null
+      Q4_VCPU:
+        Notes: null
+      Q5_VCPU:
+        Notes: null
+      Q64_VCPU:
+        Notes: null
+      Q6_VCPU:
+        Notes: null
+      Q7_VCPU:
+        Notes: null
+      Q8_VCPU:
+        Notes: null
+      QN_VCPU:
+        Notes: null
+      REMAINING_GC_CAPACITY:
+        Notes: null
+      RESPONSE_TIME:
+        Notes: null
+      SLA_COMMODITY:
+        Notes: null
+      STORAGE_ACCESS:
+        Notes: null
+      STORAGE_ALLOCATION:
+        Notes: null
+      STORAGE_AMOUNT:
+        Notes: null
+      STORAGE_HEADROOM:
+        Notes: null
+      STORAGE_LATENCY:
+        Notes: null
+      STORAGE_PROVISIONED:
+        Notes: null
+      SWAPPING:
+        Notes: null
+      THREADS:
+        Notes: null
+      TOTAL_HEADROOM:
+        Notes: null
+      TOTAL_SESSIONS:
+        Notes: null
+      TRANSACTION:
+        Notes: null
+      TRANSACTION_LOG:
+        Notes: null
+      VCPU:
+        Notes: null
+      VCPU_LIMIT_QUOTA:
+        Notes: null
+      VCPU_REQUEST:
+        Notes: null
+      VCPU_REQUEST_QUOTA:
+        Notes: null
+      VMEM:
+        Notes: null
+      VMEM_LIMIT_QUOTA:
+        Notes: null
+      VMEM_REQUEST:
+        Notes: null
+      VMEM_REQUEST_QUOTA:
+        Notes: null
+      VSTORAGE:
+        Notes: null
+  action_category:
+    intro: null
+    items:
+      COMPLIANCE:
+        Notes: null
+      EFFICIENCY_IMPROVEMENT:
+        Notes: null
+      PERFORMANCE_ASSURANCE:
+        Notes: null
+      PREVENTION:
+        Notes: null
+      UNKNOWN:
+        Notes: null
+  action_state:
+    intro: null
+    items:
+      ACCEPTED:
+        Notes: null
+      CLEARED:
+        Notes: null
+      FAILED:
+        Notes: null
+      FAILING:
+        Notes: null
+      IN_PROGRESS:
+        Notes: null
+      POST_IN_PROGRESS:
+        Notes: null
+      PRE_IN_PROGRESS:
+        Notes: null
+      QUEUED:
+        Notes: null
+      READY:
+        Notes: null
+      REJECTED:
+        Notes: null
+      SUCCEEDED:
+        Notes: null
+  action_type:
+    intro: null
+    items:
+      ACTIVATE:
+        Notes: null
+      ALLOCATE:
+        Notes: null
+      BUY_RI:
+        Notes: null
+      DEACTIVATE:
+        Notes: null
+      DELETE:
+        Notes: null
+      MOVE:
+        Notes: null
+      NONE:
+        Notes: null
+      PROVISION:
+        Notes: null
+      RECONFIGURE:
+        Notes: null
+      RESIZE:
+        Notes: null
+      SCALE:
+        Notes: null
+      START:
+        Notes: null
+      SUSPEND:
+        Notes: null
+  attr_type:
+    intro: null
+    items:
+      ENTITY_STATE:
+        Notes: null
+      NUM_VCPU:
+        Notes: null
+      VOLUME_ATTACHED:
+        Notes: null
+  entity_state:
+    intro: null
+    items:
+      FAILOVER:
+        Notes: null
+      MAINTENANCE:
+        Notes: null
+      POWERED_OFF:
+        Notes: null
+      POWERED_ON:
+        Notes: null
+      SUSPENDED:
+        Notes: null
+      UNKNOWN:
+        Notes: null
+  entity_type:
+    intro: null
+    items:
+      ACTION_MANAGER:
+        Notes: null
+      APPLICATION:
+        Notes: null
+      APPLICATION_COMPONENT:
+        Notes: null
+      APPLICATION_SERVER:
+        Notes: null
+      AVAILABILITY_ZONE:
+        Notes: null
+      BILLING_FAMILY:
+        Notes: null
+      BUSINESS:
+        Notes: null
+      BUSINESS_ACCOUNT:
+        Notes: null
+      BUSINESS_APPLICATION:
+        Notes: null
+      BUSINESS_ENTITY:
+        Notes: null
+      BUSINESS_TRANSACTION:
+        Notes: null
+      BUSINESS_USER:
+        Notes: null
+      CHASSIS:
+        Notes: null
+      CLOUD_COMMITMENT:
+        Notes: null
+      CLOUD_SERVICE:
+        Notes: null
+      COMPUTE_CLUSTER:
+        Notes: null
+      COMPUTE_RESOURCE:
+        Notes: null
+      COMPUTE_TIER:
+        Notes: null
+      CONTAINER:
+        Notes: null
+      CONTAINER_PLATFORM_CLUSTER:
+        Notes: null
+      CONTAINER_POD:
+        Notes: null
+      CONTAINER_SPEC:
+        Notes: null
+      DATABASE:
+        Notes: null
+      DATABASE_SERVER:
+        Notes: null
+      DATABASE_SERVER_TIER:
+        Notes: null
+      DATABASE_TIER:
+        Notes: null
+      DATACENTER:
+        Notes: null
+      DESIRED_RESERVED_INSTANCE:
+        Notes: null
+      DESKTOP_POOL:
+        Notes: null
+      DISK_ARRAY:
+        Notes: null
+      DISTRIBUTED_VIRTUAL_PORTGROUP:
+        Notes: null
+      DPOD:
+        Notes: null
+      GROUP:
+        Notes: null
+      HCI_PHYSICAL_MACHINE:
+        Notes: null
+      HYPERVISOR_SERVER:
+        Notes: null
+      INFRASTRUCTURE:
+        Notes: null
+      INTERNET:
+        Notes: null
+      IO_MODULE:
+        Notes: null
+      IP:
+        Notes: null
+      K8S_CLUSTER:
+        Notes: null
+      LICENSING_SERVICE:
+        Notes: null
+      LOAD_BALANCER:
+        Notes: null
+      LOGICAL_POOL:
+        Notes: null
+      MAC:
+        Notes: null
+      MOVER:
+        Notes: null
+      NAMESPACE:
+        Notes: null
+      NETWORK:
+        Notes: null
+      NETWORKING_ENDPOINT:
+        Notes: null
+      OPERATOR:
+        Notes: null
+      PHYSICAL_MACHINE:
+        Notes: null
+      PORT:
+        Notes: null
+      PROCESSOR_POOL:
+        Notes: null
+      REGION:
+        Notes: null
+      RESERVED_INSTANCE:
+        Notes: null
+      RESERVED_INSTANCE_SPECIFICATION:
+        Notes: null
+      RESOURCE_GROUP:
+        Notes: null
+      RIGHT_SIZER:
+        Notes: null
+      SAVINGS:
+        Notes: null
+      SERVICE:
+        Notes: null
+      SERVICE_ENTITY_TEMPLATE:
+        Notes: null
+      SERVICE_PROVIDER:
+        Notes: null
+      STORAGE:
+        Notes: null
+      STORAGE_CLUSTER:
+        Notes: null
+      STORAGE_CONTROLLER:
+        Notes: null
+      STORAGE_TIER:
+        Notes: null
+      STORAGE_VOLUME:
+        Notes: null
+      SWITCH:
+        Notes: null
+      THIS_ENTITY:
+        Notes: null
+      THREE_TIER_APPLICATION:
+        Notes: null
+      VIEW_POD:
+        Notes: null
+      VIRTUAL_APPLICATION:
+        Notes: null
+      VIRTUAL_DATACENTER:
+        Notes: null
+      VIRTUAL_MACHINE:
+        Notes: null
+      VIRTUAL_VOLUME:
+        Notes: null
+      VLAN:
+        Notes: null
+      VM_SPEC:
+        Notes: null
+      VPOD:
+        Notes: null
+      WEB_SERVER:
+        Notes: null
+      WORKLOAD_CONTROLLER:
+        Notes: null
+      _NONE_:
+        Notes: null
+  environment_type:
+    intro: null
+    items:
+      CLOUD:
+        Notes: null
+      HYBRID:
+        Notes: null
+      ON_PREM:
+        Notes: null
+      UNKNOWN_ENV:
+        Notes: null
+  severity:
+    intro: null
+    items:
+      CRITICAL:
+        Notes: null
+      MAJOR:
+        Notes: null
+      MINOR:
+        Notes: null
+      NORMAL:
+        Notes: null
+  terminal_state:
+    intro: null
+    items:
+      FAILED:
+        Notes: null
+      SUCCEEDED:
+        Notes: null
+tables:
+  completed_action:
+    intro: null
+    columns:
+      recommendation_time:
+        Description: null
+      acceptance_time:
+        Description: null
+      completion_time:
+        Description: null
+      action_oid:
+        Description: null
+      type:
+        Description: null
+      severity:
+        Description: null
+      category:
+        Description: null
+      target_entity_id:
+        Description: null
+      involved_entities:
+        Description: null
+      description:
+        Description: null
+      savings:
+        Description: null
+      final_state:
+        Description: null
+      final_message:
+        Description: null
+      attrs:
+        Description: null
+  entity:
+    intro: null
+    columns:
+      oid:
+        Description: null
+      type:
+        Description: null
+      name:
+        Description: null
+      environment:
+        Description: null
+      attrs:
+        Description: null
+      first_seen:
+        Description: null
+      last_seen:
+        Description: null
+  entity_old:
+    intro: null
+    columns:
+      oid:
+        Description: null
+      hash:
+        Description: null
+      type:
+        Description: null
+      name:
+        Description: null
+      environment:
+        Description: null
+      state:
+        Description: null
+      attrs:
+        Description: null
+      scope:
+        Description: null
+      first_seen:
+        Description: null
+      last_seen:
+        Description: null
+  historical_entity_attrs:
+    intro: null
+    columns:
+      time:
+        Description: null
+      entity_oid:
+        Description: null
+      type:
+        Description: null
+      bool_value:
+        Description: null
+      int_value:
+        Description: null
+      long_value:
+        Description: null
+      double_value:
+        Description: null
+      string_value:
+        Description: null
+      int_arr_value:
+        Description: null
+      long_arr_value:
+        Description: null
+      string_arr_value:
+        Description: null
+      double_arr_value:
+        Description: null
+      json_value:
+        Description: null
+  metric:
+    intro: null
+    columns:
+      time:
+        Description: null
+      entity_oid:
+        Description: null
+      type:
+        Description: null
+      provider_oid:
+        Description: null
+      key:
+        Description: null
+      current:
+        Description: null
+      capacity:
+        Description: null
+      utilization:
+        Description: null
+      consumed:
+        Description: null
+      peak_current:
+        Description: null
+      peak_consumed:
+        Description: null
+      entity_type:
+        Description: null
+  metric_old:
+    intro: null
+    columns:
+      time:
+        Description: null
+      entity_oid:
+        Description: null
+      entity_hash:
+        Description: null
+      type:
+        Description: null
+      current:
+        Description: null
+      capacity:
+        Description: null
+      utilization:
+        Description: null
+      consumed:
+        Description: null
+      provider_oid:
+        Description: null
+      key:
+        Description: null
+  pending_action:
+    intro: null
+    columns:
+      recommendation_time:
+        Description: null
+      action_oid:
+        Description: null
+      type:
+        Description: null
+      severity:
+        Description: null
+      category:
+        Description: null
+      target_entity_id:
+        Description: null
+      involved_entities:
+        Description: null
+      description:
+        Description: null
+      savings:
+        Description: null
+      attrs:
+        Description: null
+  scope:
+    intro: null
+    columns:
+      seed_oid:
+        Description: null
+      scoped_oid:
+        Description: null
+      scoped_type:
+        Description: null
+      start:
+        Description: null
+      finish:
+        Description: null
+  wasted_file:
+    intro: null
+    columns:
+      path:
+        Description: null
+      file_size_kb:
+        Description: null
+      modification_time:
+        Description: null
+      storage_oid:
+        Description: null
+      storage_name:
+        Description: null
+  vm_stats_latest:
+    intro: null
+    columns:
+      snapshot_time:
+        Description: null
+      uuid:
+        Description: null
+      producer_uuid:
+        Description: null
+      property_type:
+        Description: null
+      property_subtype:
+        Description: null
+      capacity:
+        Description: null
+      avg_value:
+        Description: null
+      min_value:
+        Description: null
+      max_value:
+        Description: null
+      relation:
+        Description: null
+      commodity_key:
+        Description: null
+      aggregated:
+        Description: null
+      hour_key:
+        Description: null
+      day_key:
+        Description: null
+      month_key:
+        Description: null
+      effective_capacity:
+        Description: null
+table-data:
+  entity.attrs:
+    intro: null
+    items:
+      BUSINESS_ACCOUNT:
+        vendor_id:
+          Description: null
+        tags:
+          Description: null
+      PHYSICAL_MACHINE:
+        cpu_model:
+          Description: null
+        model:
+          Description: null
+        num_cpus:
+          Description: null
+        timezone:
+          Description: null
+        tags:
+          Description: null
+      STORAGE:
+        is_local:
+          Description: null
+        tags:
+          Description: null
+      VIRTUAL_MACHINE:
+        connected_networks:
+          Description: null
+        guest_os_type:
+          Description: null
+        num_cpus:
+          Description: null
+        tags:
+          Description: null
+      VIRTUAL_VOLUME:
+        attachment_state:
+          Description: null
+        vendor_id:
+          Description: null
+        tags:
+          Description: null
+      ACTION_MANAGER:
+        tags:
+          Description: null
+      APPLICATION:
+        tags:
+          Description: null
+      APPLICATION_COMPONENT:
+        tags:
+          Description: null
+      APPLICATION_SERVER:
+        tags:
+          Description: null
+      AVAILABILITY_ZONE:
+        tags:
+          Description: null
+      BUSINESS:
+        tags:
+          Description: null
+      BUSINESS_APPLICATION:
+        tags:
+          Description: null
+      BUSINESS_ENTITY:
+        tags:
+          Description: null
+      BUSINESS_TRANSACTION:
+        tags:
+          Description: null
+      BUSINESS_USER:
+        tags:
+          Description: null
+      CHASSIS:
+        tags:
+          Description: null
+      CLOUD_COMMITMENT:
+        tags:
+          Description: null
+      CLOUD_SERVICE:
+        tags:
+          Description: null
+      COMPUTE_RESOURCE:
+        tags:
+          Description: null
+      COMPUTE_TIER:
+        tags:
+          Description: null
+      CONTAINER:
+        tags:
+          Description: null
+      CONTAINER_PLATFORM_CLUSTER:
+        tags:
+          Description: null
+      CONTAINER_POD:
+        tags:
+          Description: null
+      CONTAINER_SPEC:
+        tags:
+          Description: null
+      DATABASE:
+        tags:
+          Description: null
+      DATABASE_SERVER:
+        tags:
+          Description: null
+      DATABASE_SERVER_TIER:
+        tags:
+          Description: null
+      DATABASE_TIER:
+        tags:
+          Description: null
+      DATACENTER:
+        tags:
+          Description: null
+      DESIRED_RESERVED_INSTANCE:
+        tags:
+          Description: null
+      DESKTOP_POOL:
+        tags:
+          Description: null
+      DISK_ARRAY:
+        tags:
+          Description: null
+      DISTRIBUTED_VIRTUAL_PORTGROUP:
+        tags:
+          Description: null
+      DPOD:
+        tags:
+          Description: null
+      HCI_PHYSICAL_MACHINE:
+        tags:
+          Description: null
+      HYPERVISOR_SERVER:
+        tags:
+          Description: null
+      INFRASTRUCTURE:
+        tags:
+          Description: null
+      INTERNET:
+        tags:
+          Description: null
+      IO_MODULE:
+        tags:
+          Description: null
+      IP:
+        tags:
+          Description: null
+      LICENSING_SERVICE:
+        tags:
+          Description: null
+      LOAD_BALANCER:
+        tags:
+          Description: null
+      LOGICAL_POOL:
+        tags:
+          Description: null
+      MAC:
+        tags:
+          Description: null
+      MOVER:
+        tags:
+          Description: null
+      NAMESPACE:
+        tags:
+          Description: null
+      NETWORK:
+        tags:
+          Description: null
+      NETWORKING_ENDPOINT:
+        tags:
+          Description: null
+      OPERATOR:
+        tags:
+          Description: null
+      PORT:
+        tags:
+          Description: null
+      PROCESSOR_POOL:
+        tags:
+          Description: null
+      REGION:
+        tags:
+          Description: null
+      RESERVED_INSTANCE:
+        tags:
+          Description: null
+      RESERVED_INSTANCE_SPECIFICATION:
+        tags:
+          Description: null
+      RIGHT_SIZER:
+        tags:
+          Description: null
+      SAVINGS:
+        tags:
+          Description: null
+      SERVICE:
+        tags:
+          Description: null
+      SERVICE_ENTITY_TEMPLATE:
+        tags:
+          Description: null
+      SERVICE_PROVIDER:
+        tags:
+          Description: null
+      STORAGE_CONTROLLER:
+        tags:
+          Description: null
+      STORAGE_TIER:
+        tags:
+          Description: null
+      STORAGE_VOLUME:
+        tags:
+          Description: null
+      SWITCH:
+        tags:
+          Description: null
+      THIS_ENTITY:
+        tags:
+          Description: null
+      THREE_TIER_APPLICATION:
+        tags:
+          Description: null
+      UNKNOWN:
+        tags:
+          Description: null
+      VIEW_POD:
+        tags:
+          Description: null
+      VIRTUAL_APPLICATION:
+        tags:
+          Description: null
+      VIRTUAL_DATACENTER:
+        tags:
+          Description: null
+      VLAN:
+        tags:
+          Description: null
+      VM_SPEC:
+        tags:
+          Description: null
+      VPOD:
+        tags:
+          Description: null
+      WEB_SERVER:
+        tags:
+          Description: null
+      WORKLOAD_CONTROLLER:
+        tags:
+          Description: null

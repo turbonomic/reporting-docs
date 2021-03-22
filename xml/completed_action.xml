@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--Generated on 2021-03-17T21:43:34.200-04:00-->
+<GeneratedDoc name="completed_action" type="table">
+	<Intro/>
+	<Items>
+		<Item name="recommendation_time">
+			<Field name="Type">timestamp with time zone</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="acceptance_time">
+			<Field name="Type">timestamp with time zone</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="completion_time">
+			<Field name="Type">timestamp with time zone</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="action_oid">
+			<Field name="Type">bigint</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="type">
+			<Field name="Type">action_type</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="severity">
+			<Field name="Type">severity</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="category">
+			<Field name="Type">action_category</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="target_entity_id">
+			<Field name="Type">bigint</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="involved_entities">
+			<Field name="Type">bigint[]</Field>
+			<Field name="Nullable">true</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="description">
+			<Field name="Type">text</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="savings">
+			<Field name="Type">double precision</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="final_state">
+			<Field name="Type">terminal_state</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="final_message">
+			<Field name="Type">text</Field>
+			<Field name="Nullable">false</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+		<Item name="attrs">
+			<Field name="Type">jsonb</Field>
+			<Field name="Nullable">true</Field>
+			<Field name="Primary">false</Field>
+			<Field name="Description"/>
+		</Item>
+	</Items>
+</GeneratedDoc>

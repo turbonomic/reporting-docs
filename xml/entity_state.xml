@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--Generated on 2021-03-17T21:43:34.178-04:00-->
+<GeneratedDoc name="entity_state" type="type">
+	<Intro/>
+	<Items>
+		<Item name="FAILOVER">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="MAINTENANCE">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="POWERED_OFF">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="POWERED_ON">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="SUSPENDED">
+			<Field name="Notes"/>
+		</Item>
+		<Item name="UNKNOWN">
+			<Field name="Notes"/>
+		</Item>
+	</Items>
+</GeneratedDoc>
