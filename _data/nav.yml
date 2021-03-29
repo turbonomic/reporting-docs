@@ -1,12 +1,12 @@
 toc:
   - title: Schema Tables
     subItems:
-    - page: entity
-      url: EntityTable.html
-      dir: page/EntityTable.html
+    - page: entity Table
+      url: entity.html
+      dir: page/entity.html
 
-  - title: Tutorials
+  - title: Configuration
     subItems:
-    - page: Hello World
-      url: Topology.html
-      dir: page/HelloWorld.html
+    - page: Using an External Timescale Database with Embedded Reporting
+      url: external-timescale.html
+      dir: page/config/external-timescale.html

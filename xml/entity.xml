@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!--Generated on 2021-03-17T21:43:34.227-04:00-->
 <GeneratedDoc name="entity" type="table">
-	<Intro/>
+	<Intro>This table lists a bunch of columns that have different information in them. 
+		We want to say something about htem, but don't know what to say.
+	</Intro>
 	<Items>
 		<Item name="oid">
 			<Field name="Type">bigint</Field>

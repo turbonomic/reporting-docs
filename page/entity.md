@@ -1,19 +1,14 @@
 ---
 layout: default
-title: entity
+title: entity Table
 ---
-
-# Table Description
 
 The Entity table contains information about which entities appear in the 
 topologies and when. Table gets updated with each market cycle.
 
-# Columns
+{% include genFiles/entity.html %}
 
-{% include entityTable.html %}
-
-
-# Sample Use Case
+## Sample Use Case
 For a given time interval, count number of PHYSICAL_MACHINE entities that have 4 CPUS.
 
     select count(*)
