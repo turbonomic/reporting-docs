@@ -7,43 +7,50 @@
 			<td><p>bigint</p></td>
 			<td><p>false</p></td>
 			<td><p>true</p></td>
-			<td><p></p></td>
+			<td><p>Unique entity identifier</p></td>
 		</tr>
 		<tr><td><p>type</p></td>
 			<td><p>entity_type</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>Type of entity.  
+				entity_type enum supports both entity and group types.</p></td>
 		</tr>
 		<tr><td><p>name</p></td>
 			<td><p>text</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>Entity’s current display name. 
+				While display names may change over time, the data tracks 
+				only the most recent display name.</p></td>
 		</tr>
 		<tr><td><p>environment</p></td>
 			<td><p>environment_type</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>The kind of environment the entity e
+				xists in (cloud, on-prem, hybrid, etc.). See the environment_type 
+				enum for the list of values.</p></td>
 		</tr>
 		<tr><td><p>attrs</p></td>
 			<td><p>jsonb</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>Information that is specific for the given entity type. </p></td>
 		</tr>
 		<tr><td><p>first_seen</p></td>
 			<td><p>timestamp with time zone</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>A topology timestamp for when this entity first appeared.</p></td>
 		</tr>
 		<tr><td><p>last_seen</p></td>
 			<td><p>timestamp with time zone</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>A topology timestamp for when this entity last 
+				appeared. A value of 9999-12-31T23:59:59 means the entity still exists 
+				in latest market cycle.</p></td>
 		</tr>
 	</tbody></table>
 </body></html>

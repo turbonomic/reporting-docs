@@ -9,43 +9,50 @@
 			<Field name="Type">bigint</Field>
 			<Field name="Nullable">false</Field>
 			<Field name="Primary">true</Field>
-			<Field name="Description"/>
+			<Field name="Description">Unique entity identifier</Field>
 		</Item>
 		<Item name="type">
 			<Field name="Type">entity_type</Field>
 			<Field name="Nullable">false</Field>
 			<Field name="Primary">false</Field>
-			<Field name="Description"/>
+			<Field name="Description">Type of entity.  
+				entity_type enum supports both entity and group types.</Field>
 		</Item>
 		<Item name="name">
 			<Field name="Type">text</Field>
 			<Field name="Nullable">false</Field>
 			<Field name="Primary">false</Field>
-			<Field name="Description"/>
+			<Field name="Description">Entity’s current display name. 
+				While display names may change over time, the data tracks 
+				only the most recent display name.</Field>
 		</Item>
 		<Item name="environment">
 			<Field name="Type">environment_type</Field>
 			<Field name="Nullable">true</Field>
 			<Field name="Primary">false</Field>
-			<Field name="Description"/>
+			<Field name="Description">The kind of environment the entity e
+				xists in (cloud, on-prem, hybrid, etc.). See the environment_type 
+				enum for the list of values.</Field>
 		</Item>
 		<Item name="attrs">
 			<Field name="Type">jsonb</Field>
 			<Field name="Nullable">true</Field>
 			<Field name="Primary">false</Field>
-			<Field name="Description"/>
+			<Field name="Description">Information that is specific for the given entity type. </Field>
 		</Item>
 		<Item name="first_seen">
 			<Field name="Type">timestamp with time zone</Field>
 			<Field name="Nullable">false</Field>
 			<Field name="Primary">false</Field>
-			<Field name="Description"/>
+			<Field name="Description">A topology timestamp for when this entity first appeared.</Field>
 		</Item>
 		<Item name="last_seen">
 			<Field name="Type">timestamp with time zone</Field>
 			<Field name="Nullable">false</Field>
 			<Field name="Primary">false</Field>
-			<Field name="Description"/>
+			<Field name="Description">A topology timestamp for when this entity last 
+				appeared. A value of 9999-12-31T23:59:59 means the entity still exists 
+				in latest market cycle.</Field>
 		</Item>
 	</Items>
 </GeneratedDoc>
