@@ -67,11 +67,10 @@
       
       <div id="navList">
         
-        <h4>Contents:</h4>
         <span>
           <div id="toc">
             
-            <article class="navList">
+            <article class="navList" style="top:10px;">
               <div id="tocresult" tabIdex="-1" >
                 <ul>
                   
@@ -81,7 +80,7 @@
                   <h5><a href="{{ 'index.html' | absolute_url }}">DOCUMENTATION HOME</a></h5>
                   {% endif %}
                   {% for item in site.data.nav.toc %}
-                    <h5>{{ item.title }}</h5>
+                  <h5 style="margin-bottom:1px;">{{ item.title }}</h5>
                     <ul>
                     {% for entry in item.subItems %}
                         {% if site.github.pages_hostname == "github.io" %}
@@ -89,6 +88,17 @@
                         {% else %}
                         <li><a href="{{ entry.dir | absolute_url }}">{{ entry.page }}</a></li>
                         {% endif %}
+                        <ul>
+                          
+                          {% for subEntry in entry.subSubItems %}
+                            {% if site.github.pages_hostname == "github.io" %}
+                          <li><a href="{{ site.github.baseurl }}{{ subEntry.dir | relative_url }}">{{ subEntry.page }}</a></li>
+                            {% else %}
+                          <li><a href="{{ subEntry.dir | absolute_url }}">{{ subEntry.page }}</a></li>
+                            {% endif %}
+                          {% endfor %}
+                          
+                        </ul>
                     {% endfor %}
                     </ul>
                   {% endfor %}

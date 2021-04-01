@@ -3,39 +3,7 @@ layout: default
 title: Using an External Timescale Database with Embedded Reporting
 ---
 
-Beginning with {{ site.data.vars.Product_Short }} 8.1.4, you can configure 
-External Reports to use an external deployment of TimescaleDB. To enable an 
-external deployment, you will:
-
-* Deploy or access the external TimescaleDB instance that you will use.
-  
-  This is a PostgreSQL server with the TimescaleDB extension. The DB server 
-  must be deployed in a way that is accessible to your installation of {{ site.data.vars.Product_Short }}.
-  It can be deployed on the cloud or in an on-prem VM. 
-  The Embedded Reports feature currently supports PostgreSQL 12.x and TimescaleDB 2.0.1.
-  
-  For information about installing Timescale, see the articls: 
-  [https://docs.timescale.com/v2.0/getting-started/installation](https://docs.timescale.com/v2.0/getting-started/installation)
-
-* Optionally, manually create users and databases on the TimescaleDB instance,
-  You can grant {{ site.data.vars.Product_Short }} superuser privileges on the DB 
-  instance, and it will then create the necessary databases and users automatically. 
-  If this is not appropriate for your environment, then you must access the DB 
-  and manually create the databases and user accounts that the Embedded Reports 
-  feature requires.
-  
-* Edit properties in the {{ site.data.vars.Product_Short }} cr.yaml file. 
-  
-  Note that the location of the cr.yaml file is different, depending on whether you 
-  are configuring an OVA installation or a Kubernetes Node installation of 
-  {{ site.data.vars.Product_Short }}.
-  
-* Optionally, enable secure connections between {{ site.data.vars.Product_Short }} and the Timescale DB instance
-
-
-
-
-
+The features described here are supported beginning in {{ site.data.vars.Product_Short }} v8.1.4.
 
 If you wish to manage the TimescaleDB database server that will house data for
 Turbonomic's Embedded Reporting feature, you can do so fairly easily, by editing

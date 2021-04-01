@@ -23,7 +23,7 @@ ul.fancytree-container {
     font-size: 10pt;
     white-space: nowrap;
     padding: 0px;
-    margin: 0;
+    margin: 0px;
     background-color: white;
     border: 1px dotted gray;
     overflow: auto;
@@ -84,6 +84,7 @@ span.fancytree-expander,
 span.fancytree-radio,
 span.fancytree-custom-icon {
     margin-top: 2px;
+    margin-left: 10px;
 }
 /* Used by iconclass option */
 span.fancytree-custom-icon {
@@ -287,7 +288,7 @@ span.fancytree-node {
     /* See #117 */
     display: inherit;
     width: 100%;
-    margin-top: 0px;
+    margin-top: 2px;
     min-height: 16px;
 }
 span.fancytree-title {
@@ -478,6 +479,7 @@ ul.fancytree-ext-wide span.fancytree-node span.fancytree-title {
  */
 span.fancytree-title {
     border: 1px solid transparent;
+    margin-left: 10px;
 }
 .fancytree-container.fancytree-treefocus span.fancytree-focused span.fancytree-title {
     border-color: #3399ff;

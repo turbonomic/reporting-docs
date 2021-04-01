@@ -1,145 +1,108 @@
 ---
 layout: default
-title: Using an External Timescale Database with Embedded Reporting
+title: Manually Creating Users and Databases
 ---
+For {{ site.data.vars.Product_Short }} to automatically create the required databases for 
+Embedded Reports, the {{ site.data.vars.Product_Short }} cr.yaml file must specify credentials 
+for a user account that has global R/W access to the DB service. To do this you can:
 
-Beginning with {{ site.data.vars.Product_Short }} 8.1.4, you can configure 
-External Reports to use an external deployment of TimescaleDB. To enable an 
-external deployment, you will:
-
-* Deploy or access the external TimescaleDB instance that you will use.
+* Store the account credentials in Kubernetes Secrets, and then specify the secret wherever the
+  cr.yaml file needs to refer to the user account. This is the recommended method. 
+  (See Creating Secret Keys for DB Access.)
   
-  This is a PostgreSQL server with the TimescaleDB extension. The DB server 
-  must be deployed in a way that is accessible to your installation of {{ site.data.vars.Product_Short }}.
-  It can be deployed on the cloud or in an on-prem VM. 
-  The Embedded Reports feature currently supports PostgreSQL 12.x and TimescaleDB 2.0.1.
-  
-  For information about installing Timescale, see the articls: 
-  [https://docs.timescale.com/v2.0/getting-started/installation](https://docs.timescale.com/v2.0/getting-started/installation)
+* Store the credentials in cleartext in the cr.yaml file.
 
-* Optionally, manually create users and databases on the TimescaleDB instance,
-  You can grant {{ site.data.vars.Product_Short }} superuser privileges on the DB 
-  instance, and it will then create the necessary databases and users automatically. 
-  If this is not appropriate for your environment, then you must access the DB 
-  and manually create the databases and user accounts that the Embedded Reports 
-  feature requires.
-  
-* Edit properties in the {{ site.data.vars.Product_Short }} cr.yaml file. 
-  
-  Note that the location of the cr.yaml file is different, depending on whether you 
-  are configuring an OVA installation or a Kubernetes Node installation of 
-  {{ site.data.vars.Product_Short }}.
-  
-* Optionally, enable secure connections between {{ site.data.vars.Product_Short }} and the Timescale DB instance
+If this is appropriate for your environment, then you can skip this section and go 
+directly to [Editing the Platform CR File](external-timescale-editCr.html). That is 
+where you will specify the global R/W account that Embedded Reports 
+can use to access your TimescaleDB.
+
+If neither of these methods are appropriate for your environment, then you must access 
+the DB service with a R/W account and manually add the databases and user accounts that 
+Embedded Reports can use. Then, after you have added the databases to your TimescaleDB, 
+you will edit the {{ site.data.vars.Product_Short }} cr.yaml file to make use of these 
+databases.
+
+## Adding Databases and Users to TimescaleDB
+
+The following steps will properly provision the database objects that Embedded Reporting requires.
+Note that these examples use default names for illustration. You can substitute your own names 
+for databases and users. If you do provide your own naming, you must be sure to match that 
+naming as you edit the {{ site.data.vars.Product_Short }} cr.yaml file.
+
+To provision the databases and users, open a command session on the TimescaleDB, and execute 
+the following commands:
+​
+* Create two databases - one for `extractor` data, one for `grafana` data:  
+  The extractor database manages the {{ site.data.vars.Product_Short }} data stream, and 
+  the grafana database manages data for reporting within Grafana. 
+  ```
+  CREATE DATABASE extractor;
+  CREATE DATABASE grafana;
+  ```
+* Create database users:  
+  For the extractor database, you will create a R/W user, a read-only group, and read-only user. 
+  You will also create a R/W user for the grafana database.
+  ```
+  -- main read/write user for extractor data
+  CREATE USER extractor PASSWORD '<password>';
+  -- group for users with read-only access to extractor data
+  CREATE ROLE readers_extractor_extractor;
+  -- read-only user for extractor data as a member of that group
+  CREATE USER query PASSWORD '<password>';
+  GRANT CONNECT ON DATABASE extractor TO readers_extractor_extractor;
+  GRANT readers_extractor_extractor TO query;
+  -- read-write user for grafana data
+  CREATE USER grafana_backend PASSWORD '<password>';
+  ```
+* Create and prepare the schema for extractor data  
+  Connect to the extractor database and execute these commands:
+  ```
+  CREATE SCHEMA extractor;
+  -- read/write user has full access
+  GRANT ALL PRIVILEGES ON SCHEMA extractor TO extractor;
+  -- all users in readers group have read-only access
+  GRANT USAGE on SCHEMA extractor TO readers_extractor_extractor;
+  GRANT SELECT ON ALL TABLES IN SCHEMA extractor TO readers_extractor_extractor;
+  -- make sure readers get access to any tables added in the future
+  ALTER DEFAULT PRIVILEGES IN SCHEMA extractor GRANT SELECT ON TABLES TO readers_extractor_extractor;
+  -- make the extractor and query users use the extractor schema by default
+  ALTER ROLE extractor SET search_path TO `extractor`;
+  ALTER ROLE query SET search_path TO `extractor`;
+  -- install the timescaledb plugin into the extractor database using the extractor schema
+  CREATE EXTENSION timescaledb SCHEMA extractor;
+  ```
+* Create and prepare the schema for grafana data  
+  Connect to the grafana database and execute these commands:
+  ```
+  CREATE SCHEMA grafana;
+  -- read/write user has full access
+  GRANT ALL PRIVILEGES ON SCHEMA grafana TO grafana_backend;
+  -- make sure the grafana user uses the grafana schema by default
+  ALTER ROLE grafana_backend SET search_path TO 'grafana';
+  ```
+
+The above commands provision the required databases and users. Your provisioning must be 
+complete and correct for Embedded Reports to properly collect data and display it 
+in Grafana reports and dashboards. 
 
 
+## Editing the CR File for Manually Created Databases
 
+After you have provisioned the required database objects, you must edit the 
+{{ site.data.vars.Product_Short }} cr.yaml file to make use of these 
+databases. 
 
+> **NOTE:** If you provided default names when you provisioned the 
+> database objects, users, and user roles, then Embedded Reports will automatically 
+> recognize those objects. You do not need to edit the cr.yaml file.
+​
 
+Here are the full set of properties that configure required names and passwords. Each is shown with 
+the default that will be assumed if that particular property is left out, so if you're happy with 
+those choices you can leave them out. (You will still be responsible for provisioning those objects). 
+​
 
-If you wish to manage the TimescaleDB database server that will house data for
-Turbonomic's Embedded Reporting feature, you can do so fairly easily, by editing
-a few of the properties in your CR (Custom Resources) file. This file will be
-located at `~/kubernetes/operator/deploy/crds/charts_v1alpha1_xl_cr.yaml`.
-​
-### A Bit About YAML Files
-​
-> Note: There are a few rules you must bear in mind whenever editing a YAML
-> file such as this one:
-> * Always uses spaces, not tabs, for all indentation. If your editor of
->   choice makes this difficult, you can use the linux `expand` utility
->   when you're done, to convert tabs to equivalent spaces.
-> * Be careful to keep the same indentation for all properties in a given
->   section.
-> * Never use the same property name twice in the same section. Doing this
->   will render the YAML file invalid, though in all likelihood you will not
->   see any notification of a problem. Rather, all but one of the property
->   definitions will be silently ignored. 
-​
-In this document we will refer to specific properties in the CR file using a "path" like 
-`/spec/global/repository`. This means the property you find as follows:
-​
-1. Find a line that says `spec:` with no indentation at all.
-2. Between that line and the next unindented line (not counting comments, which start with `#`),
-   find a line that says `global:` and is at the next level of indentation.
-3. Between that line and the next line with the same indentation, find a line that starts with
-   `repository:`. That line is where the addressed property is defined.
-   
-Here's an example, where we're looking for the property at `/spec/global/repository`:
-```
-apiVersion: charts.helm.k8s.io/v1alpha1
-kind: Xl
-metadata:
-  name: xl-release
-spec:
-  properties:
-    global:
-      repository:               # This is NOT the correct property
-        ...
-      
-  # Global settings
-  global:
-    repository:                 # This is the one we're after
-```
-The first `repository` poperty is not at `/spec/global/repository`, but at 
-`/spec/properties/global/repository`. Step 2 doesn't apply because the `global:` line is not
-at the _next_ level of indentation, but the one after that. It is easy to get such cases confused 
-while editing YAML.
-​
-## Basic Scenario - Nothing Provisioned
-​
-In the most basic scenario of an external server, a PostgreSQL server with the TimescaleDB
-extension is provisioned somewhere in the cloud or in an on-prem VM, but no databases or users are
-provisioned for use by Turbonomic. We currently support version 12.x and TimescaleDB 2.0.1.
-Documentation regarding basic installation can be found 
-[here](https://docs.timescale.com/v2.0/getting-started/installation)
-​
-The IP address or host name of the provisioned server can be configured in the CR file at
-`/spec/global/externalTimescaleDBIP`, as in:
-​
-```
-...
-spec:
-  ...
-  global:
-    ...
-    externalTimescaleDBIP: <host-or-IP>
-```
-(Here we have included elipses -`...`- to illustrate that other lines may appear; we will omit
-these in later illustrations.)
-​
-​
-The value of this property should be either the fully-qualified domain name of the external server 
-or its IP address, replacing the placeholder shown above including angle brackets.
-​
-In this scenario, upon initial startup of the appliance, needed databases and logins will be 
-provisioned, using a root (super-user) connection for such operations. By default, we will use
-the `postgres` login, and a password that can you can obtain from your sales or field representative.
-If you wish to define your own values, you can configure them in the 
-`/spec/properties/global/dbs/postgresDefault` property block as follows:
-​
-```
-spec:
-  properties:
-    global:
-      dbs:
-        postgresDefault:
-          rootUserName: <root-user>
-          rootPassword: <root-password>  
-```
-​
-## Pre-Provisioned Databases and Logins
-​
-In the second scenario, rather than having Turbonomic perform provisioning operations, you take
-care of provisioning yourself. You will not need to configure root credentials for Turbonomic, and
-you will have the option of choosing your own names for databases, schemas, and logins. If
-provisioning is incomplete or incorrect, or if incorrect property values are configured, Turbonomic
-will be unable to collect data for Embedded Reporting and/or display reports.
-​
-Here are the full set of properties that configure required names and passwords. Each is shown with
-the default that will be assumed if that particular property is left out, so if you're happy with
-those choices you can leave them out. (You will still be responsible for provisioning those objects).
-​
 These properties are spread among the `/spec/properties/global/dbs`, `/spec/properties/extractor/dbs`
 and `/spec/grafana/grafana.ini/database` blocks:
 ​
@@ -277,11 +240,3 @@ please substitute your preferred names, matching what you have configured in you
   ALTER ROLE grafana_backend SET search_path TO 'grafana';
   ```
 ​
-## Enabling Secure Connections
-​
-Customers who wish to enable TLS/SSL for their database connections are referred ot the PostgreSQL
-documentation [here](https://www.postgresql.org/docs/12/ssl-tcp.html).
-​
-We have verified that the steps outlined in that document to create a self-signed certificate
-produce a server that functions properly with all components of Embedded Reporting. Of course, we
-do not recommend that customers use self-signed certificates in production instances.
