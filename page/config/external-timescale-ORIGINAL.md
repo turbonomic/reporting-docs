@@ -49,7 +49,7 @@ spec:
   global:
     repository:                 # This is the one we're after
 ```
-The first `repository` poperty is not at `/spec/global/repository`, but at 
+The first `repository` property is not at `/spec/global/repository`, but at 
 `/spec/properties/global/repository`. Step 2 doesn't apply because the `global:` line is not
 at the _next_ level of indentation, but the one after that. It is easy to get such cases confused 
 while editing YAML.
@@ -73,7 +73,7 @@ spec:
     ...
     externalTimescaleDBIP: <host-or-IP>
 ```
-(Here we have included elipses -`...`- to illustrate that other lines may appear; we will omit
+(Here we have included ellipses -`...`- to illustrate that other lines may appear; we will omit
 these in later illustrations.)
 ​
 ​
@@ -129,11 +129,12 @@ spec:
           password: <default-password>
         grafana:
           scehamName: grafana
-  grafana.ini:
-    database:
-      name: grafana
-      user: grafana_backend
-      password: <default-password>   
+  grafana:
+    grafana.ini:
+      database:
+        name: grafana
+        user: grafana_backend
+        password: <default-password>   
 ```
 ​
 A few points on why this structure appears as it does:
@@ -147,7 +148,7 @@ A few points on why this structure appears as it does:
   the `extractor` component by the name `"dbs.extractor"`. Similarly, the internal name used for the
   `query` login to the same database is `"dbs.extractor.qeury"`. The common prefix means that the
   `databaseName` and `schemaName` properties will be visible and identical for these two logins.
-* There's another database used by the `grafana` component, but provisioning responsibiltiy for that
+* There's another database used by the `grafana` component, but provisioning responsibility for that
   database falls to the `extractor` component as well, so its properties could be specified in the
   `/spec/properties/extractor/dbs/grafana` block. However, we only specify `schemaName` above. 
   The reason is that we must also provide these values to the `grafana` component via property names
@@ -182,8 +183,8 @@ property blocks like `/spec/properties/extractor/dbs/grafana` or
 ​
 These properties have the following meanings:
 ​
-* `shouldProvisionDatabase`: Determintes whether Turbonomic will attempt to provision any database
-  in scope of the the definition. This is `true` by default for the Embedded Reporting databases
+* `shouldProvisionDatabase`: Determines whether Turbonomic will attempt to provision any database
+  in scope of the definition. This is `true` by default for the Embedded Reporting databases
   in order to support the default behavior of provisioning all databases and users during initial
   startup.
 * `shouldProvisionUser`: Determines whether Turbonomic will attempt to provision any logins in
@@ -201,6 +202,10 @@ These properties have the following meanings:
 The following operations will properly provision all database objects required by Embedded Reporting,
 should you choose to take responsibility for that. We use the default names here for illustration;
 please substitute your preferred names, matching what you have configured in your CR file.
+
+N.B.: With one exception, all operartions should be performed using a super-user login (usually
+`postgres`). Where a group of operations requires being logged into a particular database, or with
+a particular non-superuser login, such requirements are specified prior to the operation commands.
 ​
 * Create databases - one for `extractor` data, one for `grafana` data:
   ```
@@ -218,7 +223,7 @@ please substitute your preferred names, matching what you have configured in you
   GRANT CONNECT ON DATABASE extractor TO readers_extractor_extractor;
   GRANT readers_extractor_extractor TO query;
   -- read-write user for grafana data
-  CREATE USER grafana_backend PASSWORD `<password>`;
+  CREATE USER grafana_backend PASSWORD '<password>';
   ```
 * Create and prepare the schema for extractor data - must be you connected to extractor database
   ```
@@ -228,13 +233,16 @@ please substitute your preferred names, matching what you have configured in you
   -- all users in readers group have read-only access
   GRANT USAGE on SCHEMA extractor TO readers_extractor_extractor;
   GRANT SELECT ON ALL TABLES IN SCHEMA extractor TO readers_extractor_extractor;
-  -- make sure readers get access to any tables added in the future
-  ALTER DEFAULT PRIVILEGES IN SCHEMA extractor GRANT SELECT ON TABLES TO readers_extractor_extractor;
   -- make the extractor and query users use the extractor schema by default
-  ALTER ROLE extractor SET search_path TO `extractor`;
-  ALTER ROLE query SET search_path TO `extractor`;
+  ALTER ROLE extractor SET search_path TO 'extractor';
+  ALTER ROLE query SET search_path TO 'extractor';
   -- install the timescaledb plugin into the extractor database using the extractor schema
   CREATE EXTENSION timescaledb SCHEMA extractor;
+  ```
+* Ensure that readers get access to any tables added in the future - you must be _logged in_ using
+  the main extractor user (_not_ a superuser) and connected to the extractor database for this step
+  ```
+  ALTER DEFAULT PRIVILEGES IN SCHEMA extractor GRANT SELECT ON TABLES TO readers_extractor_extractor;
   ```
 * Create and prepare the schema for grafana data - you must be connected to grafana database
   ```
