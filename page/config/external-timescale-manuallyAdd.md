@@ -27,7 +27,9 @@ databases.
 
 The following steps will properly provision the database objects that Embedded Reporting requires.
 Note that these examples use default names for illustration. You can substitute your own names 
-for databases and users. If you do provide your own naming, you must be sure to match that 
+for databases and users. 
+
+If you use the default naming, then you will not have to edit the If you do provide your own naming, you must be sure to match that 
 naming as you edit the {{ site.data.vars.Product_Short }} cr.yaml file.
 
 To provision the databases and users, open a command session on the TimescaleDB, and execute 
@@ -89,13 +91,14 @@ in Grafana reports and dashboards.
 
 ## Editing the CR File for Manually Created Databases
 
-After you have provisioned the required database objects, you must edit the 
+After you have provisioned the required database objects, you should edit the 
 {{ site.data.vars.Product_Short }} cr.yaml file to make use of these 
 databases. 
 
 > **NOTE:** If you provided default names when you provisioned the 
 > database objects, users, and user roles, then Embedded Reports will automatically 
-> recognize those objects. You do not need to edit the cr.yaml file.
+> recognize those objects. You do not need to edit the cr.yaml file. The examples 
+> above give the default names.
 ​
 
 Here are the full set of properties that configure required names and passwords. Each is shown with 
