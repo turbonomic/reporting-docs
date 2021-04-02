@@ -134,7 +134,7 @@ spec:
       database:
         name: grafana
         user: grafana_backend
-        password: <default-password>   
+        password: <default-password>
 ```
 ​
 A few points on why this structure appears as it does:
@@ -261,3 +261,13 @@ documentation [here](https://www.postgresql.org/docs/12/ssl-tcp.html).
 We have verified that the steps outlined in that document to create a self-signed certificate
 produce a server that functions properly with all components of Embedded Reporting. Of course, we
 do not recommend that customers use self-signed certificates in production instances.
+​
+In addition to configuring postgres, customers who require SSL should make
+the following addition in their CR file, adding a setting for `ssl_mode` at 
+`/spec/grafana/grafana.ini/database`:
+```
+spec:
+  grafana:
+    grafana.ini:
+      ssl_mode: required
+```
