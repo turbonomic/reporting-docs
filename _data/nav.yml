@@ -1,13 +1,37 @@
 toc:
   - title: Schema Tables
     subItems:
+    - page: completed_action Table
+      url: completed_action.html
+      dir: page/completed_action.html
     - page: entity Table
       url: entity.html
       dir: page/entity.html
+    - page: historical_entity_attrs Table
+      url: historical_entity_attrs.html
+      dir: page/historical_entity_attrs.html
+    - page: metric Table
+      url: metric.html
+      dir: page/metric.html
+    - page: pending_action Table
+      url: pending_action.html
+      dir: page/pending_action.html
+    - page: scope Table
+      url: scope.html
+      dir: page/scope.html
+    - page: wasted_file Table
+      url: wasted_file.html
+      dir: page/wasted_file.html
 #    - page: entity Table
 #      url: entity.html
 #      dir: page/entity.html
 
+
+  - title: Reference Material
+    subItems:
+    - page: Enum Reference
+      url: enum.html
+      dir: page/enum.html
 
   - title: Andy's Original Timescale Doc
     subItems:
