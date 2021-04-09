@@ -32,6 +32,9 @@ toc:
     - page: Enum Reference
       url: enum.html
       dir: page/enum.html
+    - page: Action Categories
+      url: action_categories.html
+      dir: page/enum/action_category.html
 
   - title: Andy's Original Timescale Doc
     subItems:
