@@ -49,6 +49,14 @@ h2 {
     margin-top: 40px;
 }
 
+td h2.genData {
+    display: none;
+    /* 
+    font-size:16px !important;
+    margin-top: 10px !important;
+    */
+}
+
 b {
     font-weight: 400;
 }
@@ -648,6 +656,17 @@ span.click {
     font-size: 11px !important;
     text-decoration: none;
     cursor: pointer;
+}
+
+td li {
+    font-size:12px !important;
+    margin-top: 1px !important;
+}
+
+td li p {
+    font-size:12px !important;
+    margin: 0;
+    padding: 0;
 }
 
 li.SearchList {

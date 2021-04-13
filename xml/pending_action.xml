@@ -19,7 +19,8 @@
 			<Field name="Type">action_type</Field>
 			<Field name="Nullable">false</Field>
 			<Field name="Primary">false</Field>
-			<Field name="Description"/>
+			<Field name="Description"><p>Can be one of:</p>
+				{% include genFiles/action_type.html %}</Field>
 		</Item>
 		<Item name="severity">
 			<Field name="Type">severity</Field>
