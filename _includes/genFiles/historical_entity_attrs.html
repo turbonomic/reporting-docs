@@ -1,5 +1,5 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>historical_entity_attrs</title></head><body><h2>historical_entity_attrs table</h2>
-	<p></p>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>historical_entity_attrs</title></head><body><h2 class="genData">historical_entity_attrs table</h2>
+	
 	<table><tbody><tr><th><p>Column Name</p></th><th><p>Type</p></th><th><p>Nullable</p></th><th><p>Primary</p></th><th><p>Description</p></th></tr>
 		<tr><td><p>time</p></td>
 			<td><p>timestamp with time zone</p></td>
@@ -15,10 +15,10 @@
 				pertains to.</p></td>
 		</tr>
 		<tr><td><p>type</p></td>
-			<td><p>attr_type</p></td>
+			<td><p><a href="enum/attr_type.html">attr_type</a>attr_type</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td><p>{% include genFiles/attr_type.html %}</p></td>
+			<td>The attribute type.</td>
 		</tr>
 		<tr><td><p>bool_value</p></td>
 			<td><p>boolean</p></td>
@@ -34,7 +34,7 @@
 			<td><p>If the attribute is an integer, this is
 				the integer value. If the attribute is
 				an enum, this is the oid of the
-				enum in the <code>pg_enum</code> table (to
+				enum in the pg_enum table (to
 				guard against name or order
 				changes). The int_value should be
 				castable to the enum via a custom
@@ -72,7 +72,7 @@
 			<td><p>If the attribute is a list of ints, this is
 				the value. If the attribute is a list of
 				enums, these are the OIDs of the
-				enums in the <code>pg_enum</code> table (to
+				enums in the pg_enum table (to
 				guard against name or order
 				changes).</p></td>
 		</tr>

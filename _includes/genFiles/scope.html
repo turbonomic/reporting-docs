@@ -1,5 +1,5 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>scope</title></head><body><h2>scope table</h2>
-	<p></p>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>scope</title></head><body><h2 class="genData">scope table</h2>
+	
 	<table><tbody><tr><th><p>Column Name</p></th><th><p>Type</p></th><th><p>Nullable</p></th><th><p>Primary</p></th><th><p>Description</p></th></tr>
 		<tr><td><p>seed_oid</p></td>
 			<td><p>bigint</p></td>
@@ -14,10 +14,10 @@
 			<td><p>oid of the entity that is part of that scope.</p></td>
 		</tr>
 		<tr><td><p>scoped_type</p></td>
-			<td><p>entity_type</p></td>
+			<td><p><a href="enum/entity_type.html">entity_type</a></p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td><p><a href="enum/entity_type.html">Entity type</a> of the scoped entity</p></td>
+			<td><p>The type of entity.</p></td>
 		</tr>
 		<tr><td><p>start</p></td>
 			<td><p>timestamp with time zone</p></td>
@@ -30,7 +30,7 @@
 			<td><p>timestamp with time zone</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td><p>A timestamp of last topology in which this relationship appeared. A value of <code>9999-12-31T23:59:59</code> means
+			<td><p>A timestamp of last topology in which this relationship appeared. A value of 9999-12-31T23:59:59 means
 				the relationship is not yet known to have terminated.</p></td>
 		</tr>
 	</tbody></table>

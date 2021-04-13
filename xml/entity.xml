@@ -17,6 +17,7 @@
 			<Field name="Nullable">false</Field>
 			<Field name="Primary">false</Field>
 			<Field name="Description"><p>Type of entity. This field supports both entity and group types.</p>
+				{% include genFiles/entity_type.html %}
 			</Field>
 		</Item>
 		<Item name="name">
