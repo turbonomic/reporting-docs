@@ -5,73 +5,88 @@
 			<td><p>timestamp with time zone</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>Timestamp on the topology from
+				which this metric was obtained. For
+				headroom metrics this is the time at
+				which the headroom plan was
+				created.</p></td>
 		</tr>
 		<tr><td><p>entity_oid</p></td>
 			<td><p>bigint</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>Oid of the entity to which the metric
+				applies.</p></td>
 		</tr>
 		<tr><td><p>type</p></td>
 			<td><p>metric_type</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>The <a href="enum/metric_type.html">metric type</a>.</p></td>
 		</tr>
 		<tr><td><p>provider_oid</p></td>
 			<td><p>bigint</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>Oid of the seller of this commodity.
+			</p></td>
 		</tr>
 		<tr><td><p>key</p></td>
 			<td><p>text</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>The commodity key. This value can
+				be null if no key is present.</p></td>
 		</tr>
 		<tr><td><p>current</p></td>
 			<td><p>double precision</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>Current utilization of the commodity on the selling entity</p></td>
 		</tr>
 		<tr><td><p>capacity</p></td>
 			<td><p>double precision</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>Capacity of the commodity on the selling
+				entity</p></td>
 		</tr>
 		<tr><td><p>utilization</p></td>
 			<td><p>double precision</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>Utilization of the commodity on the selling
+				entity.
+			</p></td>
 		</tr>
 		<tr><td><p>consumed</p></td>
 			<td><p>double precision</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>Amount of the commodity currently
+				used by the buying entity</p></td>
 		</tr>
 		<tr><td><p>peak_current</p></td>
 			<td><p>double precision</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>Peak amount of the
+				commodity of the selling entity</p></td>
 		</tr>
 		<tr><td><p>peak_consumed</p></td>
 			<td><p>double precision</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>Peak amount of the commodity
+				currently used by the buying entity
+			</p></td>
 		</tr>
 		<tr><td><p>entity_type</p></td>
 			<td><p>entity_type</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>The <a href="enum/entity_type.html">entity type</a> of the entity in the <code>entity_oid</code> column.
+			</p></td>
 		</tr>
 	</tbody></table>
 </body></html>
