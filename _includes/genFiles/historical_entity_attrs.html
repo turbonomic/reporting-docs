@@ -5,79 +5,104 @@
 			<td><p>timestamp with time zone</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>The time this attribute was recorded.</p></td>
 		</tr>
 		<tr><td><p>entity_oid</p></td>
 			<td><p>bigint</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>The oid of the entity the attribute
+				pertains to.</p></td>
 		</tr>
 		<tr><td><p>type</p></td>
 			<td><p>attr_type</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>{% include genFiles/attr_type.html %}</p></td>
 		</tr>
 		<tr><td><p>bool_value</p></td>
 			<td><p>boolean</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>If the attribute is boolean, this is the
+				boolean value.</p></td>
 		</tr>
 		<tr><td><p>int_value</p></td>
 			<td><p>int</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>If the attribute is an integer, this is
+				the integer value. If the attribute is
+				an enum, this is the oid of the
+				enum in the <code>pg_enum</code> table (to
+				guard against name or order
+				changes). The int_value should be
+				castable to the enum via a custom
+				cast (e.g. int	_value::entity_state =
+				'POWERED_ON').</p></td>
 		</tr>
 		<tr><td><p>long_value</p></td>
 			<td><p>bigint</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>If the attribute is a long, this is the
+				long value.
+			</p></td>
 		</tr>
 		<tr><td><p>double_value</p></td>
 			<td><p>double precision</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>If the attribute is a double, this is the
+				double value.
+			</p></td>
 		</tr>
 		<tr><td><p>string_value</p></td>
 			<td><p>text</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>If the attribute is a string, this is the
+				string value.
+			</p></td>
 		</tr>
 		<tr><td><p>int_arr_value</p></td>
 			<td><p>int[]</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>If the attribute is a list of ints, this is
+				the value. If the attribute is a list of
+				enums, these are the OIDs of the
+				enums in the <code>pg_enum</code> table (to
+				guard against name or order
+				changes).</p></td>
 		</tr>
 		<tr><td><p>long_arr_value</p></td>
 			<td><p>bigint[]</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>If the attribute is a list of longs, this
+				is the value.</p></td>
 		</tr>
 		<tr><td><p>string_arr_value</p></td>
 			<td><p>text[]</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>If the attribute is a list of strings, this
+				is the value.</p></td>
 		</tr>
 		<tr><td><p>double_arr_value</p></td>
 			<td><p>float8[]</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>If the attribute is a list of doubles,
+				this is the value.</p></td>
 		</tr>
 		<tr><td><p>json_value</p></td>
 			<td><p>jsonb</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p></p></td>
+			<td><p>If the attribute is a JSON object, this
+				is the value.</p></td>
 		</tr>
 	</tbody></table>
 </body></html>
