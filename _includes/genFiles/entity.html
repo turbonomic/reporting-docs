@@ -1,22 +1,20 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>entity</title></head><body><h2 class="genData">entity table</h2>
-	This table lists a bunch of columns that have different information in them. 
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>entity</title></head><body><h2>entity table</h2>
+	<p>This table lists a bunch of columns that have different information in them. 
 		We want to say something about htem, but don't know what to say.
-	
+	</p>
 	<table><tbody><tr><th><p>Column Name</p></th><th><p>Type</p></th><th><p>Nullable</p></th><th><p>Primary</p></th><th><p>Description</p></th></tr>
 		<tr><td><p>oid</p></td>
 			<td><p>bigint</p></td>
 			<td><p>false</p></td>
 			<td><p>true</p></td>
-			<td><p>Unique entity identifier</p>
-			</td>
+			<td><p>Unique entity identifier</p></td>
 		</tr>
 		<tr><td><p>type</p></td>
-			<td><p><a href="enum/entity_type.html">entity_type</a></p></td>
+			<td><p>entity_type</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
 			<td><p>Type of entity. This field supports both entity and group types.</p>
-				<p><a href="enum/entity_type.html">Valid entity types</a></p>
-			</td>
+				<p><a href="enum/entity_type.html">Valid entity types</a></p></td>
 		</tr>
 		<tr><td><p>name</p></td>
 			<td><p>text</p></td>
@@ -24,41 +22,35 @@
 			<td><p>false</p></td>
 			<td><p>Entity’s current display name. 
 				While display names may change over time, the data tracks 
-				only the most recent display name.</p>
-			</td>
+				only the most recent display name.</p></td>
 		</tr>
 		<tr><td><p>environment</p></td>
 			<td><p>environment_type</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p>The kind of environment the entity exists in:</p>
-				{% include genFiles/environment_type.html %}
-			</td>
+			<td><p>The kind of environment the entity exists in.</p>
+				<p>{% include genFiles/environment_type.html %}</p></td>
 		</tr>
 		<tr><td><p>attrs</p></td>
 			<td><p>jsonb</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td><p>Information that is specific for the given entity type:</p>
-				{% include genFiles/attr_type.html %}
-			</td>
+			<td><p>Information that is specific for the given entity type. </p>
+				<p>{% include genFiles/attr_type.html %}</p></td>
 		</tr>
 		<tr><td><p>first_seen</p></td>
 			<td><p>timestamp with time zone</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td><p>A topology timestamp for when this entity first appeared.</p>
-			</td>
+			<td><p>A topology timestamp for when this entity first appeared.</p></td>
 		</tr>
 		<tr><td><p>last_seen</p></td>
 			<td><p>timestamp with time zone</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
 			<td><p>A topology timestamp for when this entity last 
-				appeared.</p>
-				<p>A value of 9999-12-31T23:59:59 means the entity still exists 
-				in latest market cycle.</p>
-				</td>
+				appeared. A value of 9999-12-31T23:59:59 means the entity still exists 
+				in latest market cycle.</p></td>
 		</tr>
 	</tbody></table>
 </body></html>
