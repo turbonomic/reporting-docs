@@ -17,7 +17,6 @@
 			<Field name="Nullable">false</Field>
 			<Field name="Primary">false</Field>
 			<Field name="Description"><p>Type of entity. This field supports both entity and group types.</p>
-				<p><a href="enum/entity_type.html">Valid entity types</a></p>
 			</Field>
 		</Item>
 		<Item name="name">
@@ -30,19 +29,18 @@
 			</Field>
 		</Item>
 		<Item name="environment">
-			<Field name="Type">environment_type</Field>
+			<Field name="Type"><a href="enum/environment_type.html">environment_type</a></Field>
 			<Field name="Nullable">true</Field>
 			<Field name="Primary">false</Field>
 			<Field name="Description"><p>The kind of environment the entity exists in:</p>
-				{% include genFiles/environment_type.html %}
 			</Field>
 		</Item>
 		<Item name="attrs">
 			<Field name="Type">jsonb</Field>
 			<Field name="Nullable">true</Field>
 			<Field name="Primary">false</Field>
-			<Field name="Description"><p>Information that is specific for the given entity type:</p>
-				{% include genFiles/attr_type.html %}
+			<Field name="Description"><p>Information that is specific for the given entity type.</p>
+				<p>{% include genFiles/attr_type.html %}</p>
 			</Field>
 		</Item>
 		<Item name="first_seen">

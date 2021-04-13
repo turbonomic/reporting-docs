@@ -7,31 +7,35 @@
 			<Field name="Type">text</Field>
 			<Field name="Nullable">false</Field>
 			<Field name="Primary">false</Field>
-			<Field name="Description"/>
+			<Field name="Description"><p>The path of the file</p></Field>
 		</Item>
 		<Item name="file_size_kb">
 			<Field name="Type">bigint</Field>
 			<Field name="Nullable">false</Field>
 			<Field name="Primary">false</Field>
-			<Field name="Description"/>
+			<Field name="Description"><p>The size of the file
+			</p></Field>
 		</Item>
 		<Item name="modification_time">
 			<Field name="Type">timestamp with time zone</Field>
 			<Field name="Nullable">false</Field>
 			<Field name="Primary">false</Field>
-			<Field name="Description"/>
+			<Field name="Description"><p>Last time the file was modified</p></Field>
 		</Item>
 		<Item name="storage_oid">
 			<Field name="Type">bigint</Field>
 			<Field name="Nullable">false</Field>
 			<Field name="Primary">false</Field>
-			<Field name="Description"/>
+			<Field name="Description"><p>The oid of the storage which contains the
+				file
+			</p></Field>
 		</Item>
 		<Item name="storage_name">
 			<Field name="Type">text</Field>
 			<Field name="Nullable">false</Field>
 			<Field name="Primary">false</Field>
-			<Field name="Description"/>
+			<Field name="Description"><p>Name of the storage (denormalized
+				for reporting)</p></Field>
 		</Item>
 	</Items>
 </GeneratedDoc>
