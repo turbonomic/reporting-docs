@@ -1,66 +1,74 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>pending_action</title></head><body><h2 class="genData">pending_action table</h2>
-	
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>pending_action</title></head><body><h2>pending_action table</h2>
+	<p></p>
 	<table><tbody><tr><th><p>Column Name</p></th><th><p>Type</p></th><th><p>Nullable</p></th><th><p>Primary</p></th><th><p>Description</p></th></tr>
 		<tr><td><p>recommendation_time</p></td>
 			<td><p>timestamp with time zone</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td></td>
+			<td><p>The time the action was
+				recommended.
+			</p></td>
 		</tr>
 		<tr><td><p>action_oid</p></td>
 			<td><p>bigint</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td></td>
+			<td><p>oid of the action in the system.
+			</p></td>
 		</tr>
 		<tr><td><p>type</p></td>
 			<td><p>action_type</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td><p>Can be one of:</p>
-				{% include genFiles/action_type.html %}</td>
+			<td><p>{% include genFiles/action_type.html %}</p></td>
 		</tr>
 		<tr><td><p>severity</p></td>
 			<td><p>severity</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td></td>
+			<td><p>{% include genFiles/severity.html %}</p></td>
 		</tr>
 		<tr><td><p>category</p></td>
 			<td><p>action_category</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td></td>
+			<td><p>{% include genFiles/action_category.html %}</p></td>
 		</tr>
 		<tr><td><p>target_entity_id</p></td>
 			<td><p>bigint</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td></td>
+			<td><p>The oid of the target entity.</p></td>
 		</tr>
 		<tr><td><p>involved_entities</p></td>
 			<td><p>bigint[]</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td></td>
+			<td><p>The oids of the involved entities
+				(includes the target entity).</p></td>
 		</tr>
 		<tr><td><p>description</p></td>
 			<td><p>text</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td></td>
+			<td><p>The text description of the action.</p></td>
 		</tr>
 		<tr><td><p>savings</p></td>
 			<td><p>double precision</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td></td>
+			<td><p>Savings (or, if negative, investment) of the action.</p></td>
 		</tr>
 		<tr><td><p>attrs</p></td>
 			<td><p>jsonb</p></td>
 			<td><p>true</p></td>
 			<td><p>false</p></td>
-			<td></td>
+			<td><p>Additional (often type-specific) information
+				for the action.</p> <p>For example, in
+				resizes this will contain the
+				commodity type and from/to
+				amounts.
+			</p></td>
 		</tr>
 	</tbody></table>
 </body></html>

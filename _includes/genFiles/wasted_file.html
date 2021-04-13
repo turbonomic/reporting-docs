@@ -1,35 +1,39 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>wasted_file</title></head><body><h2 class="genData">wasted_file table</h2>
-	
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>wasted_file</title></head><body><h2>wasted_file table</h2>
+	<p></p>
 	<table><tbody><tr><th><p>Column Name</p></th><th><p>Type</p></th><th><p>Nullable</p></th><th><p>Primary</p></th><th><p>Description</p></th></tr>
 		<tr><td><p>path</p></td>
 			<td><p>text</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td></td>
+			<td><p>The path of the file</p></td>
 		</tr>
 		<tr><td><p>file_size_kb</p></td>
 			<td><p>bigint</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td></td>
+			<td><p>The size of the file
+			</p></td>
 		</tr>
 		<tr><td><p>modification_time</p></td>
 			<td><p>timestamp with time zone</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td></td>
+			<td><p>Last time the file was modified</p></td>
 		</tr>
 		<tr><td><p>storage_oid</p></td>
 			<td><p>bigint</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td></td>
+			<td><p>The oid of the storage which contains the
+				file
+			</p></td>
 		</tr>
 		<tr><td><p>storage_name</p></td>
 			<td><p>text</p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td></td>
+			<td><p>Name of the storage (denormalized
+				for reporting)</p></td>
 		</tr>
 	</tbody></table>
 </body></html>
