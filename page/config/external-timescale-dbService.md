@@ -15,7 +15,7 @@ these conditions:
   deployed in a way that is accessible to your installation of Turbonomic. It can be 
   deployed on the cloud or in an on-prem VM. 
   
-  For information about installing Timescale, see the articls: 
+  For information about installing Timescale, see the article: 
   [https://docs.timescale.com/v2.0/getting-started/installation](https://docs.timescale.com/v2.0/getting-started/installation).
   
 * Supported Version  

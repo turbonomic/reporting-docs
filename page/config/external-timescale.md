@@ -14,7 +14,7 @@ external deployment, you will:
   It can be deployed on the cloud or in an on-prem VM. 
   The Embedded Reports feature currently supports PostgreSQL 12.x and TimescaleDB 2.0.1.
   
-  For information about installing Timescale, see the articls: 
+  For information about installing Timescale, see the article: 
   [https://docs.timescale.com/v2.0/getting-started/installation](https://docs.timescale.com/v2.0/getting-started/installation)
 
 * Optionally, manually create users and databases on the TimescaleDB instance,
@@ -32,7 +32,9 @@ external deployment, you will:
   
 * Optionally, enable secure connections between {{ site.data.vars.Product_Short }} and the Timescale DB instance
 
-
+> **NOTE:** To configure External Reports to use an external deployment of TimescaleDB, you 
+> must edit the {{ site.data.vars.Product_Short }} cr.yaml file. For tips about editing yaml files, 
+> see [YAML File Editing Tips](external-timescale_YamlTips.html).
 
 
 
@@ -42,49 +44,6 @@ Turbonomic's Embedded Reporting feature, you can do so fairly easily, by editing
 a few of the properties in your CR (Custom Resources) file. This file will be
 located at `~/kubernetes/operator/deploy/crds/charts_v1alpha1_xl_cr.yaml`.
 ​
-### A Bit About YAML Files
-​
-> Note: There are a few rules you must bear in mind whenever editing a YAML
-> file such as this one:
-> * Always uses spaces, not tabs, for all indentation. If your editor of
->   choice makes this difficult, you can use the linux `expand` utility
->   when you're done, to convert tabs to equivalent spaces.
-> * Be careful to keep the same indentation for all properties in a given
->   section.
-> * Never use the same property name twice in the same section. Doing this
->   will render the YAML file invalid, though in all likelihood you will not
->   see any notification of a problem. Rather, all but one of the property
->   definitions will be silently ignored. 
-​
-In this document we will refer to specific properties in the CR file using a "path" like 
-`/spec/global/repository`. This means the property you find as follows:
-​
-1. Find a line that says `spec:` with no indentation at all.
-2. Between that line and the next unindented line (not counting comments, which start with `#`),
-   find a line that says `global:` and is at the next level of indentation.
-3. Between that line and the next line with the same indentation, find a line that starts with
-   `repository:`. That line is where the addressed property is defined.
-   
-Here's an example, where we're looking for the property at `/spec/global/repository`:
-```
-apiVersion: charts.helm.k8s.io/v1alpha1
-kind: Xl
-metadata:
-  name: xl-release
-spec:
-  properties:
-    global:
-      repository:               # This is NOT the correct property
-        ...
-      
-  # Global settings
-  global:
-    repository:                 # This is the one we're after
-```
-The first `repository` poperty is not at `/spec/global/repository`, but at 
-`/spec/properties/global/repository`. Step 2 doesn't apply because the `global:` line is not
-at the _next_ level of indentation, but the one after that. It is easy to get such cases confused 
-while editing YAML.
 ​
 ## Basic Scenario - Nothing Provisioned
 ​

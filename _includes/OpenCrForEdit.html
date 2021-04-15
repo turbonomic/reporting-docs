@@ -1,0 +1,19 @@
+
+<p>The location of the file depends on the type of Turbonomic installation you are configuring:</p>
+
+<ul>
+    <li>For an OVA installation of Turbonomic:<br />
+        Open a SSH terminal session on your Turbonomic instance.<br />
+        Log in with the System Administrator that you set up when you installed Turbonomic:
+        <ul>
+            <li>Username: <code class="language-plaintext highlighter-rouge">turbo</code></li>
+            <li>Password: <code class="language-plaintext highlighter-rouge">&lt;your_private_password&gt;</code></li>
+        </ul>
+        
+        <p>Then edit the file:<br />
+            <code class="language-plaintext highlighter-rouge">/opt/turbonomic/kubernetes/operator/deploy/crds/charts_v1alpha1_xl_cr.yaml</code></p>
+    </li>
+    <li>Turbonomic on a Kubernetes node or node cluster:<br />
+        Open the following file for editing:<br />
+        <code class="language-plaintext highlighter-rouge">deploy/crds/charts_v1alpha1_xl_cr.yaml</code></li>
+</ul>

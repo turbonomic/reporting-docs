@@ -23,13 +23,11 @@ Embedded Reports can use. Then, after you have added the databases to your Times
 you will edit the {{ site.data.vars.Product_Short }} cr.yaml file to make use of these 
 databases.
 
-## Adding Databases and Users to TimescaleDB
+## Provisioning Databases and Users on the TimescaleDB
 
 The following steps will properly provision the database objects that Embedded Reporting requires.
 Note that these examples use default names for illustration. You can substitute your own names 
-for databases and users. 
-
-If you use the default naming, then you will not have to edit the If you do provide your own naming, you must be sure to match that 
+for databases and users. You must remember these names, because you must match that 
 naming as you edit the {{ site.data.vars.Product_Short }} cr.yaml file.
 
 To provision the databases and users, open a command session on the TimescaleDB, and execute 
@@ -38,13 +36,19 @@ the following commands:
 * Create two databases - one for `extractor` data, one for `grafana` data:  
   The extractor database manages the {{ site.data.vars.Product_Short }} data stream, and 
   the grafana database manages data for reporting within Grafana. 
+  
+  Execute the following 
+  commands, where you can provide your own database names instead of `extractor` and `grafana`:
   ```
   CREATE DATABASE extractor;
   CREATE DATABASE grafana;
   ```
 * Create database users:  
   For the extractor database, you will create a R/W user, a read-only group, and read-only user. 
-  You will also create a R/W user for the grafana database.
+  You will also create a R/W user for the grafana database. 
+  
+  Execute the following commands, where you can provide your own names for instances of
+  `USER` or `ROLE`: 
   ```
   -- main read/write user for extractor data
   CREATE USER extractor PASSWORD '<password>';
@@ -58,7 +62,8 @@ the following commands:
   CREATE USER grafana_backend PASSWORD '<password>';
   ```
 * Create and prepare the schema for extractor data  
-  Connect to the extractor database and execute these commands:
+  Connect to the extractor database and execute these commands, where you can provide your own name for 
+  the `SCHEMA`, and you grant privileges to the users and roles you created above:
   ```
   CREATE SCHEMA extractor;
   -- read/write user has full access
@@ -75,7 +80,8 @@ the following commands:
   CREATE EXTENSION timescaledb SCHEMA extractor;
   ```
 * Create and prepare the schema for grafana data  
-  Connect to the grafana database and execute these commands:
+  Connect to the grafana database and execute these commands, where you can provide your own name for 
+  the `SCHEMA`, and you grant privileges to the users and roles you created above:
   ```
   CREATE SCHEMA grafana;
   -- read/write user has full access
@@ -93,22 +99,48 @@ in Grafana reports and dashboards.
 
 After you have provisioned the required database objects, you should edit the 
 {{ site.data.vars.Product_Short }} cr.yaml file to make use of these 
-databases. 
+databases. For editing tips, see [YAML File Editing Tips](external-timescale_YamlTips.html).
 
-> **NOTE:** If you provided default names when you provisioned the 
-> database objects, users, and user roles, then Embedded Reports will automatically 
-> recognize those objects. You do not need to edit the cr.yaml file. The examples 
-> above give the default names.
+To edit the cr.yaml file:
+
+#### Open the .cr file for editing.
+{% include OpenCrForEdit.html %}
+
+
+#### Specify the endpoint for connecting to the external database.
+You can use the database service DNS, or you can use an IP address. 
+
+Add the endpoint as the `externalTimescaleDBIP` property in the `spec: global:` 
+section of the .cr file:  
+```
+spec:
+  global:
+    externalTimescaleDBIP: <host-or-IP>
+```    
+
+
+
+#### Specify {{ site.data.vars.Product_Short }} access the databases you provisioned
+As you specify users and databases, be sure to match the names you used above 
+to provision users, databases, and schema. These instructions use the default 
+naming that you can see above.
+
+You will specify:
+* Global read-only access to the `extractor` database  
+  `/spec/properties/global/dbs`  
+  This grants the `extractor` and the `api` components read-only access to 
+  the `extractor` database that you provisioned above. Those components will use the 
+  `query` user account.
+* Read/write access to the `extractor` and `grafana` databases  
+  `/spec/properties/extractor/dbs`
+  This grants the `extractor` component read/write access to the 
+   `extractor` and `grafana` databases that you provisioned above.
+* Read/write access for Grafana to access the `grafana` database  
+  `/spec/grafana/grafana.ini/database`  
 ​
 
-Here are the full set of properties that configure required names and passwords. Each is shown with 
-the default that will be assumed if that particular property is left out, so if you're happy with 
-those choices you can leave them out. (You will still be responsible for provisioning those objects). 
-​
+Edit the cr.yaml file to add the following entries:
 
-These properties are spread among the `/spec/properties/global/dbs`, `/spec/properties/extractor/dbs`
-and `/spec/grafana/grafana.ini/database` blocks:
-​
 ```
 spec:
   properties:
@@ -127,40 +159,49 @@ spec:
           password: <default-password>
         grafana:
           scehamName: grafana
-  grafana.ini:
-    database:
-      name: grafana
-      user: grafana_backend
-      password: <default-password>   
+  grafana:
+    grafana.ini:
+      database:
+        name: grafana
+        user: grafana_backend
+        password: <default-password>
 ```
 ​
-A few points on why this structure appears as it does:
-​
-* The `/spec/properties/global` block contains properties that will be visible to all Turbonomic
-  components. Here we have names and password associated with a read-only login to a database owned
-  by the `extractor` component. This login will be used by both the `extractor` and the `api`
-  component, so rather than configure it for those two components specifically (and risk that they
-  are not in agreement), we have placed them among global properties.
-* Properties for the `extractor` database appear in a properties block that is referred to within
-  the `extractor` component by the name `"dbs.extractor"`. Similarly, the internal name used for the
-  `query` login to the same database is `"dbs.extractor.qeury"`. The common prefix means that the
-  `databaseName` and `schemaName` properties will be visible and identical for these two logins.
-* There's another database used by the `grafana` component, but provisioning responsibiltiy for that
-  database falls to the `extractor` component as well, so its properties could be specified in the
-  `/spec/properties/extractor/dbs/grafana` block. However, we only specify `schemaName` above. 
-  The reason is that we must also provide these values to the `grafana` component via property names
-  that are determined Grafana, not by us. We provide automatic copying of the database and login 
-  names and the login password from the `/spec/grafna/grafana.ini` block to the 
-  `/spec/properties/extractor/dbs/grafana` block, so they need (should) not be specified there.
-* The grafana configuration has property to specify a schema name, so if you want to choose that
-  you'll want to configure it in the `/spec/properties/extractor/dbs/grafana` block as shown above.
-  The `grafana` component will not include a schema name in any of the SQL that it sends to the
-  database, so as long as the grafana login's "search path" is set properly, everything will work.
   
-### Other Recommended Settings
+#### (Recommended) Block automatic provisioning by {{ site.data.vars.Product_Short }} on the TimescaleDB
 ​
-In addition to the above settings, the following are recommended but not required:
+If you have manually provisioned the Embedded Reports objects on the TimescaleDB instance, 
+then you should disable the options for {{ site.data.vars.Product_Short }} to 
+automatically execute provisioning on the TimescaleDB instance. 
+
+> **NOTE:** that {{ site.data.vars.Product_Short }} cannot provision on the TimescaleDB instance 
+> if you do not specify a global user account. If you performed these configuration steps, 
+> then you should not have done so. But we still recommend that you disable the options to 
+> execute provisioning.
+
+Set the following properties to `false`:
+
+
+* `shouldProvisionDatabase`:  
+  `spec/properties/global/dbs/postgresDefault/shouldProvisionDatabase`
+  Determintes whether {{ site.data.vars.Product_Short }} will attempt to provision any database
+  in scope of the the definition. 
+* `shouldProvisionUser`:
+  `spec/properties/global/dbs/postgresDefault/shouldProvisionUser`
+  Determines whether {{ site.data.vars.Product_Short }} will attempt to provision any logins in
+  scope of the definition. 
+* `destructiveProvisioningEnabled`:
+  `spec/properties/global/dbs/postgresDefault/destructiveProvisioningEnabled`
+  Determines whether, during its provisioning operations,
+  {{ site.data.vars.Product_Short }} can perform destructive operations like 
+  dropping databases, schemas or users that are found to be mis-configured.  In the default installation scenario, the
+  `public` schema that is created by PostgreSQL in any new database is dropped, to reduce the
+  complexity of the overall model. Because this is considered a destructive operation, this option
+  is `true` by default.  
 ​
+
+Edit the cr.yaml file to add the following properties:
+
 ```
 spec:
   properties:
@@ -177,69 +218,4 @@ they will apply to all PostgreSQL databases and users used by any Turbonomic com
 pre-provisioning is more selective than that, you can move the settings to more narrowly targeted
 property blocks like `/spec/properties/extractor/dbs/grafana` or 
 `/spec/properties/global/dbs/extractor`.
-​
-These properties have the following meanings:
-​
-* `shouldProvisionDatabase`: Determintes whether Turbonomic will attempt to provision any database
-  in scope of the the definition. This is `true` by default for the Embedded Reporting databases
-  in order to support the default behavior of provisioning all databases and users during initial
-  startup.
-* `shouldProvisionUser`: Determines whether Turbonomic will attempt to provision any logins in
-  scope of the definition. This is `true` by default for Embedded Reporting logins in order to
-  support the default behavior of provisioning all databases and users during initial startup.
-* `destructiveProvisioningEnabled`: Determines whether, during its provisioning operations,
-  Turbonomic will be allowed to perform destructive operations like dropping databases, schemas
-  or users that are found to be mis-configured.  In the default installation scenario, the
-  `public` schema that is created by PostgreSQL in any new database is dropped, to reduce the
-  complexity of the overall model. Because this is considered a destructive operation, this option
-  is `true` by default.
-​
-### Provisioning Requirements
-​
-The following operations will properly provision all database objects required by Embedded Reporting,
-should you choose to take responsibility for that. We use the default names here for illustration;
-please substitute your preferred names, matching what you have configured in your CR file.
-​
-* Create databases - one for `extractor` data, one for `grafana` data:
-  ```
-  CREATE DATABASE extractor;
-  CREATE DATABASE grafana;
-  ```
-* Create database users:
-  ```
-  -- main read/write user for extractor data
-  CREATE USER extractor PASSWORD '<password>';
-  -- group for users with read-only access to extractor data
-  CREATE ROLE readers_extractor_extractor;
-  -- read-only user for extractor data as a member of that group
-  CREATE USER query PASSWORD '<password>';
-  GRANT CONNECT ON DATABASE extractor TO readers_extractor_extractor;
-  GRANT readers_extractor_extractor TO query;
-  -- read-write user for grafana data
-  CREATE USER grafana_backend PASSWORD `<password>`;
-  ```
-* Create and prepare the schema for extractor data - must be you connected to extractor database
-  ```
-  CREATE SCHEMA extractor;
-  -- read/write user has full access
-  GRANT ALL PRIVILEGES ON SCHEMA extractor TO extractor;
-  -- all users in readers group have read-only access
-  GRANT USAGE on SCHEMA extractor TO readers_extractor_extractor;
-  GRANT SELECT ON ALL TABLES IN SCHEMA extractor TO readers_extractor_extractor;
-  -- make sure readers get access to any tables added in the future
-  ALTER DEFAULT PRIVILEGES IN SCHEMA extractor GRANT SELECT ON TABLES TO readers_extractor_extractor;
-  -- make the extractor and query users use the extractor schema by default
-  ALTER ROLE extractor SET search_path TO `extractor`;
-  ALTER ROLE query SET search_path TO `extractor`;
-  -- install the timescaledb plugin into the extractor database using the extractor schema
-  CREATE EXTENSION timescaledb SCHEMA extractor;
-  ```
-* Create and prepare the schema for grafana data - you must be connected to grafana database
-  ```
-  CREATE SCHEMA grafana;
-  -- read/write user has full access
-  GRANT ALL PRIVILEGES ON SCHEMA grafana TO grafana_backend;
-  -- make sure the grafana user uses the grafana schema by default
-  ALTER ROLE grafana_backend SET search_path TO 'grafana';
-  ```
 ​

@@ -58,3 +58,8 @@ toc:
 #    - page: Using an External Timescale Database with Embedded Reporting
 #      url: external-timescale.html
 #      dir: page/config/external-timescale.html
+  - title: Appendix
+    subItems:
+    - page: YAML File Editing Tips
+      url: external-timescale_YamlTips.html
+      dir: page/config/external-timescale_YamlTips.html
