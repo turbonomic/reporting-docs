@@ -1,7 +1,15 @@
 ---
 layout: default
-title: Manually Creating Users and Databases
+title: Manual Provisioning of Users and Databases
 ---
+
+For {{ site.data.vars.Product_Short }} to automatically create the required databases for 
+Embedded Reports, the {{ site.data.vars.Product_Short }} cr.yaml file must specify credentials 
+for a user account that has global R/W access to the DB service. To do this you can 
+Store the credentials in cleartext in the cr.yaml file.  
+
+
+<!---
 For {{ site.data.vars.Product_Short }} to automatically create the required databases for 
 Embedded Reports, the {{ site.data.vars.Product_Short }} cr.yaml file must specify credentials 
 for a user account that has global R/W access to the DB service. To do this you can:
@@ -11,23 +19,25 @@ for a user account that has global R/W access to the DB service. To do this you 
   (See Creating Secret Keys for DB Access.)
   
 * Store the credentials in cleartext in the cr.yaml file.
+-->
 
-If this is appropriate for your environment, then you can skip this section and go 
-directly to [Editing the Platform CR File](external-timescale-editCr.html). That is 
+
+If Automatic Provisioning is appropriate for your environment, then you can skip this section and go 
+directly to [Automatic Provisioning of Users and Databases](external-timescale-autoProvision.html). That is 
 where you will specify the global R/W account that Embedded Reports 
 can use to access your TimescaleDB.
 
-If neither of these methods are appropriate for your environment, then you must access 
+*If Automatic Provisioning is not appropriate for your environment*, then you must access 
 the DB service with a R/W account and manually add the databases and user accounts that 
 Embedded Reports can use. Then, after you have added the databases to your TimescaleDB, 
 you will edit the {{ site.data.vars.Product_Short }} cr.yaml file to make use of these 
 databases.
 
-## Provisioning Databases and Users on the TimescaleDB
+## Manually Provisioning Databases and Users on the TimescaleDB
 
 The following steps will properly provision the database objects that Embedded Reporting requires.
 Note that these examples use default names for illustration. You can substitute your own names 
-for databases and users. You must remember these names, because you must match that 
+for databases and users. You must remember the names you use, because you must match that 
 naming as you edit the {{ site.data.vars.Product_Short }} cr.yaml file.
 
 To provision the databases and users, open a command session on the TimescaleDB, and execute 
@@ -99,7 +109,7 @@ in Grafana reports and dashboards.
 
 After you have provisioned the required database objects, you should edit the 
 {{ site.data.vars.Product_Short }} cr.yaml file to make use of these 
-databases. For editing tips, see [YAML File Editing Tips](external-timescale_YamlTips.html).
+databases. For editing tips, see [YAML File Editing Tips](../appendix/yamlTips.html).
 
 To edit the cr.yaml file:
 

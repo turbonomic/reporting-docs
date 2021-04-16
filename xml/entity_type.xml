@@ -4,7 +4,7 @@
 	<Intro/>
 	<Items>
 		<Item name="ACTION_MANAGER">
-			<Field name="Notes"><p>Here is something now!</p></Field>
+			<Field name="Notes"/>
 		</Item>
 		<Item name="APPLICATION">
 			<Field name="Notes"/>
