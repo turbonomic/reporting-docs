@@ -17,7 +17,6 @@
 			<Field name="Nullable">false</Field>
 			<Field name="Primary">false</Field>
 			<Field name="Description"><p>Type of entity. This field supports both entity and group types.</p>
-				{% include genFiles/entity_type.html %}
 			</Field>
 		</Item>
 		<Item name="name">
@@ -33,7 +32,7 @@
 			<Field name="Type"><a href="enum/environment_type.html">environment_type</a></Field>
 			<Field name="Nullable">true</Field>
 			<Field name="Primary">false</Field>
-			<Field name="Description"><p>The kind of environment the entity exists in:</p>
+			<Field name="Description"><p>The kind of environment the entity exists in.</p>
 			</Field>
 		</Item>
 		<Item name="attrs">

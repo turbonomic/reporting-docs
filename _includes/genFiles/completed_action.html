@@ -37,7 +37,8 @@
 			<td><p><a href="enum/severity.html">severity</a></p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td><p>The severity of the action.</p></td>
+			<td><p>The severity of the action.</p>
+				{% include genFiles/severity.html %}</td>
 		</tr>
 		<tr><td><p>category</p></td>
 			<td><p><a href="enum/action_category.html">action_category</a></p></td>
@@ -74,7 +75,8 @@
 			<td><p><a href="enum/terminal_state.html">terminal_state</a></p></td>
 			<td><p>false</p></td>
 			<td><p>false</p></td>
-			<td><p>The final state of the action.</p></td>
+			<td><p>The final state of the action.</p>
+				{% include genFiles/terminal_state.html %}</td>
 		</tr>
 		<tr><td><p>final_message</p></td>
 			<td><p>text</p></td>
@@ -82,7 +84,8 @@
 			<td><p>false</p></td>
 			<td><p>Message associated with the final
 				state. Should contain an error
-				message if the action failed.</p></td>
+				message if the action failed.</p>
+				</td>
 		</tr>
 		<tr><td><p>attrs</p></td>
 			<td><p>jsonb</p></td>
