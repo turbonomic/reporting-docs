@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Turbonomic Embeded Reporting Schema
+title: Embeded Reporting Schema and External Database Configuration
 ---
 
 <p>This document describes the tables in the {{ site.data.vars.Product_Short }} Embedded Reporting data schema.</p>
