@@ -33,33 +33,30 @@ toc:
       url: enum.html
       dir: page/enum.html
 
-  - title: Andy's Original Timescale Doc
-    subItems:
-    - page: Using an External Timescale Database with Embedded Reporting
-      url: external-timescale-ORIGINAL.html
-      dir: page/config/external-timescale-ORIGINAL.html
+#  - title: Andy's Original Timescale Doc
+#    subItems:
+#    - page: Using an External Timescale Database with Embedded Reporting
+#      url: external-timescale-ORIGINAL.html
+#      dir: page/config/external-timescale-ORIGINAL.html
       
   - title: Configuration
     subItems:
-    - page: Using an External Timescale Database with Embedded Reporting
+    - page: Configuring an External TimescaleDB
       url: external-timescale.html
       dir: page/config/external-timescale.html
       subSubItems: # So far, you can nest two levels down for topic links
       - page: Creating an External TimescaleDB
         url: external-timescale-dbService.html
         dir: page/config/external-timescale-dbService.html
-      - page: Manually Creating Users and Databases
+      - page: Manual Provisioning of Users and Databases
         url: external-timescale-manuallyAdd.html
         dir: page/config/external-timescale-manuallyAdd.html
-      - page: Editing the Platform CR File
-        url: external-timescale-editCr.html
-        dir: page/config/external-timescale-editCr.html
-#    A new pge at level 1 starts like this
-#    - page: Using an External Timescale Database with Embedded Reporting
-#      url: external-timescale.html
-#      dir: page/config/external-timescale.html
+      - page: Automatic Provisioning of Users and Databases
+        url: external-timescale-autoProvision.html
+        dir: page/config/external-timescale-autoProvision.html
+        
   - title: Appendix
     subItems:
     - page: YAML File Editing Tips
-      url: external-timescale_YamlTips.html
-      dir: page/config/external-timescale_YamlTips.html
+      url: yamlTips.html
+      dir: page/appendix/yamlTips.html
