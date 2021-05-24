@@ -40,6 +40,6 @@ external deployment, you will:
 
 To configure External Reports to use an external deployment of TimescaleDB, you 
 must edit the {{ site.data.vars.Product_Short }} cr.yaml file. For tips about editing yaml files, 
-see [YAML File Editing Tips](external-timescale_YamlTips.html).
+see [YAML File Editing Tips](../appendix/yamlTips.html).
 
 ​
