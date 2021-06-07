@@ -1,35 +1,34 @@
 ---
 types:
   metric_type:
-    intro: "MetricType is a really cool type. Some of its really cool features are:\n\
-      - #1\n- #2"
+    intro: null
     items:
       CPU:
-        Notes: "Here are **some notes** on the `CPU` value."
+        Notes: "Host CPU capacity, measured in MHz."
       BALLOONING:
-        Notes: "Ballooning Notes"
+        Notes: "Percentage utilization of ballooning capacity on the host."
       ACTIVE_SESSIONS:
-        Notes: "Active Sessions Notes"
+        Notes: "The number of active sessions running in a VDI environment."
       BUFFER_COMMODITY:
-        Notes: null
+        Notes: "For network environments that support buffered switch ports, this resource measures utilization of a port buffer."
       CONNECTION:
-        Notes: null
+        Notes: "The connections in use, as a percentage of the maximum connections allowed on a database."
       COOLING:
-        Notes: null
+        Notes: "The highest acceptable running temperature for a physical device."
       CPU_ALLOCATION:
-        Notes: null
+        Notes: "Host CPU capacity, measured in MHz."
       CPU_HEADROOM:
-        Notes: null
+        Notes: "The remaining capacity available on the host."
       CPU_PROVISIONED:
-        Notes: null
+        Notes: "The overprovision percentage capacity. For a value of 1000, the max overprovision capacity is 10 x the CPU capacity."
       CPU_READY:
-        Notes: null
+        Notes: "Wait time in the ready queue on the host, measured in ms."
       DB_CACHE_HIT_RATE:
-        Notes: null
+        Notes: "Percent of DB page requests satisfied by data pages from the buffer pool."
       DB_MEM:
-        Notes: null
+        Notes: "The memory in use by the database, as a percentage of the allocated capacity."
       DTU:
-        Notes: null
+        Notes: "For Azure SQL databases, Database Transaction Unit."
       EXTENT:
         Notes: null
       FLOW:
@@ -37,7 +36,7 @@ types:
       FLOW_ALLOCATION:
         Notes: null
       HEAP:
-        Notes: null
+        Notes: "The heap capacity allocated for an application. Utilization is expressed as a percentage of capacity."
       IMAGE_CPU:
         Notes: null
       IMAGE_MEM:
@@ -45,27 +44,27 @@ types:
       IMAGE_STORAGE:
         Notes: null
       IO_THROUGHPUT:
-        Notes: null
+        Notes: "Data rate through the host’s IO adapter, measured in KBytes/sec."
       MEM:
-        Notes: null
+        Notes: "Host memory, measured in Kbytes. Utilization is expressed as a percentage of capacity."
       MEM_ALLOCATION:
-        Notes: null
+        Notes: nul"Allocated host memory capacity, measured in Kbyte."
       MEM_HEADROOM:
-        Notes: null
+        Notes: "The remaining capacity available on the host"
       MEM_PROVISIONED:
-        Notes: null
+        Notes: "The overprovision percentage capacity. For a value of 1000, the max overprovision capacity is 10 x the MEM capacity."
       NET_THROUGHPUT:
-        Notes: null
+        Notes: "Data rate through the host’s Network adapter, measured in Kbytes/sec."
       POOL_CPU:
-        Notes: null
+        Notes: "For VDI, the total CPU available in a desktop pool."
       POOL_MEM:
-        Notes: null
+        Notes: "For VDI, the total MEM available in a desktop pool."
       POOL_STORAGE:
-        Notes: null
+        Notes: "For VDI, the total storage available in a desktop pool."
       PORT_CHANEL:
         Notes: null
       POWER:
-        Notes: null
+        Notes: "A measure of the power that is consumed by a physical device."
       Q16_VCPU:
         Notes: null
       Q1_VCPU:
@@ -91,37 +90,37 @@ types:
       QN_VCPU:
         Notes: null
       REMAINING_GC_CAPACITY:
-        Notes: null
+        Notes: "The percentage of CPU time not spent on garbage collection. If heap is high and this is low, then heap is not overutilized."
       RESPONSE_TIME:
-        Notes: null
+        Notes: "Response time for an application, in ms."
       SLA_COMMODITY:
         Notes: null
       STORAGE_ACCESS:
-        Notes: null
+        Notes: "Storage operations per second (IOPS)."
       STORAGE_ALLOCATION:
-        Notes: null
+        Notes: "Total space allocated to a storage storage, disk array, or aggregates managed by a storage controller. Measured in MB."
       STORAGE_AMOUNT:
-        Notes: null
+        Notes: "The utilisation of storage capacity, measured in MB."
       STORAGE_HEADROOM:
-        Notes: null
+        Notes: "The remaining capacity available on the storage."
       STORAGE_LATENCY:
-        Notes: null
+        Notes: "Allocated capacity for latency on a datastore. This measures the latency experienced by all VMs and hosts that access the datastore. Utilization is the percentage of allocated latency that is in use on the datastore."
       STORAGE_PROVISIONED:
-        Notes: null
+        Notes: "The overprovision percentage capacity. For a value of 1000, the max overprovision capacity is 10 x the MEM capacity."
       SWAPPING:
-        Notes: null
+        Notes: "The rate of memory swapping to disk, in bytes per second."
       THREADS:
-        Notes: null
+        Notes: "Allocated thread capacity. Utilization gives the percentage of capacity."
       TOTAL_HEADROOM:
         Notes: null
       TOTAL_SESSIONS:
-        Notes: null
+        Notes: "For VDI, the total count of active sessions in all desktop pools."
       TRANSACTION:
-        Notes: null
+        Notes: "Transactions per second in an application."
       TRANSACTION_LOG:
-        Notes: null
+        Notes: "The disk space devoted to transaction logging for a database."
       VCPU:
-        Notes: null
+        Notes: "The CPU capacity allocated to a VM guest OS, measured in MHz."
       VCPU_LIMIT_QUOTA:
         Notes: null
       VCPU_REQUEST:
@@ -129,7 +128,7 @@ types:
       VCPU_REQUEST_QUOTA:
         Notes: null
       VMEM:
-        Notes: null
+        Notes: "The MEM capacity allocated to a VM guest OS, measured in MHz."
       VMEM_LIMIT_QUOTA:
         Notes: null
       VMEM_REQUEST:
@@ -137,20 +136,20 @@ types:
       VMEM_REQUEST_QUOTA:
         Notes: null
       VSTORAGE:
-        Notes: null
+        Notes: "The storage capacity allocated to a VM guest OS, measured in MHz."
   action_category:
     intro: null
     items:
       COMPLIANCE:
-        Notes: null
+        Notes: "An action to correct when an entity violates placement constraints, or is misconfigured (e.g. is configured to access an unavailable network)."
       EFFICIENCY_IMPROVEMENT:
-        Notes: null
+        Notes: "An action to consolidate operations to increase efficiency (e.g. move VMs to free up a host so it can be powered off)."
       PERFORMANCE_ASSURANCE:
-        Notes: null
+        Notes: "An action to correct overutilization that puts QoS at risk."
       PREVENTION:
-        Notes: null
+        Notes: "An action to correct overutilization before it puts QoS at risk."
       UNKNOWN:
-        Notes: null
+        Notes: "Unknown action type. Should not occur."
   action_state:
     intro: null
     items:
