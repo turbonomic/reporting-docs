@@ -30,25 +30,25 @@ types:
       DTU:
         Notes: "For Azure SQL databases, Database Transaction Unit."
       EXTENT:
-        Notes: null
+        Notes: "Extents allow disks presented to a vSphere system to be added to a VMFS datastore to extend the file system,aggregating multiple disks together"
       FLOW:
-        Notes: null
+        Notes: "The utilization of network capacity between entities."
       FLOW_ALLOCATION:
-        Notes: null
+        Notes: "The allocated amount of network capacity."
       HEAP:
         Notes: "The heap capacity allocated for an application. Utilization is expressed as a percentage of capacity."
       IMAGE_CPU:
-        Notes: null
+        Notes: "The CPU speed of the image."
       IMAGE_MEM:
-        Notes: null
+        Notes: "The total memory available to the image."
       IMAGE_STORAGE:
-        Notes: null
+        Notes: "The total storage available to the image."
       IO_THROUGHPUT:
         Notes: "Data rate through the host’s IO adapter, measured in KBytes/sec."
       MEM:
         Notes: "Host memory, measured in Kbytes. Utilization is expressed as a percentage of capacity."
       MEM_ALLOCATION:
-        Notes: nul"Allocated host memory capacity, measured in Kbyte."
+        Notes: "Allocated host memory capacity, measured in Kbyte."
       MEM_HEADROOM:
         Notes: "The remaining capacity available on the host"
       MEM_PROVISIONED:
@@ -62,39 +62,51 @@ types:
       POOL_STORAGE:
         Notes: "For VDI, the total storage available in a desktop pool."
       PORT_CHANEL:
-        Notes: null
+        Notes: "A logical grouping of ports in a fabric target."
       POWER:
         Notes: "A measure of the power that is consumed by a physical device."
       Q16_VCPU:
-        Notes: null
+        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
+Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
       Q1_VCPU:
-        Notes: null
+        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
+Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
       Q2_VCPU:
-        Notes: null
+        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
+Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
       Q32_VCPU:
-        Notes: null
+        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
+Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
       Q3_VCPU:
-        Notes: null
+        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
+Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
       Q4_VCPU:
-        Notes: null
+        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
+Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
       Q5_VCPU:
-        Notes: null
+        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
+Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
       Q64_VCPU:
-        Notes: null
+        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
+Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
       Q6_VCPU:
-        Notes: null
+        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
+Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
       Q7_VCPU:
-        Notes: null
+        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
+Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
       Q8_VCPU:
-        Notes: null
+        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
+Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
       QN_VCPU:
-        Notes: null
+        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
+Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
       REMAINING_GC_CAPACITY:
         Notes: "The percentage of CPU time not spent on garbage collection. If heap is high and this is low, then heap is not overutilized."
       RESPONSE_TIME:
         Notes: "Response time for an application, in ms."
       SLA_COMMODITY:
-        Notes: null
+        Notes: "A commodity to represent service-level agreements, calculated by the number of requests made divided by the duration of the request."
       STORAGE_ACCESS:
         Notes: "Storage operations per second (IOPS)."
       STORAGE_ALLOCATION:
@@ -112,7 +124,7 @@ types:
       THREADS:
         Notes: "Allocated thread capacity. Utilization gives the percentage of capacity."
       TOTAL_HEADROOM:
-        Notes: null
+        Notes: "The maximum number of virtual machines created from the headroom template that can fit on the entity (host, cluster, etc.)"
       TOTAL_SESSIONS:
         Notes: "For VDI, the total count of active sessions in all desktop pools."
       TRANSACTION:
@@ -122,19 +134,19 @@ types:
       VCPU:
         Notes: "The CPU capacity allocated to a VM guest OS, measured in MHz."
       VCPU_LIMIT_QUOTA:
-        Notes: null
+        Notes: "The amount of virtual CPU limit the pod has allocated against the namespace quota."
       VCPU_REQUEST:
-        Notes: null
+        Notes: "The virtual CPU request allocated by the pod against the node allocatable capacity."
       VCPU_REQUEST_QUOTA:
-        Notes: null
+        Notes: " The amount of virtual CPU request the pod has allocated against the namespace quota."
       VMEM:
         Notes: "The MEM capacity allocated to a VM guest OS, measured in MHz."
       VMEM_LIMIT_QUOTA:
-        Notes: null
+        Notes: "The amount of virtual memory limit the pod has allocated against the namespace quota."
       VMEM_REQUEST:
-        Notes: null
+        Notes: "The virtual memory request allocated by the pod against the node allocatable capacity."
       VMEM_REQUEST_QUOTA:
-        Notes: null
+        Notes: "The amount of virtual memory request the pod has allocated against the namespace quota."
       VSTORAGE:
         Notes: "The storage capacity allocated to a VM guest OS, measured in MHz."
   action_category:
@@ -154,56 +166,70 @@ types:
     intro: null
     items:
       ACCEPTED:
-        Notes: null
+        Notes: "An action that has been accepted, but is not yet in progress."
       CLEARED:
-        Notes: null
+        Notes: "When the action mode is set to manual, an action that is no longer recommended by the market."
       FAILED:
-        Notes: null
+        Notes: "An action that was accepted and did not complete successfully."
       FAILING:
-        Notes: null
+        Notes: "An action that was accepted and will not complete successfully."
       IN_PROGRESS:
-        Notes: null
+        Notes: "An action that is being executed."
       POST_IN_PROGRESS:
-        Notes: null
+        Notes: "An action for which a post-execution script is running."
       PRE_IN_PROGRESS:
-        Notes: null
+        Notes: "An action for which a pre-execution script is running."
       QUEUED:
-        Notes: null
+        Notes: "When more than 10 actions are to be executed for a single target, the 11th and all subsequent actions are placed into a QUEUED state, and they will execute as the previous actions complete."
       READY:
-        Notes: null
+        Notes: "When the action mode is set to manual, an action that is ready to be accepted or rejected."
       REJECTED:
-        Notes: null
+        Notes: "When the action mode is set to manual, an action that has been rejected by the user."
       SUCCEEDED:
-        Notes: null
+        Notes: "An action that was accepted and completed successfully."
+      ACCOUNTING:
+        Notes: "For cloud entities, an action to resize in order to use a different instance template."
   action_type:
     intro: null
     items:
       ACTIVATE:
-        Notes: null
+        Notes: "This is equal to the start action for suspended entities."
       ALLOCATE:
         Notes: null
       BUY_RI:
-        Notes: null
+        Notes: "Generated when the action requires involves using a reserved instance."
+      CHANGE:
+        Notes: "Move a virtual machine's storage between datastores."
       DEACTIVATE:
         Notes: null
       DELETE:
-        Notes: null
+        Notes: "This is equivalent to the SUSPEND action, but for storage entities."
       MOVE:
-        Notes: null
+        Notes: "Move an entity from one provider to another. For example, moving a VM between hosts, or a datastore between disk arrays."
       NONE:
-        Notes: null
+        Notes: "An action for which no reason has been generated. Users should not see this action type."
       PROVISION:
-        Notes: null
+        Notes: "Add capacity to your environment."
       RECONFIGURE:
-        Notes: null
+        Notes: "When a VM is not able to correct a misconfiguration via another type of action. For example, if a placement policy requires a VM to move to a host on a particular cluster, but cross-cluster moves are not permitted."
+      RESERVE_ON_PM:
+        Notes: "When using the reservation functionality, this is the action to reserve the resources of a VM on a particular host."
+      RESERVE_ON_DS:
+        Notes: "When using the reservation functionality, this is the action to reserve the resources of a VM on a particular datastore."
       RESIZE:
-        Notes: null
+        Notes: "An action that reduces or increases the capacity of a commodity."
+      RESIZE_FOR_EFFICIENCY:
+        Notes: "A resize that reduces the capacity of a commodity, such as vCPU, or vMEM."
+      RESIZE_FOR_PERFORMANCE:
+        Notes: "A resize that increases the capacity of a commodity, such as vCPU, or vMEM."
       SCALE:
-        Notes: null
+        Notes: "A provision or suspend action in relation to an expandable entity, such as a Kubernetes pod."
       START:
-        Notes: null
+        Notes: "Start an entity, and add it to the market."
       SUSPEND:
-        Notes: null
+        Notes: "Remove capacity from your environment. Suspended entities are not removed from the environment, but will not be used in market decisions. Based on market conditions, suspended entities can be started, re-adding them to the market."
+      ADD_PROVIDER:
+        Notes: "This is equivalent to the START action, but for storage entities."
   attr_type:
     intro: null
     items:
@@ -217,17 +243,33 @@ types:
     intro: null
     items:
       FAILOVER:
-        Notes: null
+        Notes: "This entity is reserved for failover and will not participate in the market."
       MAINTENANCE:
-        Notes: null
+        Notes: "Entity is in maintenance mode."
       POWERED_OFF:
-        Notes: null
+        Notes: "Entity is in a powered-off state."
       POWERED_ON:
-        Notes: null
+        Notes: "Entity is in a powered-on state."
       SUSPENDED:
-        Notes: null
+        Notes: "Entity is suspended or the guest OS is in sleep, standby, or suspended state. The entity is not removed from the environment, but will not be used in market decisions. Based on market conditions, suspended entities can be started, re-adding them to the market."
       UNKNOWN:
-        Notes: null
+        Notes: "We are unable to ascertain the state of this entity. This occurs when the entity is reported to the hypervisor as having a state of DISCONNECTED, ORPHANED, or INVALID."
+      ACTIVE:
+        Notes: "Entity is actively consuming resources."
+      EVACUATED:
+        Notes: "Entity is ready to suspend and will not participate in the market, but will not generate a SUSPEND action."
+      NOT_MONITORED:
+        Notes: "Entity is not currently monitored by or participating in the market."
+      QUEUED:
+        Notes: "Entity is in the process of changing from one state to another. This state is internal and will not appear in the UI, but may appear in an API response if the call is executed at the precise moment the entity is changing state."
+      RESOURCE_ALLOCATION:
+        Notes: "Cloud entity is being created."
+      RESOURCE_RELEASE:
+        Notes: "Cloud entity is being deleted."
+      SUSPEND_PENDING:
+        Notes: "Entity is making preparations to suspend, or is the next entity of its type to suspend."
+      TERMINATE_PENDING:
+        Notes: "Entity is in the process of being deleted."
   entity_type:
     intro: null
     items:
@@ -244,15 +286,15 @@ types:
       BILLING_FAMILY:
         Notes: null
       BUSINESS:
-        Notes: null
+        Notes: "This entity is internal, and not exposed in the supply chain."
       BUSINESS_ACCOUNT:
         Notes: null
       BUSINESS_APPLICATION:
-        Notes: null
+        Notes: "A logical grouping of application entities and nodes that work together to compose a complete application"
       BUSINESS_ENTITY:
         Notes: null
       BUSINESS_TRANSACTION:
-        Notes: null
+        Notes: "A logical grouping of underlying elements. These elements, which represent all elements that fulfill a user-initiated request, may include Services, Applications Components, Database Servers, Containers, and Virtual Machines. A Business Transaction can also be used to represent a part of a Business Application and how that application is structured in your environment. "
       BUSINESS_USER:
         Notes: null
       CHASSIS:
@@ -261,14 +303,16 @@ types:
         Notes: null
       CLOUD_SERVICE:
         Notes: null
+      CLUSTER:
+        Notes: "A group of two or more computers, or hosts, that are connected in a network and run in parallel to complete individual tasks."
       COMPUTE_CLUSTER:
         Notes: null
       COMPUTE_RESOURCE:
-        Notes: null
+        Notes: "This entity is internal, and not exposed in the supply chain."
       COMPUTE_TIER:
         Notes: null
       CONTAINER:
-        Notes: null
+        Notes: "A standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computer environment to another."
       CONTAINER_PLATFORM_CLUSTER:
         Notes: null
       CONTAINER_POD:
@@ -296,13 +340,13 @@ types:
       DPOD:
         Notes: null
       GROUP:
-        Notes: null
+        Notes: "a named collection of like entities that can be used to set scope to policies, plans, charts, etc."
       HCI_PHYSICAL_MACHINE:
         Notes: null
       HYPERVISOR_SERVER:
         Notes: null
       INFRASTRUCTURE:
-        Notes: null
+        Notes: "This entity is internal, and not exposed in the supply chain."
       INTERNET:
         Notes: null
       IO_MODULE:
@@ -320,7 +364,7 @@ types:
       MAC:
         Notes: null
       MOVER:
-        Notes: null
+        Notes: "This entity is internal, and not exposed in the supply chain."
       NAMESPACE:
         Notes: null
       NETWORK:
@@ -328,7 +372,7 @@ types:
       NETWORKING_ENDPOINT:
         Notes: null
       OPERATOR:
-        Notes: null
+        Notes: "This entity is internal, and not exposed in the supply chain."
       PHYSICAL_MACHINE:
         Notes: null
       PORT:
@@ -366,7 +410,7 @@ types:
       SWITCH:
         Notes: null
       THIS_ENTITY:
-        Notes: null
+        Notes: "This entity is internal, and not exposed in the supply chain."
       THREE_TIER_APPLICATION:
         Notes: null
       VIEW_POD:
@@ -390,29 +434,29 @@ types:
       WORKLOAD_CONTROLLER:
         Notes: null
       _NONE_:
-        Notes: null
+        Notes: "This entity is internal, and not exposed in the supply chain."
   environment_type:
     intro: null
     items:
       CLOUD:
-        Notes: null
+        Notes: "An environment with entities derived from targets in the public cloud."
       HYBRID:
-        Notes: null
+        Notes: "An environment with entities derived from both targets running in your environment or a private cloud, and the public cloud."
       ON_PREM:
-        Notes: null
+        Notes: "An environment with entities derived from targets running in your environment, or in a private cloud."
       UNKNOWN_ENV:
-        Notes: null
+        Notes: "Unable to determine the type of environment."
   severity:
     intro: null
     items:
       CRITICAL:
-        Notes: null
+        Notes: "The recommended action will improve the environment, and if left unaddressed will have severe consequences. These actions should be addressed immediately."
       MAJOR:
-        Notes: null
+        Notes: "The recommended action will improve the environment, and if left unaddressed is likely to have severe consequences."
       MINOR:
-        Notes: null
+        Notes: "The recommended action will improve the environment, but is unlikely to have severe consequences if not addressed."
       NORMAL:
-        Notes: null
+        Notes: "This entity is in a healthy state."
   terminal_state:
     intro: null
     items:
@@ -425,50 +469,52 @@ tables:
     intro: null
     columns:
       recommendation_time:
-        Description: null
+        Description: "The time the action was recommended."
       acceptance_time:
-        Description: null
+        Description: "The time the action was recommended."
       completion_time:
-        Description: null
+        Description: "The time the action was completed."
       action_oid:
-        Description: null
+        Description: "The oid of the action in the system."
       type:
-        Description: null
+        Description: "The type of the action."
       severity:
-        Description: null
+        Description: "The severity of the action."
       category:
-        Description: null
+        Description: "The category of the action."
       target_entity_id:
-        Description: null
+        Description: "The oid of the target entity."
       involved_entities:
-        Description: null
+        Description: "The oids of the involved entities
+				(includes the target entity)."
       description:
-        Description: null
+        Description: "The text description of the action."
       savings:
-        Description: null
+        Description: "Savings (or, if negative, investment) of the action."
       final_state:
-        Description: null
+        Description: "The final state of the action."
       final_message:
-        Description: null
+        Description: "Message associated with the final	state. This message will contain an error if the action failed."
       attrs:
-        Description: null
+        Description: "Additional (often type-specific) information for the action. For example, in resizes this will contain the commodity type and from/to	amounts."
   entity:
     intro: null
     columns:
       oid:
-        Description: null
+        Description: "Unique entity identifier."
       type:
-        Description: null
+        Description: "Type of entity. This field supports both entity and group types."
       name:
-        Description: null
+        Description: "Entity’s current display name. While display names may change over time, the data tracks 
+				only the most recent display name."
       environment:
-        Description: null
+        Description: "The kind of environment the entity exists in."
       attrs:
-        Description: null
+        Description: "Information that is specific for the given entity type."
       first_seen:
-        Description: null
+        Description: "A topology timestamp for when this entity first appeared."
       last_seen:
-        Description: null
+        Description: "A topology timestamp for when this entity last appeared. A value of 9999-12-31T23:59:59 means the entity still exists in latest market cycle."
   entity_old:
     intro: null
     columns:
@@ -496,58 +542,60 @@ tables:
     intro: null
     columns:
       time:
-        Description: null
+        Description: "The time this attribute was recorded."
       entity_oid:
-        Description: null
+        Description: "The oid of the entity the attribute pertains to."
       type:
-        Description: null
+        Description: "The attribute type."
       bool_value:
-        Description: null
+        Description: "If the attribute is boolean, this is the
+				boolean value."
       int_value:
-        Description: null
+        Description: "If the attribute is an integer, this is the integer value. If the attribute is an enum, this is the oid of the enum in the pg_enum table (to guard against name or order changes). The int_value should be
+				castable to the enum via a custom	cast (e.g. int	_value::entity_state = 'POWERED_ON')."
       long_value:
-        Description: null
+        Description: "If the attribute is a long, this is the	long value."
       double_value:
-        Description: null
+        Description: "If the attribute is a double, this is the	double value."
       string_value:
-        Description: null
+        Description: "If the attribute is a string, this is the	string value."
       int_arr_value:
-        Description: null
+        Description: "If the attribute is a list of ints, this is	the value. If the attribute is a list of enums, these are the OIDs of the enums in the pg_enum table (to guard against name or order changes)."
       long_arr_value:
-        Description: null
+        Description: "If the attribute is a list of longs, this	is the value."
       string_arr_value:
-        Description: null
+        Description: "If the attribute is a list of strings, this	is the value."
       double_arr_value:
-        Description: null
+        Description: "If the attribute is a list of doubles, this is the value."
       json_value:
-        Description: null
+        Description: "If the attribute is a JSON object, this	is the value."
   metric:
     intro: null
     columns:
       time:
-        Description: null
+        Description: "Timestamp on the topology from which this metric was obtained. For headroom metrics this is the time at	which the headroom plan was	created."
       entity_oid:
-        Description: null
+        Description: "Oid of the entity to which the metric applies."
       type:
-        Description: null
+        Description: "The type of the metric."
       provider_oid:
-        Description: null
+        Description: "Oid of the seller of this commodity."
       key:
-        Description: null
+        Description: "The commodity key. This value can be null if no key is present."
       current:
-        Description: null
+        Description: "Current utilization of the commodity on the selling entity."
       capacity:
-        Description: null
+        Description: "Capacity of the commodity on the selling entity."
       utilization:
-        Description: null
+        Description: "Utilization of the commodity on the selling entity."
       consumed:
-        Description: null
+        Description: "Amount of the commodity currently	used by the buying entity."
       peak_current:
-        Description: null
+        Description: "Peak amount of the commodity of the selling entity."
       peak_consumed:
-        Description: null
+        Description: "Peak amount of the commodity currently used by the buying entity."
       entity_type:
-        Description: null
+        Description: "The type of the entity in the entity_oid column."
   metric_old:
     intro: null
     columns:
@@ -575,38 +623,38 @@ tables:
     intro: null
     columns:
       recommendation_time:
-        Description: null
+        Description: "The time the action was	recommended."
       action_oid:
-        Description: null
+        Description: "Oid of the action in the system."
       type:
-        Description: null
+        Description: "The type of the action."
       severity:
-        Description: null
+        Description: "The severity of the action."
       category:
-        Description: null
+        Description: "The category of the action."
       target_entity_id:
-        Description: null
+        Description: "The oid of the target entity."
       involved_entities:
-        Description: null
+        Description: "The oids of the involved entities	(includes the target entity)."
       description:
-        Description: null
+        Description: "The text description of the action."
       savings:
-        Description: null
+        Description: "Savings (or, if negative, investment) of the action."
       attrs:
-        Description: null
+        Description: "Additional (often type-specific) information for the action. For example, in resizes this will contain the commodity type and from/to	amounts."
   scope:
     intro: null
     columns:
       seed_oid:
-        Description: null
+        Description: "Oid of the entity whose scope is the subject of this record."
       scoped_oid:
-        Description: null
+        Description: "Oid of the entity that is part of that scope."
       scoped_type:
-        Description: null
+        Description: "The type of entity."
       start:
-        Description: null
+        Description: "A timestamp for the first topology in which this relationship appeared. This covers the initial appearance, or a reappearance after the relationship was temporarily broken."
       finish:
-        Description: null
+        Description: "A timestamp of last topology in which this relationship appeared. A value of 9999-12-31T23:59:59 means the relationship is not yet known to have terminated."
   wasted_file:
     intro: null
     columns:
