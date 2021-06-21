@@ -3,118 +3,155 @@ types:
   metric_type:
     intro: null
     items:
-      CPU:
-        Notes: "Host CPU capacity, measured in MHz."
-      BALLOONING:
-        Notes: "Percentage utilization of ballooning capacity on the host."
       ACTIVE_SESSIONS:
-        Notes: "The number of active sessions running in a VDI environment."
+        Units: "count"
+        Notes: "The number of active sessions."
+      BALLOONING:
+        Units: "kilobytes"
+        Notes: "The amount of memory on the host dedicated to ballooning."
       BUFFER_COMMODITY:
-        Notes: "For network environments that support buffered switch ports, this resource measures utilization of a port buffer."
+        Units: "unknown"
+        Notes: "For network environments that support buffered switch ports (fabric), the utilization of a port buffer."
       CONNECTION:
+        Units: "count"
         Notes: "The connections in use, as a percentage of the maximum connections allowed on a database."
-      COOLING:
-        Notes: "The highest acceptable running temperature for a physical device."
+      CPU:
+        Units: "MHz"
+        Notes: "For Host: usage of CPU (CURRENT column). For VM: Host CPU that the VM has consumed (CONSUMED column)."
       CPU_ALLOCATION:
-        Notes: "Host CPU capacity, measured in MHz."
+        Units: "MHz"
+        Notes: "For Host: usage of CPU (CURRENT column). For VM: Desktop Pool or VDC CPU that the VM has consumed (CONSUMED column)."
       CPU_HEADROOM:
-        Notes: "The remaining capacity available on the host."
+        Units: "count"
+        Notes: "The count of VMs that can run within the CPU capacity of the current Host cluster."
       CPU_PROVISIONED:
-        Notes: "The overprovision percentage capacity. For a value of 1000, the max overprovision capacity is 10 x the CPU capacity."
+        Units: "MHz"
+        Notes: "The overprovisioned capacity. This is calculated from the overprovision percentage that is defined in the effective policy."
       CPU_READY:
+        Units: "ms"
         Notes: "Wait time in the ready queue on the host, measured in ms."
+      COOLING:
+        Units: "degrees farenheit"
+        Notes: "The highest acceptable running temperature for a physical device."
       DB_CACHE_HIT_RATE:
-        Notes: "Percent of DB page requests satisfied by data pages from the buffer pool."
+        Units: "percent"
+        Notes: "Percentage of DB page requests satisfied by data pages from the buffer pool."
       DB_MEM:
-        Notes: "The memory in use by the database, as a percentage of the allocated capacity."
+        Units: "kilobytes"
+        Notes: "Database memory utilization."
       DTU:
+        Units: "count"
         Notes: "For Azure SQL databases, Database Transaction Unit."
       EXTENT:
-        Notes: "Extents allow disks presented to a vSphere system to be added to a VMFS datastore to extend the file system,aggregating multiple disks together"
+        Units: "NA"
+        Notes: "For internal use, only."
       FLOW:
-        Notes: "The utilization of network capacity between entities."
+        Units: "kilobytes/second"
+        Notes: "Amount of network traffic between nodes."
       FLOW_ALLOCATION:
+        Units: "bytes"
         Notes: "The allocated amount of network capacity."
       HEAP:
-        Notes: "The heap capacity allocated for an application. Utilization is expressed as a percentage of capacity."
+        Units: "kilobytes"
+        Notes: "The heap capacity configured for an application."
       IMAGE_CPU:
-        Notes: "The CPU speed of the image."
+        Units: "MHz"
+        Notes: "For VDI, the CPU utilization for a Business User."
       IMAGE_MEM:
-        Notes: "The total memory available to the image."
+        Units: "kilobytes"
+        Notes: "For VDI, the MEM utilization for a Business User."
       IMAGE_STORAGE:
-        Notes: "The total storage available to the image."
+        Units: "megabytes"
+        Notes: "For VDI, the storage utilization for a Business User."
       IO_THROUGHPUT:
-        Notes: "Data rate through the host’s IO adapter, measured in KBytes/sec."
+        Units: "kilobytes/second"
+        Notes: "Data rate through the host’s IO adapter."
       MEM:
-        Notes: "Host memory, measured in Kbytes. Utilization is expressed as a percentage of capacity."
+        Units: "kilobytes"
+        Notes: "For Host: usage of MEM (CURRENT column). For VM: Host MEM that the VM has consumed (CONSUMED column)."
       MEM_ALLOCATION:
-        Notes: "Allocated host memory capacity, measured in Kbyte."
+        Units: "kilobytes"
+        Notes: "For Host: usage of MEM (CURRENT column). For VM: Desktop Pool or VDC MEM that the VM has consumed (CONSUMED column)."
       MEM_HEADROOM:
-        Notes: "The remaining capacity available on the host"
+        Units: "count"
+        Notes: "The count of VMs that can run within the MEM capacity of the current Host cluster."
       MEM_PROVISIONED:
-        Notes: "The overprovision percentage capacity. For a value of 1000, the max overprovision capacity is 10 x the MEM capacity."
+        Units: "kilobytes"
+        Notes: "The overprovisioned capacity. This is calculated from the overprovision percentage that is defined in the effective policy."
       NET_THROUGHPUT:
-        Notes: "Data rate through the host’s Network adapter, measured in Kbytes/sec."
+        Units: "kilobytes/second"
+        Notes: "Data rate through the host’s Network adapter."
       POOL_CPU:
-        Notes: "For VDI, the total CPU available in a desktop pool."
+        Units: "MHz"
+        Notes: "For VDI, the CPU utilized on a desktop pool."
       POOL_MEM:
-        Notes: "For VDI, the total MEM available in a desktop pool."
+        Units: "kilobytes"
+        Notes: "For VDI, the MEM utilized on a desktop pool."
       POOL_STORAGE:
-        Notes: "For VDI, the total storage available in a desktop pool."
+        Units: "megabytes"
+        Notes: "For VDI, the storage utilized on a desktop pool."
       PORT_CHANEL:
-        Notes: "A logical grouping of ports in a fabric target."
+        Units: "kilobytes/second"
+        Notes: "Data rate through a logical grouping of ports in a fabric target."
       POWER:
+        Units: "NA"
         Notes: "A measure of the power that is consumed by a physical device."
+        
       Q16_VCPU:
-        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
-Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
+        Units: "ms"
+        Notes: "For VM: Sum of the Ready Queue usage of all CPUs on the VM (to normalize, divide the value by the count of vCPUs). For Host: Average of underlying Ready Queue values from all VMs with the same vCPU count."
       Q1_VCPU:
-        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
-Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
+        Units: "ms"
+        Notes: "For VM: Sum of the Ready Queue usage of all CPUs on the VM (to normalize, divide the value by the count of vCPUs). For Host: Average of underlying Ready Queue values from all VMs with the same vCPU count."
       Q2_VCPU:
-        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
-Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
+        Units: "ms"
+        Notes: "For VM: Sum of the Ready Queue usage of all CPUs on the VM (to normalize, divide the value by the count of vCPUs). For Host: Average of underlying Ready Queue values from all VMs with the same vCPU count."
       Q32_VCPU:
-        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
-Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
+        Units: "ms"
+        Notes: "For VM: Sum of the Ready Queue usage of all CPUs on the VM (to normalize, divide the value by the count of vCPUs). For Host: Average of underlying Ready Queue values from all VMs with the same vCPU count."
       Q3_VCPU:
-        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
-Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
+        Units: "ms"
+        Notes: "For VM: Sum of the Ready Queue usage of all CPUs on the VM (to normalize, divide the value by the count of vCPUs). For Host: Average of underlying Ready Queue values from all VMs with the same vCPU count."
       Q4_VCPU:
-        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
-Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
+        Units: "ms"
+        Notes: "For VM: Sum of the Ready Queue usage of all CPUs on the VM (to normalize, divide the value by the count of vCPUs). For Host: Average of underlying Ready Queue values from all VMs with the same vCPU count."
       Q5_VCPU:
-        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
-Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
+        Units: "ms"
+        Notes: "For VM: Sum of the Ready Queue usage of all CPUs on the VM (to normalize, divide the value by the count of vCPUs). For Host: Average of underlying Ready Queue values from all VMs with the same vCPU count."
       Q64_VCPU:
-        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
-Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
+        Units: "ms"
+        Notes: "For VM: Sum of the Ready Queue usage of all CPUs on the VM (to normalize, divide the value by the count of vCPUs). For Host: Average of underlying Ready Queue values from all VMs with the same vCPU count."
       Q6_VCPU:
-        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
-Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
+        Units: "ms"
+        Notes: "For VM: Sum of the Ready Queue usage of all CPUs on the VM (to normalize, divide the value by the count of vCPUs). For Host: Average of underlying Ready Queue values from all VMs with the same vCPU count."
       Q7_VCPU:
-        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
-Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
+        Units: "ms"
+        Notes: "For VM: Sum of the Ready Queue usage of all CPUs on the VM (to normalize, divide the value by the count of vCPUs). For Host: Average of underlying Ready Queue values from all VMs with the same vCPU count."
       Q8_VCPU:
-        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
-Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
+        Units: "ms"
+        Notes: "For VM: Sum of the Ready Queue usage of all CPUs on the VM (to normalize, divide the value by the count of vCPUs). For Host: Average of underlying Ready Queue values from all VMs with the same vCPU count."
       QN_VCPU:
-        Notes: "Ready queue is a queue of all processes that are waiting to be scheduled on a core/CPU.
-Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For example, a host with 8 CPUs would have ready queue for 1 CPU, 2 CPUs, 4 CPUs and 8 CPUs."
+        Units: "ms"
+        Notes: "For VM: Sum of the Ready Queue usage of all CPUs on the VM (to normalize, divide the value by the count of vCPUs). For Host: Average of underlying Ready Queue values from all VMs with the same vCPU count."
       REMAINING_GC_CAPACITY:
+        Units: "percentage"
         Notes: "The percentage of CPU time not spent on garbage collection. If heap is high and this is low, then heap is not overutilized."
       RESPONSE_TIME:
+        Units: "ms"
         Notes: "Response time for an application, in ms."
       SLA_COMMODITY:
+        Units: "NA"
         Notes: "A commodity to represent service-level agreements, calculated by the number of requests made divided by the duration of the request."
       STORAGE_ACCESS:
-        Notes: "Storage operations per second (IOPS)."
+        Units: "count"
+        Notes: "Storage operations per second (IOPS), for the given discovery cycle (."
       STORAGE_ALLOCATION:
         Notes: "Total space allocated to a storage storage, disk array, or aggregates managed by a storage controller. Measured in MB."
       STORAGE_AMOUNT:
         Notes: "The utilisation of storage capacity, measured in MB."
       STORAGE_HEADROOM:
-        Notes: "The remaining capacity available on the storage."
+        Units: "count"
+        Notes: "The count of VMs that can run within the storage capacity of the current cluster."
       STORAGE_LATENCY:
         Notes: "Allocated capacity for latency on a datastore. This measures the latency experienced by all VMs and hosts that access the datastore. Utilization is the percentage of allocated latency that is in use on the datastore."
       STORAGE_PROVISIONED:
@@ -124,7 +161,8 @@ Ready Queue commodites are created for each power of 2 up to 64 vCPUs. For examp
       THREADS:
         Notes: "Allocated thread capacity. Utilization gives the percentage of capacity."
       TOTAL_HEADROOM:
-        Notes: "The maximum number of virtual machines created from the headroom template that can fit on the entity (host, cluster, etc.)"
+        Units: "count"
+        Notes: "The maximum number of virtual machines created from the headroom template that can fit on the cluster. This is the lowest of CPU, MEM, or Storage headroom."
       TOTAL_SESSIONS:
         Notes: "For VDI, the total count of active sessions in all desktop pools."
       TRANSACTION:
