@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.021169 -->
+<Type id="OSType_topic" type="enums">
+  <Title>OSType</Title>
+  <body>
+    <Item name="LINUX">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="LINUX_WITH_SQL_ENTERPRISE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="LINUX_WITH_SQL_STANDARD">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="LINUX_WITH_SQL_WEB">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="RHEL">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="SUSE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="UNKNOWN_OS">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="WINDOWS">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="WINDOWS_BYOL">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="WINDOWS_WITH_SQL_ENTERPRISE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="WINDOWS_WITH_SQL_STANDARD">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="WINDOWS_WITH_SQL_WEB">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+  </body>
+</Type>

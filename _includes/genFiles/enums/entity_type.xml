@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.017868 -->
+<Type id="entity_type_topic" type="enums">
+  <Title>entity_type</Title>
+  <body>
+    <Item name="ACTION_MANAGER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="APPLICATION">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="APPLICATION_COMPONENT">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="APPLICATION_SERVER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="AVAILABILITY_ZONE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="BILLING_FAMILY">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="BUSINESS">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="BUSINESS_ACCOUNT">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="BUSINESS_APPLICATION">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="BUSINESS_ENTITY">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="BUSINESS_TRANSACTION">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="BUSINESS_USER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="CHASSIS">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="CLOUD_COMMITMENT">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="CLOUD_SERVICE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="COMPUTE_CLUSTER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="COMPUTE_RESOURCE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="COMPUTE_TIER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="CONTAINER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="CONTAINER_PLATFORM_CLUSTER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="CONTAINER_POD">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="CONTAINER_SPEC">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="DATABASE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="DATABASE_SERVER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="DATABASE_SERVER_TIER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="DATABASE_TIER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="DATACENTER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="DESIRED_RESERVED_INSTANCE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="DESKTOP_POOL">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="DISK_ARRAY">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="DISTRIBUTED_VIRTUAL_PORTGROUP">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="DPOD">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="GROUP">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="HCI_PHYSICAL_MACHINE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="HYPERVISOR_SERVER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="INFRASTRUCTURE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="INTERNET">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="IO_MODULE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="IP">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="K8S_CLUSTER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="LICENSING_SERVICE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="LOAD_BALANCER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="LOGICAL_POOL">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="MAC">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="MOVER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="NAMESPACE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="NETWORK">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="NETWORKING_ENDPOINT">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="OPERATOR">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="PHYSICAL_MACHINE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="PORT">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="PROCESSOR_POOL">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="REGION">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="RESERVED_INSTANCE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="RESERVED_INSTANCE_SPECIFICATION">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="RESOURCE_GROUP">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="RIGHT_SIZER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="SAVINGS">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="SERVICE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="SERVICE_ENTITY_TEMPLATE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="SERVICE_PROVIDER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="STORAGE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="STORAGE_CLUSTER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="STORAGE_CONTROLLER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="STORAGE_TIER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="STORAGE_VOLUME">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="SWITCH">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="TARGET">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="THIS_ENTITY">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="THREE_TIER_APPLICATION">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="VIEW_POD">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="VIRTUAL_APPLICATION">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="VIRTUAL_DATACENTER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="VIRTUAL_MACHINE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="VIRTUAL_VOLUME">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="VLAN">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="VM_SPEC">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="VPOD">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="WEB_SERVER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="WORKLOAD_CONTROLLER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="_NONE_">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+  </body>
+</Type>

@@ -1,0 +1,235 @@
+<html><body><h1>completed_action</h1>
+  
+  <table><tbody><tr><th>Data Object</th><th>Type</th><th>Nullable</th><th>Primary</th><th>Description</th><th>Reference</th></tr>
+    <tr><td>recommendation_time</td>
+      <td>
+        <p>timestamp with time zone</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>When analysis recommended the action.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>acceptance_time</td>
+      <td>
+        <p>timestamp with time zone</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>For manual actions, when the action was accepted for execution.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>completion_time</td>
+      <td>
+        <p>timestamp with time zone</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>When the action completed. Can be for success or failure.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>action_oid</td>
+      <td>
+        <p>bigint</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>The ID of the action. Use this to get action details.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>type</td>
+      <td>
+        <p>enum</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>The action type.</p>
+      </td>
+      <td>
+        <p>
+          <a href="../enums/action_type.html">action_type</a>
+        </p>
+      </td>
+    </tr>
+    <tr><td>severity</td>
+      <td>
+        <p>enum</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>The action severity.</p>
+      </td>
+      <td>
+        <p>
+          <a href="../enums/severity.html">severity</a>
+        </p>
+      </td>
+    </tr>
+    <tr><td>category</td>
+      <td>
+        <p>enum</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>The action category.</p>
+      </td>
+      <td>
+        <p>
+          <a href="../enums/action_category.html">action_category</a>
+        </p>
+      </td>
+    </tr>
+    <tr><td>target_entity_id</td>
+      <td>
+        <p>bigint</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>The ID of the entity that the action affects. For example, for a VMem resize, the VM that is resized.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>involved_entities</td>
+      <td>
+        <p>bigint[]</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>An array of IDs for entities involved in the action. This includes the target entity.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>description</td>
+      <td>
+        <p>text</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>The text description of the action.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>savings</td>
+      <td>
+        <p>double precision</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>The cost savings this action results in. A negative savings indicates an investment.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>final_state</td>
+      <td>
+        <p>enum</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>Whether the action succeded or failed.</p>
+      </td>
+      <td>
+        <p>
+          <a href="../enums/terminal_state.html">terminal_state</a>
+        </p>
+      </td>
+    </tr>
+    <tr><td>final_message</td>
+      <td>
+        <p>text</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>A message for the final state. If the action failed, this should contain an error message.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>attrs</td>
+      <td>
+        <p>jsonb</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>Additional (often type-specific) info for the action. For example, in resizes this will contain the commodity type and from/to amounts.</p>
+      </td>
+      <td>
+        <p>
+          <a href="../table_data/action.attrs.html">action.attrs</a>
+        </p>
+      </td>
+    </tr>
+  </tbody></table>
+</body></html>

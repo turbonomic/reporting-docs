@@ -1,0 +1,84 @@
+<html><body><h1>scope</h1>
+  
+  <table><tbody><tr><th>Data Object</th><th>Type</th><th>Nullable</th><th>Primary</th><th>Description</th><th>Reference</th></tr>
+    <tr><td>seed_oid</td>
+      <td>
+        <p>bigint</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>The ID of the entity whose scope is the subject of the given record. For example, for a cluster-to-host relationship, the seed can be the cluster, and the scoped entity would be the host.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>scoped_oid</td>
+      <td>
+        <p>bigint</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>ID of the entity that is part of the seed scope.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>scoped_type</td>
+      <td>
+        <p>enum</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>Entity type for the scoped entity.</p>
+      </td>
+      <td>
+        <p>
+          <a href="../enums/entity_type.html">entity_type</a>
+        </p>
+      </td>
+    </tr>
+    <tr><td>start</td>
+      <td>
+        <p>timestamp with time zone</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>When this relationship first appeared in the topology. This covers the initial appearance, or an appearance after a gap (the relationship was temporarily broken).</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>finish</td>
+      <td>
+        <p>timestamp with time zone</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>WHEN this relationship LAST appeared IN THE TOPOLOGY. A value of 9999-12-31T23:59:59 means the relationship is not yet known to have terminated.</p>
+      </td>
+      <td></td>
+    </tr>
+  </tbody></table>
+</body></html>

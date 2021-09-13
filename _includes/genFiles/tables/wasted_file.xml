@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.031767 -->
+<Type id="wasted_file_topic" type="tables">
+  <Title>wasted_file</Title>
+  <body>
+    <Item name="path">
+      <Field name="Type">
+        <p>text</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>The file path.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="file_size_kb">
+      <Field name="Type">
+        <p>bigint</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>The file size.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="modification_time">
+      <Field name="Type">
+        <p>timestamp with time zone</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>When the file was last modified.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="storage_oid">
+      <Field name="Type">
+        <p>bigint</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>The ID of the storage that contains the file.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="storage_name">
+      <Field name="Type">
+        <p>text</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>The name of the storage (denormalized for reporting).</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+  </body>
+</Type>

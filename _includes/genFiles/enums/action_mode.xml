@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.013916 -->
+<Type id="action_mode_topic" type="enums">
+  <Title>action_mode</Title>
+  <body>
+    <Item name="AUTOMATIC">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="DISABLED">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="EXTERNAL_APPROVAL">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="MANUAL">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="RECOMMEND">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+  </body>
+</Type>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.016986 -->
+<Type id="entity_state_topic" type="enums">
+  <Title>entity_state</Title>
+  <body>
+    <Item name="FAILOVER">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="MAINTENANCE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="POWERED_OFF">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="POWERED_ON">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="SUSPENDED">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="UNKNOWN">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+  </body>
+</Type>

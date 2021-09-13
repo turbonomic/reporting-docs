@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.043215 -->
+<Type id="Commodity_topic" type="exporter">
+  <Title>Commodity</Title>
+  <body>
+    <Item name="capacity">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>Double</p>
+      </Field>
+    </Item>
+    <Item name="consumed">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>Double</p>
+      </Field>
+    </Item>
+    <Item name="current">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>Double</p>
+      </Field>
+    </Item>
+    <Item name="utilization">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>Double</p>
+      </Field>
+    </Item>
+  </body>
+</Type>

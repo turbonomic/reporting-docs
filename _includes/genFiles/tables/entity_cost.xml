@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.023678 -->
+<Type id="entity_cost_topic" type="tables">
+  <Title>entity_cost</Title>
+  <body>
+    <Item name="time">
+      <Field name="Type">
+        <p>timestamp with time zone</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="entity_oid">
+      <Field name="Type">
+        <p>bigint</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>The entity ID</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="category">
+      <Field name="Type">
+        <p>enum</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>The cost category - IP service, storage service, on-demand or RI compute, etc.</p>
+      </Field>
+      <Field name="Reference">
+        <p>
+          <xref href="/enums/cost_category.xml">cost_category</xref>
+        </p>
+      </Field>
+    </Item>
+    <Item name="source">
+      <Field name="Type">
+        <p>enum</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>The billing data that provides the cost.</p>
+      </Field>
+      <Field name="Reference">
+        <p>
+          <xref href="/enums/cost_source.xml">cost_source</xref>
+        </p>
+      </Field>
+    </Item>
+    <Item name="cost">
+      <Field name="Type">
+        <p>real</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>The calculated cost.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+  </body>
+</Type>

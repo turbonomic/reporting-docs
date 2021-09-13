@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.019595 -->
+<Type id="metric_type_topic" type="enums">
+  <Title>metric_type</Title>
+  <body>
+    <Item name="ACTIVE_SESSIONS">
+      <Field name="Notes">
+        <p>Count of the number of actively logged in sessions</p>
+      </Field>
+      <Field name="Unit">
+        <p>Count</p>
+      </Field>
+    </Item>
+    <Item name="BALLOONING">
+      <Field name="Notes">
+        <p>Number of kb the host is dedicated for ballooning</p>
+      </Field>
+      <Field name="Unit">
+        <p>kilobytes</p>
+      </Field>
+    </Item>
+    <Item name="BUFFER_COMMODITY">
+      <Field name="Notes">
+        <p>Utilization of a port buffer (fabric, UCS specific)</p>
+      </Field>
+      <Field name="Unit">
+        <p>megabytes</p>
+      </Field>
+    </Item>
+    <Item name="CONNECTION">
+      <Field name="Notes">
+        <p>Number of connections onto the application</p>
+      </Field>
+      <Field name="Unit">
+        <p>Count</p>
+      </Field>
+    </Item>
+    <Item name="COOLING">
+      <Field name="Notes" outputclass="NULL"/>
+      <Field name="Unit" outputclass="NULL"/>
+    </Item>
+    <Item name="CPU">
+      <Field name="Notes">
+        <p>For Physical machine - usage of CPU (current column).    For VM - consumed CPU on the host (consumed column).</p>
+      </Field>
+      <Field name="Unit">
+        <p>MHz</p>
+      </Field>
+    </Item>
+    <Item name="CPU_ALLOCATION">
+      <Field name="Notes">
+        <p>For VMs (consumed column) - VM buys from VDC or from desktop pool (VDI).   For PMs - PMs sells to VDCs.</p>
+      </Field>
+      <Field name="Unit">
+        <p>MHz</p>
+      </Field>
+    </Item>
+    <Item name="CPU_HEADROOM">
+      <Field name="Notes">
+        <p>Number of VMs that can fit in all of the available  CPU (on a cluster)</p>
+      </Field>
+      <Field name="Unit">
+        <p>Count</p>
+      </Field>
+    </Item>
+    <Item name="CPU_PROVISIONED">
+      <Field name="Notes">
+        <p>Capacity is based on the over-provisioned value in policy</p>
+      </Field>
+      <Field name="Unit">
+        <p>MHz</p>
+      </Field>
+    </Item>
+    <Item name="CPU_READY">
+      <Field name="Notes">
+        <p>Ready queue</p>
+      </Field>
+      <Field name="Unit">
+        <p>ms</p>
+      </Field>
+    </Item>
+    <Item name="DB_CACHE_HIT_RATE">
+      <Field name="Notes">
+        <p>The percentage of accesses that result in cache hits.</p>
+      </Field>
+      <Field name="Unit">
+        <p>Percentage</p>
+      </Field>
+    </Item>
+    <Item name="DB_MEM">
+      <Field name="Notes">
+        <p>DB mem utilization or DM capacity</p>
+      </Field>
+      <Field name="Unit">
+        <p>kilobytes</p>
+      </Field>
+    </Item>
+    <Item name="DTU">
+      <Field name="Notes">
+        <p>Capacity defined in the cloud</p>
+      </Field>
+      <Field name="Unit">
+        <p>Count</p>
+      </Field>
+    </Item>
+    <Item name="EXTENT">
+      <Field name="Notes">
+        <p>Internal</p>
+      </Field>
+      <Field name="Unit">
+        <p>NA</p>
+      </Field>
+    </Item>
+    <Item name="FLOW">
+      <Field name="Notes">
+        <p>Amount of network traffic per second between two nodes</p>
+      </Field>
+      <Field name="Unit">
+        <p>kilobytes/sec</p>
+      </Field>
+    </Item>
+    <Item name="FLOW_ALLOCATION">
+      <Field name="Notes" outputclass="NULL"/>
+      <Field name="Unit">
+        <p>bytes</p>
+      </Field>
+    </Item>
+    <Item name="HEAP">
+      <Field name="Notes">
+        <p>Amount of heap configured for an application</p>
+      </Field>
+      <Field name="Unit">
+        <p>kilobytes</p>
+      </Field>
+    </Item>
+    <Item name="IMAGE_CPU">
+      <Field name="Notes">
+        <p>For VDI, usage of the business user</p>
+      </Field>
+      <Field name="Unit">
+        <p>MHz</p>
+      </Field>
+    </Item>
+    <Item name="IMAGE_MEM">
+      <Field name="Notes">
+        <p>For VDI, usage of the business user</p>
+      </Field>
+      <Field name="Unit">
+        <p>kilobytes</p>
+      </Field>
+    </Item>
+    <Item name="IMAGE_STORAGE">
+      <Field name="Notes">
+        <p>For VDI, usage of the business user</p>
+      </Field>
+      <Field name="Unit">
+        <p>megabytes</p>
+      </Field>
+    </Item>
+    <Item name="IO_THROUGHPUT">
+      <Field name="Notes">
+        <p>Amount of traffic through the IO adapter</p>
+      </Field>
+      <Field name="Unit">
+        <p>kilobytes/sec</p>
+      </Field>
+    </Item>
+    <Item name="MEM">
+      <Field name="Notes">
+        <p>Physical machine - usage of memory.   VM - consumed memory.</p>
+      </Field>
+      <Field name="Unit">
+        <p>kilobytes</p>
+      </Field>
+    </Item>
+    <Item name="MEM_ALLOCATION">
+      <Field name="Notes">
+        <p>Physical machine - what the host provides to VDCs.   VM (consumed column) - what the VM buys from VDC or desktop pool.</p>
+      </Field>
+      <Field name="Unit">
+        <p>kilobytes</p>
+      </Field>
+    </Item>
+    <Item name="MEM_HEADROOM">
+      <Field name="Notes">
+        <p>Number of VMs that can fit in the available memory on the cluster</p>
+      </Field>
+      <Field name="Unit">
+        <p>Count</p>
+      </Field>
+    </Item>
+    <Item name="MEM_PROVISIONED">
+      <Field name="Notes">
+        <p>Capacity, based on the over-provisioned value in policy</p>
+      </Field>
+      <Field name="Unit">
+        <p>kilobytes</p>
+      </Field>
+    </Item>
+    <Item name="NET_THROUGHPUT">
+      <Field name="Notes">
+        <p>Amount of traffic through the Network adapter</p>
+      </Field>
+      <Field name="Unit">
+        <p>kilobytes/sec</p>
+      </Field>
+    </Item>
+    <Item name="POOL_CPU">
+      <Field name="Notes">
+        <p>For VDI, usage of the desktop pool</p>
+      </Field>
+      <Field name="Unit">
+        <p>MHz</p>
+      </Field>
+    </Item>
+    <Item name="POOL_MEM">
+      <Field name="Notes">
+        <p>For VDI, usage of the desktop pool</p>
+      </Field>
+      <Field name="Unit">
+        <p>kilobytes</p>
+      </Field>
+    </Item>
+    <Item name="POOL_STORAGE">
+      <Field name="Notes">
+        <p>For VDI, usage of the desktop pool</p>
+      </Field>
+      <Field name="Unit">
+        <p>megabytes</p>
+      </Field>
+    </Item>
+    <Item name="PORT_CHANEL">
+      <Field name="Notes">
+        <p>Traffic on ports for UCS Mgr/HPE1</p>
+      </Field>
+      <Field name="Unit">
+        <p>kilobytes/sec</p>
+      </Field>
+    </Item>
+    <Item name="POWER">
+      <Field name="Notes" outputclass="NULL"/>
+      <Field name="Unit" outputclass="NULL"/>
+    </Item>
+    <Item name="Q16_VCPU">
+      <Field name="Notes">
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      </Field>
+      <Field name="Unit">
+        <p>ms</p>
+      </Field>
+    </Item>
+    <Item name="Q1_VCPU">
+      <Field name="Notes">
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      </Field>
+      <Field name="Unit">
+        <p>ms</p>
+      </Field>
+    </Item>
+    <Item name="Q2_VCPU">
+      <Field name="Notes">
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      </Field>
+      <Field name="Unit">
+        <p>ms</p>
+      </Field>
+    </Item>
+    <Item name="Q32_VCPU">
+      <Field name="Notes">
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      </Field>
+      <Field name="Unit">
+        <p>ms</p>
+      </Field>
+    </Item>
+    <Item name="Q3_VCPU">
+      <Field name="Notes">
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      </Field>
+      <Field name="Unit">
+        <p>ms</p>
+      </Field>
+    </Item>
+    <Item name="Q4_VCPU">
+      <Field name="Notes">
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      </Field>
+      <Field name="Unit">
+        <p>ms</p>
+      </Field>
+    </Item>
+    <Item name="Q5_VCPU">
+      <Field name="Notes">
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      </Field>
+      <Field name="Unit">
+        <p>ms</p>
+      </Field>
+    </Item>
+    <Item name="Q64_VCPU">
+      <Field name="Notes">
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      </Field>
+      <Field name="Unit">
+        <p>ms</p>
+      </Field>
+    </Item>
+    <Item name="Q6_VCPU">
+      <Field name="Notes">
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      </Field>
+      <Field name="Unit">
+        <p>ms</p>
+      </Field>
+    </Item>
+    <Item name="Q7_VCPU">
+      <Field name="Notes">
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      </Field>
+      <Field name="Unit">
+        <p>ms</p>
+      </Field>
+    </Item>
+    <Item name="Q8_VCPU">
+      <Field name="Notes">
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      </Field>
+      <Field name="Unit">
+        <p>ms</p>
+      </Field>
+    </Item>
+    <Item name="QN_VCPU">
+      <Field name="Notes">
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      </Field>
+      <Field name="Unit">
+        <p>ms</p>
+      </Field>
+    </Item>
+    <Item name="REMAINING_GC_CAPACITY">
+      <Field name="Notes">
+        <p>Percentage of time not spent on garbage collection</p>
+      </Field>
+      <Field name="Unit">
+        <p>Percentage</p>
+      </Field>
+    </Item>
+    <Item name="RESPONSE_TIME">
+      <Field name="Notes">
+        <p>Application response</p>
+      </Field>
+      <Field name="Unit">
+        <p>ms</p>
+      </Field>
+    </Item>
+    <Item name="SLA_COMMODITY">
+      <Field name="Notes">
+        <p>User-defined value</p>
+      </Field>
+      <Field name="Unit">
+        <p>Number</p>
+      </Field>
+    </Item>
+    <Item name="STORAGE_ACCESS">
+      <Field name="Notes">
+        <p>Count of the number of I/O (read + write) within two discovery cycles</p>
+      </Field>
+      <Field name="Unit">
+        <p>count</p>
+      </Field>
+    </Item>
+    <Item name="STORAGE_ALLOCATION">
+      <Field name="Notes">
+        <p>Allocated storage</p>
+      </Field>
+      <Field name="Unit">
+        <p>megabytes</p>
+      </Field>
+    </Item>
+    <Item name="STORAGE_AMOUNT">
+      <Field name="Notes">
+        <p>Used storage</p>
+      </Field>
+      <Field name="Unit">
+        <p>megabytes</p>
+      </Field>
+    </Item>
+    <Item name="STORAGE_HEADROOM">
+      <Field name="Notes">
+        <p>Count of VM that can fit for the storage in a cluster in terms of storage</p>
+      </Field>
+      <Field name="Unit">
+        <p>Count</p>
+      </Field>
+    </Item>
+    <Item name="STORAGE_LATENCY">
+      <Field name="Notes">
+        <p>Acceptable latency. User can set capacity for most storage, is discovered for NetApp.</p>
+      </Field>
+      <Field name="Unit">
+        <p>ms</p>
+      </Field>
+    </Item>
+    <Item name="STORAGE_PROVISIONED">
+      <Field name="Notes">
+        <p>Capacity, based on the over-provisioned value in policy</p>
+      </Field>
+      <Field name="Unit">
+        <p>megabytes</p>
+      </Field>
+    </Item>
+    <Item name="SWAPPING">
+      <Field name="Notes">
+        <p>Memory swapping</p>
+      </Field>
+      <Field name="Unit">
+        <p>bytes/sec</p>
+      </Field>
+    </Item>
+    <Item name="THREADS">
+      <Field name="Notes">
+        <p>Threads in use</p>
+      </Field>
+      <Field name="Unit">
+        <p>Count</p>
+      </Field>
+    </Item>
+    <Item name="TOTAL_HEADROOM">
+      <Field name="Notes">
+        <p>Min value of CPU, Mem, IO, of the headrooms</p>
+      </Field>
+      <Field name="Unit">
+        <p>Count</p>
+      </Field>
+    </Item>
+    <Item name="TOTAL_SESSIONS">
+      <Field name="Notes">
+        <p>Total number of possible sessions</p>
+      </Field>
+      <Field name="Unit">
+        <p>Count</p>
+      </Field>
+    </Item>
+    <Item name="TRANSACTION">
+      <Field name="Notes">
+        <p>Transactions for the application</p>
+      </Field>
+      <Field name="Unit">
+        <p>transactions/sec</p>
+      </Field>
+    </Item>
+    <Item name="TRANSACTION_LOG">
+      <Field name="Notes">
+        <p>Size of the transaction log</p>
+      </Field>
+      <Field name="Unit">
+        <p>megabytes</p>
+      </Field>
+    </Item>
+    <Item name="VCPU">
+      <Field name="Notes">
+        <p>CPU for the VM</p>
+      </Field>
+      <Field name="Unit">
+        <p>MHz</p>
+      </Field>
+    </Item>
+    <Item name="VCPU_LIMIT_QUOTA">
+      <Field name="Notes" outputclass="NULL"/>
+      <Field name="Unit">
+        <p>millicores</p>
+      </Field>
+    </Item>
+    <Item name="VCPU_REQUEST">
+      <Field name="Notes" outputclass="NULL"/>
+      <Field name="Unit">
+        <p>millicores</p>
+      </Field>
+    </Item>
+    <Item name="VCPU_REQUEST_QUOTA">
+      <Field name="Notes" outputclass="NULL"/>
+      <Field name="Unit">
+        <p>millicores</p>
+      </Field>
+    </Item>
+    <Item name="VMEM">
+      <Field name="Notes">
+        <p>Memory sold by a VM. Memory sold and bought for a container</p>
+      </Field>
+      <Field name="Unit">
+        <p>kilobytes</p>
+      </Field>
+    </Item>
+    <Item name="VMEM_LIMIT_QUOTA">
+      <Field name="Notes" outputclass="NULL"/>
+      <Field name="Unit">
+        <p>kilobytes</p>
+      </Field>
+    </Item>
+    <Item name="VMEM_REQUEST">
+      <Field name="Notes" outputclass="NULL"/>
+      <Field name="Unit">
+        <p>kilobytes</p>
+      </Field>
+    </Item>
+    <Item name="VMEM_REQUEST_QUOTA">
+      <Field name="Notes" outputclass="NULL"/>
+      <Field name="Unit">
+        <p>kilobytes</p>
+      </Field>
+    </Item>
+    <Item name="VSTORAGE">
+      <Field name="Notes" outputclass="NULL"/>
+      <Field name="Unit">
+        <p>megabytes</p>
+      </Field>
+    </Item>
+  </body>
+</Type>

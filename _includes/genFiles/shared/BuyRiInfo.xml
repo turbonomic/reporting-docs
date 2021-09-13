@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.038357 -->
+<Type id="BuyRiInfo_topic" type="shared">
+  <Title>BuyRiInfo</Title>
+  <body>
+    <Item name="computeTier">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/ActionEntity</p>
+      </Field>
+    </Item>
+    <Item name="count">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>Integer</p>
+      </Field>
+    </Item>
+    <Item name="masterAccount">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/ActionEntity</p>
+      </Field>
+    </Item>
+    <Item name="region">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/ActionEntity</p>
+      </Field>
+    </Item>
+    <Item name="target">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/ActionEntity</p>
+      </Field>
+    </Item>
+  </body>
+</Type>

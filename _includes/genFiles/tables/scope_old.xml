@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.030457 -->
+<Type id="scope_old_topic" type="tables">
+  <Title>scope_old</Title>
+  <body>
+    <Item name="seed_oid">
+      <Field name="Type">
+        <p>bigint</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>True</p>
+      </Field>
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="scoped_oid">
+      <Field name="Type">
+        <p>bigint</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>True</p>
+      </Field>
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="scoped_type">
+      <Field name="Type">
+        <p>enum</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Reference">
+        <p>
+          <xref href="/enums/entity_type.xml">entity_type</xref>
+        </p>
+      </Field>
+    </Item>
+    <Item name="start">
+      <Field name="Type">
+        <p>timestamp with time zone</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>True</p>
+      </Field>
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="finish">
+      <Field name="Type">
+        <p>timestamp with time zone</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+  </body>
+</Type>

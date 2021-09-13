@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.024581 -->
+<Type id="entity_types_with_cost_topic" type="tables">
+  <Title>entity_types_with_cost</Title>
+  <body>
+    <Item name="type">
+      <Field name="Type">
+        <p>enum</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Reference">
+        <p>
+          <xref href="/enums/entity_type.xml">entity_type</xref>
+        </p>
+      </Field>
+    </Item>
+  </body>
+</Type>

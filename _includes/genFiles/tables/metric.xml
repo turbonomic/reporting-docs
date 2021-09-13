@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.027194 -->
+<Type id="metric_topic" type="tables">
+  <Title>metric</Title>
+  <body>
+    <Item name="time">
+      <Field name="Type">
+        <p>timestamp with time zone</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>When analysis discovered thIS metric. For headroom metrics, when the headroom plan was created.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="entity_oid">
+      <Field name="Type">
+        <p>bigint</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>The ID of the entity this metric pertains to.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="type">
+      <Field name="Type">
+        <p>enum</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>The metric type.</p>
+      </Field>
+      <Field name="Reference">
+        <p>
+          <xref href="/enums/metric_type.xml">metric_type</xref>
+        </p>
+      </Field>
+    </Item>
+    <Item name="provider_oid">
+      <Field name="Type">
+        <p>bigint</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>The ID of the entity that provides this metric. For example, for VMem, the ID of the host that provides the memory.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="key">
+      <Field name="Type">
+        <p>text</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>The commodity key. This value can be null if no key is present.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="current">
+      <Field name="Type">
+        <p>double precision</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>Current utilization of commodity in provider entity.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="capacity">
+      <Field name="Type">
+        <p>double precision</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>The capacity of the commodity in the provider entity.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="utilization">
+      <Field name="Type">
+        <p>double precision</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>Overall utilization of the commodity in the provider entity.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="consumed">
+      <Field name="Type">
+        <p>double precision</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>Amount of commodity currently used by consumer entity.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="peak_current">
+      <Field name="Type">
+        <p>double precision</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>Peak amount of current used commodity in the provider entity.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="peak_consumed">
+      <Field name="Type">
+        <p>double precision</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>Peak amount of commodity currently used by the consumer entity.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="entity_type">
+      <Field name="Type">
+        <p>enum</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>The type of the consumer entity.</p>
+      </Field>
+      <Field name="Reference">
+        <p>
+          <xref href="/enums/entity_type.xml">entity_type</xref>
+        </p>
+      </Field>
+    </Item>
+  </body>
+</Type>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.032975 -->
+<Type id="Target_topic" type="shared">
+  <Title>Target</Title>
+  <body>
+    <Item name="category">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>String</p>
+      </Field>
+    </Item>
+    <Item name="entityVendorId">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>String</p>
+      </Field>
+    </Item>
+    <Item name="name">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>String</p>
+      </Field>
+    </Item>
+    <Item name="oid">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>Long</p>
+      </Field>
+    </Item>
+    <Item name="type">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>String</p>
+      </Field>
+    </Item>
+  </body>
+</Type>

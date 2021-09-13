@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.039612 -->
+<Type id="action.attrs_topic" type="table_data">
+  <Title>action.attrs</Title>
+  <body>
+    <Item name="buyRiInfo">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/BuyRiInfo</p>
+      </Field>
+    </Item>
+    <Item name="deleteInfo">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/DeleteInfo</p>
+      </Field>
+    </Item>
+    <Item name="moveInfo">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/MoveChange</p>
+      </Field>
+      <Field name="MapKeyType">
+        <p>/enums/entity_type</p>
+      </Field>
+    </Item>
+    <Item name="resizeInfo">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/CommodityChange</p>
+      </Field>
+      <Field name="MapKeyType">
+        <p>/enums/metric_type</p>
+      </Field>
+    </Item>
+    <Item name="scaleInfo">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/MoveChange</p>
+      </Field>
+      <Field name="MapKeyType">
+        <p>/enums/entity_type</p>
+      </Field>
+    </Item>
+    <Item name="target">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/ActionImpactedEntity</p>
+      </Field>
+    </Item>
+  </body>
+</Type>

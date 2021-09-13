@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.027976 -->
+<Type id="metric_old_topic" type="tables">
+  <Title>metric_old</Title>
+  <body>
+    <Item name="time">
+      <Field name="Type">
+        <p>timestamp with time zone</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="entity_oid">
+      <Field name="Type">
+        <p>bigint</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="entity_hash">
+      <Field name="Type">
+        <p>bigint</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="type">
+      <Field name="Type">
+        <p>enum</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Reference">
+        <p>
+          <xref href="/enums/metric_type.xml">metric_type</xref>
+        </p>
+      </Field>
+    </Item>
+    <Item name="current">
+      <Field name="Type">
+        <p>double precision</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="capacity">
+      <Field name="Type">
+        <p>double precision</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="utilization">
+      <Field name="Type">
+        <p>double precision</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="consumed">
+      <Field name="Type">
+        <p>double precision</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="provider_oid">
+      <Field name="Type">
+        <p>bigint</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="key">
+      <Field name="Type">
+        <p>text</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+  </body>
+</Type>

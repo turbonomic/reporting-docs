@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.043505 -->
+<Type id="CostByCategory_topic" type="exporter">
+  <Title>CostByCategory</Title>
+  <body>
+    <Item name="source">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>Float</p>
+      </Field>
+      <Field name="MapKeyType">
+        <p>/enums/cost_source</p>
+      </Field>
+    </Item>
+    <Item name="total">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>Float</p>
+      </Field>
+    </Item>
+  </body>
+</Type>

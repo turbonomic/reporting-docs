@@ -1,0 +1,86 @@
+<html><body><h1>entity_cost</h1>
+  
+  <table><tbody><tr><th>Data Object</th><th>Type</th><th>Nullable</th><th>Primary</th><th>Description</th><th>Reference</th></tr>
+    <tr><td>time</td>
+      <td>
+        <p>timestamp with time zone</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr><td>entity_oid</td>
+      <td>
+        <p>bigint</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>The entity ID</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>category</td>
+      <td>
+        <p>enum</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>The cost category - IP service, storage service, on-demand or RI compute, etc.</p>
+      </td>
+      <td>
+        <p>
+          <a href="../enums/cost_category.html">cost_category</a>
+        </p>
+      </td>
+    </tr>
+    <tr><td>source</td>
+      <td>
+        <p>enum</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>The billing data that provides the cost.</p>
+      </td>
+      <td>
+        <p>
+          <a href="../enums/cost_source.html">cost_source</a>
+        </p>
+      </td>
+    </tr>
+    <tr><td>cost</td>
+      <td>
+        <p>real</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>The calculated cost.</p>
+      </td>
+      <td></td>
+    </tr>
+  </tbody></table>
+</body></html>

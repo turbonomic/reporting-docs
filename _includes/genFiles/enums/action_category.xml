@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.013514 -->
+<Type id="action_category_topic" type="enums">
+  <Title>action_category</Title>
+  <body>
+    <Item name="COMPLIANCE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="EFFICIENCY_IMPROVEMENT">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="PERFORMANCE_ASSURANCE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="PREVENTION">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="UNKNOWN">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+  </body>
+</Type>

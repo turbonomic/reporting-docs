@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.015250 -->
+<Type id="attr_type_topic" type="enums">
+  <Title>attr_type</Title>
+  <body>
+    <Item name="ENTITY_STATE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="NUM_VCPU">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="VOLUME_ATTACHED">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+  </body>
+</Type>

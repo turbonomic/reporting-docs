@@ -1,0 +1,202 @@
+<html><body><h1>historical_entity_attrs</h1>
+  
+  <table><tbody><tr><th>Data Object</th><th>Type</th><th>Nullable</th><th>Primary</th><th>Description</th><th>Reference</th></tr>
+    <tr><td>time</td>
+      <td>
+        <p>timestamp with time zone</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>When this attribute was recorded.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>entity_oid</td>
+      <td>
+        <p>bigint</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>The ID of the entity this attribute pertains to.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>type</td>
+      <td>
+        <p>enum</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>The attribute type.</p>
+      </td>
+      <td>
+        <p>
+          <a href="../enums/attr_type.html">attr_type</a>
+        </p>
+      </td>
+    </tr>
+    <tr><td>bool_value</td>
+      <td>
+        <p>boolean</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>If the attribute is boolean, the boolean value.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>int_value</td>
+      <td>
+        <p>int</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>If the attribute is an integer, the integer value. If the attribute is an enum, this is the OID of the enum in the pg_enum table (to guard against name or order changes). The int_value should be castable to the enum via a custom cast (e.g. int_value::entity_state = 'POWERED_ON').</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>long_value</td>
+      <td>
+        <p>bigint</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>If the attribute is a long, the long value.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>double_value</td>
+      <td>
+        <p>double precision</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>If the attribute is a double, the double value.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>string_value</td>
+      <td>
+        <p>text</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>If the attribute is a string, the string value.</p>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr><td>int_arr_value</td>
+      <td>
+        <p>int[]</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>If the attribute is a list of ints, the list values. If the attribute is a list of enums, these are the OIDs of the enums in the pg_enum table (to guard against name or order changes).</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>long_arr_value</td>
+      <td>
+        <p>bigint[]</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>If the attribute is a list of longs, the long values.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>string_arr_value</td>
+      <td>
+        <p>text[]</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>If the attribute is a list of strings, the string values.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>double_arr_value</td>
+      <td>
+        <p>float8[]</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>If the attribute is a list of doubles, the double values.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>json_value</td>
+      <td>
+        <p>jsonb</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>If the attribute is a JSON object, the given object.</p>
+      </td>
+      <td></td>
+    </tr>
+  </tbody></table>
+</body></html>

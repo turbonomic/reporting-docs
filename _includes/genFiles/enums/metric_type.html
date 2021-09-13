@@ -1,0 +1,517 @@
+<html><body>
+  
+  <ul>
+    <li><p><code>ACTIVE_SESSIONS</code>:</p>
+      
+        <p>Count of the number of actively logged in sessions</p>
+      
+      
+        <p>Units: Count</p>
+      
+    </li>
+    <li><p><code>BALLOONING</code>:</p>
+      
+        <p>Number of kb the host is dedicated for ballooning</p>
+      
+      
+        <p>Units: kilobytes</p>
+      
+    </li>
+    <li><p><code>BUFFER_COMMODITY</code>:</p>
+      
+        <p>Utilization of a port buffer (fabric, UCS specific)</p>
+      
+      
+        <p>Units: megabytes</p>
+      
+    </li>
+    <li><p><code>CONNECTION</code>:</p>
+      
+        <p>Number of connections onto the application</p>
+      
+      
+        <p>Units: Count</p>
+      
+    </li>
+    <li><p><code>COOLING</code>:</p>
+      
+      
+    </li>
+    <li><p><code>CPU</code>:</p>
+      
+        <p>For Physical machine - usage of CPU (current column).    For VM - consumed CPU on the host (consumed column).</p>
+      
+      
+        <p>Units: MHz</p>
+      
+    </li>
+    <li><p><code>CPU_ALLOCATION</code>:</p>
+      
+        <p>For VMs (consumed column) - VM buys from VDC or from desktop pool (VDI).   For PMs - PMs sells to VDCs.</p>
+      
+      
+        <p>Units: MHz</p>
+      
+    </li>
+    <li><p><code>CPU_HEADROOM</code>:</p>
+      
+        <p>Number of VMs that can fit in all of the available  CPU (on a cluster)</p>
+      
+      
+        <p>Units: Count</p>
+      
+    </li>
+    <li><p><code>CPU_PROVISIONED</code>:</p>
+      
+        <p>Capacity is based on the over-provisioned value in policy</p>
+      
+      
+        <p>Units: MHz</p>
+      
+    </li>
+    <li><p><code>CPU_READY</code>:</p>
+      
+        <p>Ready queue</p>
+      
+      
+        <p>Units: ms</p>
+      
+    </li>
+    <li><p><code>DB_CACHE_HIT_RATE</code>:</p>
+      
+        <p>The percentage of accesses that result in cache hits.</p>
+      
+      
+        <p>Units: Percentage</p>
+      
+    </li>
+    <li><p><code>DB_MEM</code>:</p>
+      
+        <p>DB mem utilization or DM capacity</p>
+      
+      
+        <p>Units: kilobytes</p>
+      
+    </li>
+    <li><p><code>DTU</code>:</p>
+      
+        <p>Capacity defined in the cloud</p>
+      
+      
+        <p>Units: Count</p>
+      
+    </li>
+    <li><p><code>EXTENT</code>:</p>
+      
+        <p>Internal</p>
+      
+      
+        <p>Units: NA</p>
+      
+    </li>
+    <li><p><code>FLOW</code>:</p>
+      
+        <p>Amount of network traffic per second between two nodes</p>
+      
+      
+        <p>Units: kilobytes/sec</p>
+      
+    </li>
+    <li><p><code>FLOW_ALLOCATION</code>:</p>
+      
+      
+        <p>Units: bytes</p>
+      
+    </li>
+    <li><p><code>HEAP</code>:</p>
+      
+        <p>Amount of heap configured for an application</p>
+      
+      
+        <p>Units: kilobytes</p>
+      
+    </li>
+    <li><p><code>IMAGE_CPU</code>:</p>
+      
+        <p>For VDI, usage of the business user</p>
+      
+      
+        <p>Units: MHz</p>
+      
+    </li>
+    <li><p><code>IMAGE_MEM</code>:</p>
+      
+        <p>For VDI, usage of the business user</p>
+      
+      
+        <p>Units: kilobytes</p>
+      
+    </li>
+    <li><p><code>IMAGE_STORAGE</code>:</p>
+      
+        <p>For VDI, usage of the business user</p>
+      
+      
+        <p>Units: megabytes</p>
+      
+    </li>
+    <li><p><code>IO_THROUGHPUT</code>:</p>
+      
+        <p>Amount of traffic through the IO adapter</p>
+      
+      
+        <p>Units: kilobytes/sec</p>
+      
+    </li>
+    <li><p><code>MEM</code>:</p>
+      
+        <p>Physical machine - usage of memory.   VM - consumed memory.</p>
+      
+      
+        <p>Units: kilobytes</p>
+      
+    </li>
+    <li><p><code>MEM_ALLOCATION</code>:</p>
+      
+        <p>Physical machine - what the host provides to VDCs.   VM (consumed column) - what the VM buys from VDC or desktop pool.</p>
+      
+      
+        <p>Units: kilobytes</p>
+      
+    </li>
+    <li><p><code>MEM_HEADROOM</code>:</p>
+      
+        <p>Number of VMs that can fit in the available memory on the cluster</p>
+      
+      
+        <p>Units: Count</p>
+      
+    </li>
+    <li><p><code>MEM_PROVISIONED</code>:</p>
+      
+        <p>Capacity, based on the over-provisioned value in policy</p>
+      
+      
+        <p>Units: kilobytes</p>
+      
+    </li>
+    <li><p><code>NET_THROUGHPUT</code>:</p>
+      
+        <p>Amount of traffic through the Network adapter</p>
+      
+      
+        <p>Units: kilobytes/sec</p>
+      
+    </li>
+    <li><p><code>POOL_CPU</code>:</p>
+      
+        <p>For VDI, usage of the desktop pool</p>
+      
+      
+        <p>Units: MHz</p>
+      
+    </li>
+    <li><p><code>POOL_MEM</code>:</p>
+      
+        <p>For VDI, usage of the desktop pool</p>
+      
+      
+        <p>Units: kilobytes</p>
+      
+    </li>
+    <li><p><code>POOL_STORAGE</code>:</p>
+      
+        <p>For VDI, usage of the desktop pool</p>
+      
+      
+        <p>Units: megabytes</p>
+      
+    </li>
+    <li><p><code>PORT_CHANEL</code>:</p>
+      
+        <p>Traffic on ports for UCS Mgr/HPE1</p>
+      
+      
+        <p>Units: kilobytes/sec</p>
+      
+    </li>
+    <li><p><code>POWER</code>:</p>
+      
+      
+    </li>
+    <li><p><code>Q16_VCPU</code>:</p>
+      
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      
+      
+        <p>Units: ms</p>
+      
+    </li>
+    <li><p><code>Q1_VCPU</code>:</p>
+      
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      
+      
+        <p>Units: ms</p>
+      
+    </li>
+    <li><p><code>Q2_VCPU</code>:</p>
+      
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      
+      
+        <p>Units: ms</p>
+      
+    </li>
+    <li><p><code>Q32_VCPU</code>:</p>
+      
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      
+      
+        <p>Units: ms</p>
+      
+    </li>
+    <li><p><code>Q3_VCPU</code>:</p>
+      
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      
+      
+        <p>Units: ms</p>
+      
+    </li>
+    <li><p><code>Q4_VCPU</code>:</p>
+      
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      
+      
+        <p>Units: ms</p>
+      
+    </li>
+    <li><p><code>Q5_VCPU</code>:</p>
+      
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      
+      
+        <p>Units: ms</p>
+      
+    </li>
+    <li><p><code>Q64_VCPU</code>:</p>
+      
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      
+      
+        <p>Units: ms</p>
+      
+    </li>
+    <li><p><code>Q6_VCPU</code>:</p>
+      
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      
+      
+        <p>Units: ms</p>
+      
+    </li>
+    <li><p><code>Q7_VCPU</code>:</p>
+      
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      
+      
+        <p>Units: ms</p>
+      
+    </li>
+    <li><p><code>Q8_VCPU</code>:</p>
+      
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      
+      
+        <p>Units: ms</p>
+      
+    </li>
+    <li><p><code>QN_VCPU</code>:</p>
+      
+        <p>VM - Sum of the Ready Queue usage of all of the CPU on the VM. To normalize the value, divide it by the number of vCPU.   Host - Average of the underlying Ready Queue values from all of the corresponding VMs with the same number of vCPUs.</p>
+      
+      
+        <p>Units: ms</p>
+      
+    </li>
+    <li><p><code>REMAINING_GC_CAPACITY</code>:</p>
+      
+        <p>Percentage of time not spent on garbage collection</p>
+      
+      
+        <p>Units: Percentage</p>
+      
+    </li>
+    <li><p><code>RESPONSE_TIME</code>:</p>
+      
+        <p>Application response</p>
+      
+      
+        <p>Units: ms</p>
+      
+    </li>
+    <li><p><code>SLA_COMMODITY</code>:</p>
+      
+        <p>User-defined value</p>
+      
+      
+        <p>Units: Number</p>
+      
+    </li>
+    <li><p><code>STORAGE_ACCESS</code>:</p>
+      
+        <p>Count of the number of I/O (read + write) within two discovery cycles</p>
+      
+      
+        <p>Units: count</p>
+      
+    </li>
+    <li><p><code>STORAGE_ALLOCATION</code>:</p>
+      
+        <p>Allocated storage</p>
+      
+      
+        <p>Units: megabytes</p>
+      
+    </li>
+    <li><p><code>STORAGE_AMOUNT</code>:</p>
+      
+        <p>Used storage</p>
+      
+      
+        <p>Units: megabytes</p>
+      
+    </li>
+    <li><p><code>STORAGE_HEADROOM</code>:</p>
+      
+        <p>Count of VM that can fit for the storage in a cluster in terms of storage</p>
+      
+      
+        <p>Units: Count</p>
+      
+    </li>
+    <li><p><code>STORAGE_LATENCY</code>:</p>
+      
+        <p>Acceptable latency. User can set capacity for most storage, is discovered for NetApp.</p>
+      
+      
+        <p>Units: ms</p>
+      
+    </li>
+    <li><p><code>STORAGE_PROVISIONED</code>:</p>
+      
+        <p>Capacity, based on the over-provisioned value in policy</p>
+      
+      
+        <p>Units: megabytes</p>
+      
+    </li>
+    <li><p><code>SWAPPING</code>:</p>
+      
+        <p>Memory swapping</p>
+      
+      
+        <p>Units: bytes/sec</p>
+      
+    </li>
+    <li><p><code>THREADS</code>:</p>
+      
+        <p>Threads in use</p>
+      
+      
+        <p>Units: Count</p>
+      
+    </li>
+    <li><p><code>TOTAL_HEADROOM</code>:</p>
+      
+        <p>Min value of CPU, Mem, IO, of the headrooms</p>
+      
+      
+        <p>Units: Count</p>
+      
+    </li>
+    <li><p><code>TOTAL_SESSIONS</code>:</p>
+      
+        <p>Total number of possible sessions</p>
+      
+      
+        <p>Units: Count</p>
+      
+    </li>
+    <li><p><code>TRANSACTION</code>:</p>
+      
+        <p>Transactions for the application</p>
+      
+      
+        <p>Units: transactions/sec</p>
+      
+    </li>
+    <li><p><code>TRANSACTION_LOG</code>:</p>
+      
+        <p>Size of the transaction log</p>
+      
+      
+        <p>Units: megabytes</p>
+      
+    </li>
+    <li><p><code>VCPU</code>:</p>
+      
+        <p>CPU for the VM</p>
+      
+      
+        <p>Units: MHz</p>
+      
+    </li>
+    <li><p><code>VCPU_LIMIT_QUOTA</code>:</p>
+      
+      
+        <p>Units: millicores</p>
+      
+    </li>
+    <li><p><code>VCPU_REQUEST</code>:</p>
+      
+      
+        <p>Units: millicores</p>
+      
+    </li>
+    <li><p><code>VCPU_REQUEST_QUOTA</code>:</p>
+      
+      
+        <p>Units: millicores</p>
+      
+    </li>
+    <li><p><code>VMEM</code>:</p>
+      
+        <p>Memory sold by a VM. Memory sold and bought for a container</p>
+      
+      
+        <p>Units: kilobytes</p>
+      
+    </li>
+    <li><p><code>VMEM_LIMIT_QUOTA</code>:</p>
+      
+      
+        <p>Units: kilobytes</p>
+      
+    </li>
+    <li><p><code>VMEM_REQUEST</code>:</p>
+      
+      
+        <p>Units: kilobytes</p>
+      
+    </li>
+    <li><p><code>VMEM_REQUEST_QUOTA</code>:</p>
+      
+      
+        <p>Units: kilobytes</p>
+      
+    </li>
+    <li><p><code>VSTORAGE</code>:</p>
+      
+      
+        <p>Units: megabytes</p>
+      
+    </li>
+  </ul>
+</body></html>

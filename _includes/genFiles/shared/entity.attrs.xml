@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.032236 -->
+<Type id="entity.attrs_topic" type="shared">
+  <Title>entity.attrs</Title>
+  <body>
+    <Item name="attachment_state">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/enums/AttachmentState</p>
+      </Field>
+      <Field name="SupportedEntityTypes">
+        <p>VIRTUAL_VOLUME</p>
+      </Field>
+    </Item>
+    <Item name="connected_networks">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>MULTI_TEXT</p>
+      </Field>
+      <Field name="SupportedEntityTypes">
+        <p>VIRTUAL_MACHINE</p>
+      </Field>
+    </Item>
+    <Item name="cpu_model">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>TEXT</p>
+      </Field>
+      <Field name="SupportedEntityTypes">
+        <p>PHYSICAL_MACHINE</p>
+      </Field>
+    </Item>
+    <Item name="guest_os_name">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>TEXT</p>
+      </Field>
+      <Field name="SupportedEntityTypes">
+        <p>VIRTUAL_MACHINE</p>
+      </Field>
+    </Item>
+    <Item name="guest_os_type">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/enums/OSType</p>
+      </Field>
+      <Field name="SupportedEntityTypes">
+        <p>VIRTUAL_MACHINE</p>
+      </Field>
+    </Item>
+    <Item name="is_local">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>BOOLEAN</p>
+      </Field>
+      <Field name="SupportedEntityTypes">
+        <p>STORAGE</p>
+      </Field>
+    </Item>
+    <Item name="model">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>TEXT</p>
+      </Field>
+      <Field name="SupportedEntityTypes">
+        <p>PHYSICAL_MACHINE</p>
+      </Field>
+    </Item>
+    <Item name="num_cpus">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>NUMBER</p>
+      </Field>
+      <Field name="SupportedEntityTypes">
+        <p>PHYSICAL_MACHINE</p>
+      </Field>
+    </Item>
+    <Item name="tags">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>TEXT_MULTIMAP (Embedded Reporting) or List (Data Exporter)</p>
+      </Field>
+      <Field name="SupportedEntityTypes">
+        <p>ALL</p>
+      </Field>
+    </Item>
+    <Item name="targets">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/Target</p>
+      </Field>
+      <Field name="SupportedEntityTypes">
+        <p>ALL</p>
+      </Field>
+      <Field name="Repeated">
+        <p>True</p>
+      </Field>
+    </Item>
+    <Item name="timezone">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>TEXT</p>
+      </Field>
+      <Field name="SupportedEntityTypes">
+        <p>PHYSICAL_MACHINE</p>
+      </Field>
+    </Item>
+    <Item name="vendor_id">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>TEXT</p>
+      </Field>
+      <Field name="SupportedEntityTypes">
+        <p>VIRTUAL_VOLUME,BUSINESS_ACCOUNT</p>
+      </Field>
+    </Item>
+  </body>
+</Type>

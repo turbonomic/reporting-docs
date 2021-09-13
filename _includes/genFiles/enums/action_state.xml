@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.014288 -->
+<Type id="action_state_topic" type="enums">
+  <Title>action_state</Title>
+  <body>
+    <Item name="ACCEPTED">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="CLEARED">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="FAILED">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="FAILING">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="IN_PROGRESS">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="POST_IN_PROGRESS">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="PRE_IN_PROGRESS">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="QUEUED">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="READY">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="REJECTED">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="SUCCEEDED">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+  </body>
+</Type>

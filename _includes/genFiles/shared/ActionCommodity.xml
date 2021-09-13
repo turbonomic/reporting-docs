@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.037493 -->
+<Type id="ActionCommodity_topic" type="shared">
+  <Title>ActionCommodity</Title>
+  <body>
+    <Item name="capacity">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>float</p>
+      </Field>
+    </Item>
+    <Item name="percentileUtilization">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>Double</p>
+      </Field>
+    </Item>
+    <Item name="used">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>float</p>
+      </Field>
+    </Item>
+    <Item name="utilization">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>float</p>
+      </Field>
+    </Item>
+  </body>
+</Type>

@@ -1,0 +1,107 @@
+<html><body><h1>action_group</h1>
+  
+  <table><tbody><tr><th>Data Object</th><th>Type</th><th>Nullable</th><th>Primary</th><th>Description</th><th>Reference</th></tr>
+    <tr><td>id</td>
+      <td>
+        <p>int</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr><td>type</td>
+      <td>
+        <p>enum</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td></td>
+      <td>
+        <p>
+          <a href="../enums/action_type.html">action_type</a>
+        </p>
+      </td>
+    </tr>
+    <tr><td>category</td>
+      <td>
+        <p>enum</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>The category of the given action.</p>
+      </td>
+      <td>
+        <p>
+          <a href="../enums/action_category.html">action_category</a>
+        </p>
+      </td>
+    </tr>
+    <tr><td>state</td>
+      <td>
+        <p>enum</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>That action type.</p>
+      </td>
+      <td>
+        <p>
+          <a href="../enums/action_state.html">action_state</a>
+        </p>
+      </td>
+    </tr>
+    <tr><td>mode</td>
+      <td>
+        <p>enum</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>The action mode - automated, manual, etc.</p>
+      </td>
+      <td>
+        <p>
+          <a href="../enums/action_mode.html">action_mode</a>
+        </p>
+      </td>
+    </tr>
+    <tr><td>risks</td>
+      <td>
+        <p>text[]</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>An array of strings to describe the risks that drive the action.</p>
+      </td>
+      <td></td>
+    </tr>
+  </tbody></table>
+</body></html>

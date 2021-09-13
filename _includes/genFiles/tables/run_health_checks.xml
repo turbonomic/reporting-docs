@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.029653 -->
+<Type id="run_health_checks_topic" type="tables">
+  <Title>run_health_checks</Title>
+  <body>
+    <Item name="check_name">
+      <Field name="Type">
+        <p>text</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>The display name of the health check.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="passed">
+      <Field name="Type">
+        <p>boolean</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>Whether the health check passed or failed.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="messages">
+      <Field name="Type">
+        <p>text[]</p>
+      </Field>
+      <Field name="Nullable">
+        <p>True</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>The text description of the health check results.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+  </body>
+</Type>

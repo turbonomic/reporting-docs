@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.030048 -->
+<Type id="scope_topic" type="tables">
+  <Title>scope</Title>
+  <body>
+    <Item name="seed_oid">
+      <Field name="Type">
+        <p>bigint</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>True</p>
+      </Field>
+      <Field name="Description">
+        <p>The ID of the entity whose scope is the subject of the given record. For example, for a cluster-to-host relationship, the seed can be the cluster, and the scoped entity would be the host.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="scoped_oid">
+      <Field name="Type">
+        <p>bigint</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>True</p>
+      </Field>
+      <Field name="Description">
+        <p>ID of the entity that is part of the seed scope.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="scoped_type">
+      <Field name="Type">
+        <p>enum</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>Entity type for the scoped entity.</p>
+      </Field>
+      <Field name="Reference">
+        <p>
+          <xref href="/enums/entity_type.xml">entity_type</xref>
+        </p>
+      </Field>
+    </Item>
+    <Item name="start">
+      <Field name="Type">
+        <p>timestamp with time zone</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>True</p>
+      </Field>
+      <Field name="Description">
+        <p>When this relationship first appeared in the topology. This covers the initial appearance, or an appearance after a gap (the relationship was temporarily broken).</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+    <Item name="finish">
+      <Field name="Type">
+        <p>timestamp with time zone</p>
+      </Field>
+      <Field name="Nullable">
+        <p>False</p>
+      </Field>
+      <Field name="Primary">
+        <p>False</p>
+      </Field>
+      <Field name="Description">
+        <p>WHEN this relationship LAST appeared IN THE TOPOLOGY. A value of 9999-12-31T23:59:59 means the relationship is not yet known to have terminated.</p>
+      </Field>
+      <Field name="Reference" outputclass="NULL"/>
+    </Item>
+  </body>
+</Type>

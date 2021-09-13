@@ -1,0 +1,122 @@
+<html><body><h1>entity</h1>
+  
+  <table><tbody><tr><th>Data Object</th><th>Type</th><th>Nullable</th><th>Primary</th><th>Description</th><th>Reference</th></tr>
+    <tr><td>oid</td>
+      <td>
+        <p>bigint</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>The entity ID.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>type</td>
+      <td>
+        <p>enum</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>The entity type.</p>
+      </td>
+      <td>
+        <p>
+          <a href="../enums/entity_type.html">entity_type</a>
+        </p>
+      </td>
+    </tr>
+    <tr><td>name</td>
+      <td>
+        <p>text</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>The current display name for the entity. While display names may change over time, this is always the most recent display name.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>environment</td>
+      <td>
+        <p>enum</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>Whether the entity is in an on-prem, cloud, or hybrid environment.</p>
+      </td>
+      <td>
+        <p>
+          <a href="../enums/environment_type.html">environment_type</a>
+        </p>
+      </td>
+    </tr>
+    <tr><td>attrs</td>
+      <td>
+        <p>jsonb</p>
+      </td>
+      <td>
+        <p>True</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>Additional data for the entity.</p>
+      </td>
+      <td>
+        <p>
+          <a href="../shared/entity.attrs|/shared/group.attrs.html">group.attrs</a>
+        </p>
+      </td>
+    </tr>
+    <tr><td>first_seen</td>
+      <td>
+        <p>timestamp with time zone</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>When the entity was first discovered in the topology.</p>
+      </td>
+      <td></td>
+    </tr>
+    <tr><td>last_seen</td>
+      <td>
+        <p>timestamp with time zone</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td>
+        <p>When the entity last existed in the topology. For an entity that still exists, the value is 9999-12-31T23:59:59.</p>
+      </td>
+      <td></td>
+    </tr>
+  </tbody></table>
+</body></html>

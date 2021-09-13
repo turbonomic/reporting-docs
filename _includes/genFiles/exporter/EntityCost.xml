@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.042878 -->
+<Type id="EntityCost_topic" type="exporter">
+  <Title>EntityCost</Title>
+  <body>
+    <Item name="category">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/exporter/CostByCategory</p>
+      </Field>
+      <Field name="MapKeyType">
+        <p>/enums/cost_category</p>
+      </Field>
+    </Item>
+    <Item name="total">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>Float</p>
+      </Field>
+    </Item>
+    <Item name="unit">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>String</p>
+      </Field>
+    </Item>
+  </body>
+</Type>

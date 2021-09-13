@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.034534 -->
+<Type id="ActionImpactedEntity_topic" type="shared">
+  <Title>ActionImpactedEntity</Title>
+  <body>
+    <Item name="affectedCosts">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/ActionImpactedCosts</p>
+      </Field>
+    </Item>
+    <Item name="affectedMetrics">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/ImpactedMetric</p>
+      </Field>
+      <Field name="MapKeyType">
+        <p>/enums/metric_type</p>
+      </Field>
+    </Item>
+    <Item name="name">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>String</p>
+      </Field>
+    </Item>
+    <Item name="oid">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>Long</p>
+      </Field>
+    </Item>
+    <Item name="settings">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/EntitySettings</p>
+      </Field>
+    </Item>
+    <Item name="type">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/enums/entity_type</p>
+      </Field>
+    </Item>
+  </body>
+</Type>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.041252 -->
+<Type id="Entity_topic" type="exporter">
+  <Title>Entity</Title>
+  <body>
+    <Item name="accountExpenses">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/exporter/AccountExpenses</p>
+      </Field>
+    </Item>
+    <Item name="attrs">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/entity.attrs</p>
+      </Field>
+    </Item>
+    <Item name="cost">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/exporter/EntityCost</p>
+      </Field>
+    </Item>
+    <Item name="environment">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/enums/environment_type</p>
+      </Field>
+    </Item>
+    <Item name="metric">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/exporter/Commodity</p>
+      </Field>
+      <Field name="MapKeyType">
+        <p>/enums/metric_type</p>
+      </Field>
+    </Item>
+    <Item name="name">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>String</p>
+      </Field>
+    </Item>
+    <Item name="oid">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>Long</p>
+      </Field>
+    </Item>
+    <Item name="related">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/exporter/RelatedEntity</p>
+      </Field>
+      <Field name="MapKeyType">
+        <p>/enums/entity_type</p>
+      </Field>
+      <Field name="Repeated">
+        <p>True</p>
+      </Field>
+    </Item>
+    <Item name="state">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/enums/entity_state</p>
+      </Field>
+    </Item>
+    <Item name="type">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/enums/entity_type</p>
+      </Field>
+    </Item>
+  </body>
+</Type>

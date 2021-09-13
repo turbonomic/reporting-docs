@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.020501 -->
+<Type id="terminal_state_topic" type="enums">
+  <Title>terminal_state</Title>
+  <body>
+    <Item name="FAILED">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="SUCCEEDED">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+  </body>
+</Type>

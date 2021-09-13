@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.018670 -->
+<Type id="file_type_topic" type="enums">
+  <Title>file_type</Title>
+  <body>
+    <Item name="CONFIGURATION">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="DISK">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="ESXCONSOLE">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="ISO">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="LOG">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="MEMORY">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="SNAPSHOT">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="SWAP">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+  </body>
+</Type>

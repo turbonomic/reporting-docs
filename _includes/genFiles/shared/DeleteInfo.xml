@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.039202 -->
+<Type id="DeleteInfo_topic" type="shared">
+  <Title>DeleteInfo</Title>
+  <body>
+    <Item name="filePath">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>String</p>
+      </Field>
+    </Item>
+    <Item name="fileSize">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>Double</p>
+      </Field>
+    </Item>
+    <Item name="lastModifiedTimestamp">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>String</p>
+      </Field>
+      <Field name="Format">
+        <p>yyyy-MM-dd'T'HH:mm:ss'Z'</p>
+      </Field>
+    </Item>
+    <Item name="unattachedDays">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>Integer</p>
+      </Field>
+    </Item>
+    <Item name="unit">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>String</p>
+      </Field>
+    </Item>
+  </body>
+</Type>

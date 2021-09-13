@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.032645 -->
+<Type id="group.attrs_topic" type="shared">
+  <Title>group.attrs</Title>
+  <body>
+    <Item name="dynamic">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>BOOLEAN</p>
+      </Field>
+      <Field name="SupportedEntityTypes">
+        <p>STORAGE_CLUSTER,COMPUTE_CLUSTER,GROUP,K8S_CLUSTER,BILLING_FAMILY,RESOURCE_GROUP</p>
+      </Field>
+    </Item>
+    <Item name="member_types">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>MULTI_TEXT</p>
+      </Field>
+      <Field name="SupportedEntityTypes">
+        <p>STORAGE_CLUSTER,COMPUTE_CLUSTER,GROUP,K8S_CLUSTER,BILLING_FAMILY,RESOURCE_GROUP</p>
+      </Field>
+    </Item>
+    <Item name="origin">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>TEXT</p>
+      </Field>
+      <Field name="SupportedEntityTypes">
+        <p>STORAGE_CLUSTER,COMPUTE_CLUSTER,GROUP,K8S_CLUSTER,BILLING_FAMILY,RESOURCE_GROUP</p>
+      </Field>
+    </Item>
+    <Item name="tags">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>TEXT_MULTIMAP (Embedded Reporting) or List (Data Exporter)</p>
+      </Field>
+      <Field name="SupportedEntityTypes">
+        <p>GROUP,RESOURCE_GROUP,COMPUTE_CLUSTER,K8S_CLUSTER,STORAGE_CLUSTER,BILLING_FAMILY</p>
+      </Field>
+    </Item>
+    <Item name="targets">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/Target</p>
+      </Field>
+      <Field name="SupportedEntityTypes">
+        <p>GROUP,RESOURCE_GROUP,COMPUTE_CLUSTER,K8S_CLUSTER,STORAGE_CLUSTER,BILLING_FAMILY</p>
+      </Field>
+      <Field name="Repeated">
+        <p>True</p>
+      </Field>
+    </Item>
+  </body>
+</Type>

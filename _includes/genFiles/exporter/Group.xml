@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.041641 -->
+<Type id="Group_topic" type="exporter">
+  <Title>Group</Title>
+  <body>
+    <Item name="attrs">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/group.attrs</p>
+      </Field>
+    </Item>
+    <Item name="name">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>String</p>
+      </Field>
+    </Item>
+    <Item name="oid">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>Long</p>
+      </Field>
+    </Item>
+    <Item name="type">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/enums/entity_type</p>
+      </Field>
+    </Item>
+  </body>
+</Type>

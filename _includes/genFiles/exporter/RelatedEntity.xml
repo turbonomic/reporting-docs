@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.041967 -->
+<Type id="RelatedEntity_topic" type="exporter">
+  <Title>RelatedEntity</Title>
+  <body>
+    <Item name="name">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>String</p>
+      </Field>
+    </Item>
+    <Item name="oid">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>Long</p>
+      </Field>
+    </Item>
+  </body>
+</Type>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.036007 -->
+<Type id="EntitySettings_topic" type="shared">
+  <Title>EntitySettings</Title>
+  <body>
+    <Item name="percentileAggressiveness">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>Integer</p>
+      </Field>
+    </Item>
+    <Item name="percentileObservationPeriodDays">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>Integer</p>
+      </Field>
+    </Item>
+  </body>
+</Type>

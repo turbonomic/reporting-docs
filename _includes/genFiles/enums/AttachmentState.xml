@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.020809 -->
+<Type id="AttachmentState_topic" type="enums">
+  <Title>AttachmentState</Title>
+  <body>
+    <Item name="ATTACHED">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+    <Item name="UNATTACHED">
+      <Field name="Notes" outputclass="NULL"/>
+    </Item>
+  </body>
+</Type>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated on 2021-09-12 13:16:15.035246 -->
+<Type id="ImpactedMetric_topic" type="shared">
+  <Title>ImpactedMetric</Title>
+  <body>
+    <Item name="afterActions">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/ActionCommodity</p>
+      </Field>
+    </Item>
+    <Item name="beforeActions">
+      <Field name="Description" outputclass="NULL"/>
+      <Field name="Type">
+        <p>/shared/ActionCommodity</p>
+      </Field>
+    </Item>
+  </body>
+</Type>
