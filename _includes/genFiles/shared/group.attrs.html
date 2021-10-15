@@ -1,13 +1,18 @@
-<html><body><h1>group.attrs</h1>
+<html><body>
   
-  <table><tbody><tr><th>Data Object</th><th>Description</th><th>Type</th><th>SupportedEntityTypes</th></tr>
+  <table><tbody><tr><th>Data Object</th><th>Description</th><th>Type</th><th>Repeated</th><th>Reference</th><th>SupportedEntityTypes</th><th>SupportedGroupTypes</th></tr>
     <tr><td>dynamic</td>
       <td></td>
       <td>
         <p>BOOLEAN</p>
       </td>
+      <td></td>
+      <td></td>
       <td>
         <p>STORAGE_CLUSTER,COMPUTE_CLUSTER,GROUP,K8S_CLUSTER,BILLING_FAMILY,RESOURCE_GROUP</p>
+      </td>
+      <td>
+        <p>RESOURCE_GROUP,COMPUTE_CLUSTER,BILLING_FAMILY,GROUP,K8S_CLUSTER,STORAGE_CLUSTER</p>
       </td>
     </tr>
     <tr><td>member_types</td>
@@ -16,7 +21,14 @@
         <p>MULTI_TEXT</p>
       </td>
       <td>
+        <p>True</p>
+      </td>
+      <td></td>
+      <td>
         <p>STORAGE_CLUSTER,COMPUTE_CLUSTER,GROUP,K8S_CLUSTER,BILLING_FAMILY,RESOURCE_GROUP</p>
+      </td>
+      <td>
+        <p>RESOURCE_GROUP,COMPUTE_CLUSTER,BILLING_FAMILY,GROUP,K8S_CLUSTER,STORAGE_CLUSTER</p>
       </td>
     </tr>
     <tr><td>origin</td>
@@ -24,8 +36,13 @@
       <td>
         <p>TEXT</p>
       </td>
+      <td></td>
+      <td></td>
       <td>
         <p>STORAGE_CLUSTER,COMPUTE_CLUSTER,GROUP,K8S_CLUSTER,BILLING_FAMILY,RESOURCE_GROUP</p>
+      </td>
+      <td>
+        <p>RESOURCE_GROUP,COMPUTE_CLUSTER,BILLING_FAMILY,GROUP,K8S_CLUSTER,STORAGE_CLUSTER</p>
       </td>
     </tr>
     <tr><td>tags</td>
@@ -33,8 +50,13 @@
       <td>
         <p>TEXT_MULTIMAP (Embedded Reporting) or List (Data Exporter)</p>
       </td>
+      <td></td>
+      <td></td>
       <td>
         <p>GROUP,RESOURCE_GROUP,COMPUTE_CLUSTER,K8S_CLUSTER,STORAGE_CLUSTER,BILLING_FAMILY</p>
+      </td>
+      <td>
+        <p>ALL</p>
       </td>
     </tr>
     <tr><td>targets</td>
@@ -42,11 +64,17 @@
       <td>
         <p><a href="../shared/Target">Target</a></p>
       </td>
+      <td></td>
+      <td>
+        <p>
+          <a href="../shared/Target.html">Target</a>
+        </p>
+      </td>
       <td>
         <p>GROUP,RESOURCE_GROUP,COMPUTE_CLUSTER,K8S_CLUSTER,STORAGE_CLUSTER,BILLING_FAMILY</p>
       </td>
       <td>
-        <p>True</p>
+        <p>ALL</p>
       </td>
     </tr>
   </tbody></table>

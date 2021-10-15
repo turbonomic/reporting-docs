@@ -3,7 +3,9 @@ layout: default
 title: CommodityPercentileChange JSON
 ---
 
-The different categories for a given action.
+If an action changes a commodity that participates in 
+percentile-based analysis, the percentile settings, and the 
+commodity values before and after the action.
 
 
 {% include genFiles/shared/CommodityPercentileChange.html %}

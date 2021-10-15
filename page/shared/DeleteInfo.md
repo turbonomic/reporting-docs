@@ -3,7 +3,7 @@ layout: default
 title: DeleteInfo JSON
 ---
 
-The different categories for a given action.
+A description of a file that has been deleted.
 
 
 {% include genFiles/shared/DeleteInfo.html %}

@@ -3,7 +3,8 @@ layout: default
 title: EntitySettings JSON
 ---
 
-The different categories for a given action.
+For an entity that participates in percentile-based analysis, 
+the aggressiveness setting and observation period.
 
 
 {% include genFiles/shared/EntitySettings.html %}

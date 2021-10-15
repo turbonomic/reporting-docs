@@ -3,7 +3,7 @@ layout: default
 title: group.attrs JSON
 ---
 
-The different categories for a given action.
 
+Additional descriptions for a given group. 
 
 {% include genFiles/shared/group.attrs.html %}

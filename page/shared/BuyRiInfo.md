@@ -3,7 +3,8 @@ layout: default
 title: BuyRiInfo JSON
 ---
 
-The different categories for a given action.
+The information that analysis can use to 
+calculate Buy RI actions.
 
 
 {% include genFiles/shared/BuyRiInfo.html %}

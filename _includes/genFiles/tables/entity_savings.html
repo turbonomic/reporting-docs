@@ -9,7 +9,7 @@
         <p>False</p>
       </td>
       <td>
-        <p>False</p>
+        <p>True</p>
       </td>
       <td></td>
       <td></td>
@@ -22,14 +22,14 @@
         <p>False</p>
       </td>
       <td>
-        <p>False</p>
+        <p>True</p>
       </td>
       <td>
-        <p>The entity ID</p>
+        <p>The object ID for the entity that has seen a saving or investment.</p>
       </td>
       <td></td>
     </tr>
-    <tr><td>category</td>
+    <tr><td>savings_type</td>
       <td>
         <p>enum</p>
       </td>
@@ -37,37 +37,18 @@
         <p>False</p>
       </td>
       <td>
-        <p>False</p>
+        <p>True</p>
       </td>
       <td>
-        <p>The cost category - IP service, storage service, on-demand or RI compute, etc.</p>
-      </td>
-      <td>
-        <p>
-          <a href="../enums/cost_category.html">cost_category</a>
-        </p>
-      </td>
-    </tr>
-    <tr><td>source</td>
-      <td>
-        <p>enum</p>
-      </td>
-      <td>
-        <p>False</p>
-      </td>
-      <td>
-        <p>False</p>
-      </td>
-      <td>
-        <p>The billing data that provides the cost.</p>
+        <p>Whether the action resulted in an investment or saving, and whether the action executed or not.</p>
       </td>
       <td>
         <p>
-          <a href="../enums/cost_source.html">cost_source</a>
+          <a href="../enums/savings_type.html">savings_type</a>
         </p>
       </td>
     </tr>
-    <tr><td>cost</td>
+    <tr><td>stats_value</td>
       <td>
         <p>real</p>
       </td>
@@ -78,7 +59,7 @@
         <p>False</p>
       </td>
       <td>
-        <p>The calculated cost.</p>
+        <p>The value of the investment or saving for the related action.</p>
       </td>
       <td></td>
     </tr>

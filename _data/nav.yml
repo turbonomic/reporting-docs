@@ -17,6 +17,9 @@ toc:
     - page: entity_cost Table
       url: entity_cost.html
       dir: page/tables/entity_cost.html
+    - page: entity_savings Table
+      url: entity_savings.html
+      dir: page/tables/entity_savings.html
     - page: entity_types_with_cost Table
       url: entity_types_with_cost.html
       dir: page/tables/entity_types_with_cost.html
@@ -171,11 +174,11 @@ toc:
   
   
   
-  - title: Reference Material
-    subItems:
-    - page: Enum Reference
-      url: enum.html
-      dir: page/enum.html
+#  - title: Reference Material
+#    subItems:
+#    - page: Enum Reference
+#      url: enum.html
+#      dir: page/enum.html
 
 #  - title: Andy's Original Timescale Doc
 #    subItems:

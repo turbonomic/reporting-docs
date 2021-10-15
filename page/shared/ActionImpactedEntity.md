@@ -3,7 +3,8 @@ layout: default
 title: ActionImpactedEntity JSON
 ---
 
-The different categories for a given action.
+For a given action, a description of an entity that is 
+affected by that action.
 
 
 {% include genFiles/shared/ActionImpactedEntity.html %}
