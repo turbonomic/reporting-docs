@@ -46,7 +46,13 @@ To create the TimescaleDB:
   can create the databases that the Embedded Reports feature needs. 
 3. (OPTIONAL) Manually create the users and databases that Embedded Reports will use.  
    If you cannot grant {{ site.data.vars.Product_Short }} global R/W access to the DB, you must 
-   manually create the databases and users for Embedded Reports. See 
-   [Manually Creating Users and Databases](external-timescale-manuallyAdd.html). 
+   manually create the databases and users for Embedded Reports. 
+   
+   For information about manually creating databases and users, see 
+   [Manual Provisioning of Users and Databases](external-timescale-manuallyAdd.html). 
+   
+   For information about automatically creating databases and users via R/W access, 
+   see [Automatic Provisioning of Users and Databases](external-timescale-autoProvision.html).
+   
    
 

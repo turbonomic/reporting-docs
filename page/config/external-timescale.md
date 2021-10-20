@@ -7,16 +7,15 @@ Beginning with {{ site.data.vars.Product_Short }} 8.1.4, you can configure
 External Reports to use an external deployment of TimescaleDB. To enable an 
 external deployment, you will:
 
-* Deploy or access the external TimescaleDB instance that you will use.
-  
+* Deploy or access the external TimescaleDB instance that you will use  
   This is a PostgreSQL server with the TimescaleDB extension. The DB server 
   must be deployed in a way that is accessible to your installation of {{ site.data.vars.Product_Short }}.
   It can be deployed on the cloud or in an on-prem VM. 
-  The Embedded Reports feature currently supports PostgreSQL 12.x and TimescaleDB 2.0.1.
+  The Embedded Reports feature currently supports PostgreSQL 12.x and TimescaleDB 2.0.1.  
+  For more information, see:
+  * [Creating an External TimescaleDB](external-timescale-dbService.html)
+  * See the article, [https://docs.timescale.com/v2.0/getting-started/installation](https://docs.timescale.com/v2.0/getting-started/installation)  
   
-  For information about installing Timescale, see the article: 
-  [https://docs.timescale.com/v2.0/getting-started/installation](https://docs.timescale.com/v2.0/getting-started/installation)
-
 * Provision users, databases, and schemas on the TimescaleDB instance  
   To provision these database objects you can manually provision or 
   enable {{ site.data.vars.Product_Short }} to automatically provision.  
