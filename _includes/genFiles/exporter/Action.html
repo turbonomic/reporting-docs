@@ -1,11 +1,16 @@
 <html><body>
   
-  <table><tbody><tr><th>JSON Object</th><th>Description</th><th>Type</th><th>Reference</th></tr>
+  <table><tbody><tr><th>JSON Object</th><th>Description</th><th>Type</th><th>Repeated</th><th>Format</th><th>MapKeyType</th><th>Reference</th></tr>
     <tr><td>buyRiInfo</td>
       <td></td>
       <td>
         <p><a href="../shared/BuyRiInfo">BuyRiInfo</a></p>
       </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td></td>
+      <td></td>
       <td>
         <p>
           <a href="../shared/BuyRiInfo.html">BuyRiInfo</a>
@@ -13,10 +18,17 @@
       </td>
     </tr>
     <tr><td>category</td>
-      <td></td>
+      <td>
+        <p>The category of action.</p>
+      </td>
       <td>
         <p><a href="../enums/action_category">action_category</a></p>
       </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td></td>
+      <td></td>
       <td>
         <p>
           <a href="../enums/action_category.html">action_category</a>
@@ -24,13 +36,20 @@
       </td>
     </tr>
     <tr><td>creationTime</td>
-      <td></td>
+      <td>
+        <p>When analysis created the action.</p>
+      </td>
       <td>
         <p>String</p>
       </td>
       <td>
+        <p>False</p>
+      </td>
+      <td>
         <p>yyyy-MM-dd'T'HH:mm:ss'Z'</p>
       </td>
+      <td></td>
+      <td></td>
     </tr>
     <tr><td>deleteInfo</td>
       <td></td>
@@ -38,28 +57,56 @@
         <p><a href="../shared/DeleteInfo">DeleteInfo</a></p>
       </td>
       <td>
+        <p>False</p>
+      </td>
+      <td></td>
+      <td></td>
+      <td>
         <p>
           <a href="../shared/DeleteInfo.html">DeleteInfo</a>
         </p>
       </td>
     </tr>
     <tr><td>description</td>
-      <td></td>
+      <td>
+        <p>The description that analysis generates for the action.</p>
+      </td>
       <td>
         <p>String</p>
       </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
     <tr><td>explanation</td>
-      <td></td>
+      <td>
+        <p>The condition that the action is addressing. For example, Q2 VCPU CONGESTION.</p>
+      </td>
       <td>
         <p>String</p>
       </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
     <tr><td>mode</td>
-      <td></td>
+      <td>
+        <p>The mode for the action execution.</p>
+      </td>
       <td>
         <p><a href="../enums/action_mode">action_mode</a></p>
       </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td></td>
+      <td></td>
       <td>
         <p>
           <a href="../enums/action_mode.html">action_mode</a>
@@ -67,10 +114,17 @@
       </td>
     </tr>
     <tr><td>moveInfo</td>
-      <td></td>
+      <td>
+        <p>Information to describe a MOVE action.</p>
+      </td>
       <td>
         <p><a href="../shared/MoveChange">MoveChange</a></p>
       </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td></td>
+      <td></td>
       <td>
         <p>
           <a href="../shared/MoveChange.html">MoveChange</a>
@@ -78,21 +132,32 @@
       </td>
     </tr>
     <tr><td>oid</td>
-      <td></td>
+      <td>
+        <p>The action object identifier.</p>
+      </td>
       <td>
         <p>Long</p>
       </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
     <tr><td>related</td>
-      <td></td>
+      <td>
+        <p>An array of entities or groups that are related to the target entity.</p>
+      </td>
       <td>
         <p><a href="../exporter/RelatedEntity">RelatedEntity</a></p>
       </td>
       <td>
-        <p><a href="../enums/entity_type">entity_type</a></p>
-      </td>
-      <td>
         <p>True</p>
+      </td>
+      <td></td>
+      <td>
+        <p><a href="../enums/entity_type">entity_type</a></p>
       </td>
       <td>
         <p>
@@ -101,10 +166,17 @@
       </td>
     </tr>
     <tr><td>resizeInfo</td>
-      <td></td>
+      <td>
+        <p>Information to describe a RESIZE action.</p>
+      </td>
       <td>
         <p><a href="../shared/CommodityChange">CommodityChange</a></p>
       </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td></td>
+      <td></td>
       <td>
         <p>
           <a href="../shared/CommodityChange.html">CommodityChange</a>
@@ -112,10 +184,17 @@
       </td>
     </tr>
     <tr><td>savings</td>
-      <td></td>
+      <td>
+        <p>The cost change for the action.</p>
+      </td>
       <td>
         <p><a href="../exporter/CostAmount">CostAmount</a></p>
       </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td></td>
+      <td></td>
       <td>
         <p>
           <a href="../exporter/CostAmount.html">CostAmount</a>
@@ -123,10 +202,17 @@
       </td>
     </tr>
     <tr><td>scaleInfo</td>
-      <td></td>
+      <td>
+        <p>Information to describe a SCALE action.</p>
+      </td>
       <td>
         <p><a href="../shared/MoveChange">MoveChange</a></p>
       </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td></td>
+      <td></td>
       <td>
         <p>
           <a href="../shared/MoveChange.html">MoveChange</a>
@@ -134,10 +220,17 @@
       </td>
     </tr>
     <tr><td>severity</td>
-      <td></td>
+      <td>
+        <p>For a given action, the severity of the issue that it addresses.</p>
+      </td>
       <td>
         <p><a href="../enums/severity">severity</a></p>
       </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td></td>
+      <td></td>
       <td>
         <p>
           <a href="../enums/severity.html">severity</a>
@@ -145,10 +238,17 @@
       </td>
     </tr>
     <tr><td>state</td>
-      <td></td>
+      <td>
+        <p>The different states for the action, such as completed or pending.</p>
+      </td>
       <td>
         <p><a href="../enums/action_state">action_state</a></p>
       </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td></td>
+      <td></td>
       <td>
         <p>
           <a href="../enums/action_state.html">action_state</a>
@@ -156,10 +256,17 @@
       </td>
     </tr>
     <tr><td>target</td>
-      <td></td>
+      <td>
+        <p>The entity that the action operates on.</p>
+      </td>
       <td>
         <p><a href="../shared/ActionImpactedEntity">ActionImpactedEntity</a></p>
       </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td></td>
+      <td></td>
       <td>
         <p>
           <a href="../shared/ActionImpactedEntity.html">ActionImpactedEntity</a>
@@ -167,10 +274,17 @@
       </td>
     </tr>
     <tr><td>type</td>
-      <td></td>
+      <td>
+        <p>The action type.</p>
+      </td>
       <td>
         <p><a href="../enums/action_type">action_type</a></p>
       </td>
+      <td>
+        <p>False</p>
+      </td>
+      <td></td>
+      <td></td>
       <td>
         <p>
           <a href="../enums/action_type.html">action_type</a>
