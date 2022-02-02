@@ -3,7 +3,9 @@ layout: default
 title: scope Table
 ---
 
-The Scope table tracks the association of two entities as they are related in each other’s scope. The `seed_oid` identifies the containing entity (the entity that defines the scope), and the `scoped_oid` identifies the entity that is within the given scope. This table is updated with each market cycle.
+The Scope table tracks the association of two entities as they are related in each other’s scope. 
+The `seed_oid` identifies the containing entity (the entity that defines the scope), and the `scoped_oid` 
+identifies the entity that is within the given scope. This table updates with each market cycle.
 
 {% include genFiles/tables/scope.html %}
 

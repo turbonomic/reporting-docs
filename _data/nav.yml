@@ -55,6 +55,9 @@ toc:
       url: scope_to_types.html
       dir: page/tables/scope_to_types.html
       
+    - page: topology_stats Table
+      url: topology_stats.html
+      dir: page/tables/topology_stats.html
       
     - page: wasted_file Table
       url: wasted_file.html

@@ -4,7 +4,7 @@ title: entity Table
 ---
 
 The Entity table contains information about which entities appear in the 
-topologies and when. Table gets updated with each market cycle.
+topologies and when. This table gets updated with each market cycle.
 
 {% include genFiles/tables/entity.html %}
 

@@ -3,7 +3,7 @@ layout: default
 title: DeleteInfo JSON
 ---
 
-A description of a file that has been deleted.
+A description of a file is unattached and should be deleted.
 
 
 {% include genFiles/shared/DeleteInfo.html %}

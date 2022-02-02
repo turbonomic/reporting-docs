@@ -3,7 +3,7 @@ layout: default
 title: ActionIMpactedCosts JSON
 ---
 
-The different categories for a given action.
+For a given action, descriptions of the Before and After costs.
 
 
 {% include genFiles/shared/ActionImpactedCosts.html %}
