@@ -10,4 +10,11 @@ This table does not include actions that are in progress.
 
 ## Sample Use Cases
 
-N/A
+To get the target entities for all the pending actions, join this table with the `entities` table. 
+This example lists the pending action type, entity name, and the entity type:
+
+```
+select pending_action.type AS action_type, entity.name, entity.type AS ent_type
+FROM pending_action
+INNER JOIN entity ON pending_action.target_entity_id=entity.oid
+```

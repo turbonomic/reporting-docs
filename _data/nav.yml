@@ -1,4 +1,9 @@
 toc:
+  - title: Creating Reports
+    subItems:
+    - page: Creating Reports
+      url: creating_reports.html
+      dir: page/creating_reports.html
   - title: Schema Tables
     subItems:
     - page: action_group Table
