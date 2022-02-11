@@ -1,9 +1,15 @@
 toc:
-  - title: Creating Reports
+  - title: Custom Reports
     subItems:
+    - page: Importing Reports
+      url: reports_importing.html
+      dir: page/reports_importing.html
     - page: Creating Reports
-      url: creating_reports.html
-      dir: page/creating_reports.html
+      url: reports_creating.html
+      dir: page/reports_creating.html
+    - page: Exploring SQL Queries
+      url: reports_exploring_SQL.html
+      dir: page/reports_exploring_SQL.html
   - title: Schema Tables
     subItems:
     - page: action_group Table

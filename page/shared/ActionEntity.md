@@ -3,7 +3,7 @@ layout: default
 title: ActionEntity JSON
 ---
 
-The description of an entity.
+For a given action, a description of the entity this action changes.
 
 
 {% include genFiles/shared/ActionEntity.html %}
