@@ -4,7 +4,7 @@ title: Embeded Reporting Schema and External Database Configuration
 ---
 
 <p>Click to see the 
-<a href="https://https://www.ibm.com/docs/en/tarm/latest?topic=documentation-integration-embedded-reporting/">Embedded Reports</a> documentation.</p>
+<a href="https://www.ibm.com/docs/en/tarm/latest?topic=documentation-integration-embedded-reporting/">Embedded Reports</a> documentation.</p>
 
 <!--
 <p>This document describes the tables in the {{ site.data.vars.Product_Short }} Embedded Reporting data schema.</p>
